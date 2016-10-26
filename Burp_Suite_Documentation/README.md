@@ -16,4 +16,4 @@ Burp Suite是一个针对Web应用程序的安全测试的集成化平台。 当
 * [疑难解答](/Burp_Suite_Documentation/Troubleshooting.md) - 一些常见问题的提示。
 * [文档目录](/Contents.html) - 以树形呈现出整个文档的目录结构。
 
-本节英文原版地址：[https://portswigger.net/burp/help/](https://portswigger.net/burp/help/)
+本节英文版地址：[https://portswigger.net/burp/help/](https://portswigger.net/burp/help/)
