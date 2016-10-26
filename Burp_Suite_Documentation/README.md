@@ -9,4 +9,11 @@ Burp Suite是一个针对Web应用程序的安全测试的集成化平台。 当
 * [Burp 入门](/Burp_Suite_Documentation/Getting_Started/index.html) - 如果你从未接触过 Burp 或是不了解其关键的基础信息，请从这里开始学习 Burp。
 * [Burp 工程](/Burp_Suite_Documentation/Burp_Projects/index.html) - 如何使用 Burp 项目和配置文件来管理您的工作。
 * [开始使用 Burp Suite](/Burp_Suite_Documentation/Using_Burp_Suite/index.html) - Burp 的用户驱动测试工作流的详细概述，以及这些工具如何协同工作。
-* [Burp 工具集](/Burp_Suite_Documentation/Burp_Tools.html)- 它包含 Burp 的每个个工具的详细文档。
+* [Burp 工具集](/Burp_Suite_Documentation/Burp_Tools.html) - 该部分包含 Burp 的每个工具套件的详细文档。
+* [套件功能](/Suite_Function/index.html) - 该部分说明了支持测试过程的所有共享套件功能。
+* [选项](/Options/index.html)- 该部分说明了影响所有工具套件行为的套件范围选项。
+* [扩展](/Extender/index.html) - 该部分说明了Burps可扩展性框架，以及如何编写插件来扩展Burps功能。
+* [疑难解答](/Burp_Suite_Documentation/Troubleshooting.html) - 一些常见问题的提示。
+* [文档目录](/Contents.html) - 以树形呈现出整个文档的目录结构。
+
+
