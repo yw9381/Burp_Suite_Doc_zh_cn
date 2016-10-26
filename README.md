@@ -16,10 +16,11 @@
 
 - Burp Suite Documentation
 - Target
+- Proxy
 
 正在进行的章节
 
-- Proxy
+- 暂无
 
 还未开始的章节
 
