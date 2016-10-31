@@ -1,10 +1,10 @@
 # Burp Suite 官方文档中文版
 -------------------------
-这是由官方在 Burp Suite 所放出的Supper Center中的帮助文档翻译而来的中文版  
+这是由官方在 Burp Suite 所放出的Support Center中的帮助文档翻译而来的中文版  
 英文原版地址：[https://support.portswigger.net/](https://support.portswigger.net/)
 # 在线阅读
 ---------
-本文档使用gitbook制作，可直接[在线阅读](https://www.gitbook.com/book/yw9381/burp_suite_doc_zh_cn/details) 
+本文档使用gitbook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_doc_zh_cn/content/) 
 # 版本记录
 ---------
 文档版本将随着 Burp 的版本更新而更新， 版本号将使用 Burp 的版本号  
@@ -12,11 +12,11 @@
 # 当前阶段
 ---------
 目前进度处于全书结构创建阶段，整体创建进度如下  
-已完成结构的章节
+结构创建完成之后，将会分配相应页到个人，进行翻译  
 
-- Burp Suite Documentation
-- Target
-- Proxy
+已完成翻译的章节
+
+- 暂无
 
 正在进行的章节
 
@@ -24,6 +24,9 @@
 
 还未开始的章节
 
+- Burp Suite Documentation
+- Target
+- Proxy
 - Spider
 - Scanner
 - Intruder
