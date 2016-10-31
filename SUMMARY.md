@@ -223,6 +223,11 @@
         * [字符级分析](Sequencer/Results/Character-level_Analysis.md)
         * [比特级分析](Sequencer/Results/Bit-level_Analysis.md)
         * [分析选项](Sequencer/Results/Analysis_Options.md)
+* [Decoder 组件](Decoder/README.md)
+    * [加载原始数据](Decoder/Loading_Raw_Data.md)
+    * [转换](Decoder/Transformations.md)
+    * [手工工作](Decoder/Working_Manually.md)
+    * [智能解码](Decoder/Smart_Decoding.md)
 * [目录](Contents.md)
 * [译者记录](Translate_Info.md)
 
