@@ -4,4 +4,5 @@ Burp Suite是一个针对Web应用程序的安全测试的集成化平台。 它
 
 
 
-本节英文原版地址：[https://portswigger.net/burp/help/suite_gettingstarted.html](https://portswigger.net/burp/help/suite_gettingstarted.html)
+本节英文原版地址：  
+[https://portswigger.net/burp/help/suite_gettingstarted.html](https://portswigger.net/burp/help/suite_gettingstarted.html)

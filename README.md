@@ -5,8 +5,10 @@
 在每一页的结尾，会附上该页的英文原版，方便英文能力较好的朋友直接阅读
 # 在线阅读
 ---------
-本文档使用gitbook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_doc_zh_cn/content/)   
-也可以[查看GitBook的信息](https://yw9381.gitbooks.io/burp_suite_doc_zh_cn/)
+本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_doc_zh_cn/content/)   
+也可以[查看本书在GitBook的信息](https://yw9381.gitbooks.io/burp_suite_doc_zh_cn/)  
+或是[查看目录](Contents.md)
+
 # 版本记录
 ---------
 文档版本将随着 Burp 的版本更新而更新， 版本号将使用 Burp 的版本号  
@@ -58,8 +60,10 @@
 ---------
 将本书fork/pull到本地  
 新建一个分支，然后联系我认领要翻译的章节  
+使用MarkDown编辑器，md语法格式进行文档翻译及排版工作  
 完成之后Pull Request该分支  
 如没问题的话，我会合并到主分支  
+如果不太明白md的排版，可以吧翻译好的内容发送给我，我代为排版并提交  
 如有其它问题，欢迎发送issue，谢谢~
 # 开源协议
 ---------
