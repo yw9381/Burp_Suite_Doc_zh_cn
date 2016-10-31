@@ -196,6 +196,13 @@
             * [攻击菜单](Intruder/Attacks/Results_Menus/Attack_Menu.md)
             * [保存菜单](Intruder/Attacks/Results_Menus/Save_Menu.md)
             * [列菜单](Intruder/Attacks/Results_Menus/Columns_Menu.md)
+* [Repeater 组件](Repeater/README.md)
+    * [使用 Burp 的 Repeater 组件](Repeater/Using_Burp_Repeater/README.md)
+        * [发出请求](Repeater/Using_Burp_Repeater/Issuing_Requests.md)
+        * [请求历史](Repeater/Using_Burp_Repeater/Request_History.md)
+        * [Repeater 选项](Repeater/Using_Burp_Repeater/Repeater_Options.md)
+        * [管理请求标签](Repeater/Using_Burp_Repeater/Managing_Request_Tabs.md)
+    * [选项](Repeater/Opttons.md)
 * [目录](Contents.md)
 * [译者记录](Translate_Info.md)
 
