@@ -1,18 +1,20 @@
 # Burp Suite 官方文档中文版
 -------------------------
 这是由官方在 Burp Suite 所放出的Support Center中的帮助文档翻译而来的中文版  
-英文原版地址：[https://support.portswigger.net/](https://support.portswigger.net/)
+英文原版地址：[https://support.portswigger.net/](https://support.portswigger.net/)  
+在每一页的结尾，会附上该页的英文原版，方便英文能力较好的朋友直接阅读
 # 在线阅读
 ---------
-本文档使用gitbook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_doc_zh_cn/content/) 
+本文档使用gitbook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_doc_zh_cn/content/)   
+也可以[查看GitBook的信息](https://yw9381.gitbooks.io/burp_suite_doc_zh_cn/)
 # 版本记录
 ---------
 文档版本将随着 Burp 的版本更新而更新， 版本号将使用 Burp 的版本号  
 当前版本 **1.7.03** 
 # 当前阶段
 ---------
-目前进度处于全书结构创建阶段，整体创建进度如下  
-结构创建完成之后，将会分配相应页到个人，进行翻译  
+目前进度：本书结构已创建完成
+准备组建翻译团队，以页为单位分发翻译文章  
 
 已完成翻译的章节
 
@@ -20,11 +22,9 @@
 
 正在进行的章节
 
-- 暂无
+- Burp Suite Documentation (LinE)
 
 还未开始的章节
-
-- Burp Suite Documentation
 - Target
 - Proxy
 - Spider
@@ -56,7 +56,9 @@
 
 # 如何参与
 ---------
-将本书fork到本地，新建一个分支进行翻译，完成之后Pull Request该分支  
+将本书fork/pull到本地  
+新建一个分支，然后联系我认领要翻译的章节  
+完成之后Pull Request该分支  
 如没问题的话，我会合并到主分支  
 如有其它问题，欢迎发送issue，谢谢~
 # 开源协议

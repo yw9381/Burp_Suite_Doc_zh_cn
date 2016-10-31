@@ -359,5 +359,6 @@
             * [测试安装](Burp_Collaborator/Options_for_Using_Burp_Collaborator/Deploying_a_Private_Server/Testing_the_Installation.md)
             * [配置文件格式](Burp_Collaborator/Options_for_Using_Burp_Collaborator/Deploying_a_Private_Server/Configuration_File_Format.md)
 * [目录](Contents.md)
-* [译者记录](Translate_Info.md)
+* [译者简介](Translate_Introduction.md)
+* [翻译详情](Translate_Info.md)
 
