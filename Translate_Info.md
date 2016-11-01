@@ -11,15 +11,16 @@
 ----------------
 * [Burp Suite 文档](Burp_Suite_Documentation/README.md) --->>> LinE
     * [入门](Burp_Suite_Documentation/Getting_Started/README.md) --->>> LinE
-        * [启动 Burp](Burp_Suite_Documentation/Getting_Started/Launching_Burp.md)
-        * [命令行参数](Burp_Suite_Documentation/Getting_Started/Command_Line_Arguments.md)
-        * [启动向导](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/README.md)
-            * [选择一个工程](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/Select_a_Project.md)
-            * [选择一个配置](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/Select_a_Configuration.md)
-            * [从一个不同的Burp打开工程](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/Open_a_project_From_a_Different_Burp.md)
-        * [查看配置](Burp_Suite_Documentation/Getting_Started/Display_Settings.md)
-        * [Burp 的基本使用](Burp_Suite_Documentation/Getting_Started/The_Basics_Of_Using_Burp.md)
-        * [下一步](Burp_Suite_Documentation/Getting_Started/Next_Steps.md)
+        * [启动 Burp](Burp_Suite_Documentation/Getting_Started/Launching_Burp.md) --->>> LinE
+        * [命令行参数](Burp_Suite_Documentation/Getting_Started/Command_Line_Arguments.md) --->>> LinE
+        * [启动向导](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/README.md) --->>> LinE
+            * [选择一个工程](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/Select_a_Project.md) --->>> LinE
+            * [选择一个配置](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/Select_a_Configuration.md) --->>> LinE
+            * [从一个不同的Burp打开工程](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/Open_a_project_From_a_Different_Burp.md) --->>> LinE
+        * [界面&字体设置](Burp_Suite_Documentation/Getting_Started/Display_Settings.md) --->>> LinE
+        * [浏览器设置](Burp_Suite_Documentation/Getting_Started/Configuring_Your_Browser.md) --->>> LinE
+        * [Burp 的基本使用](Burp_Suite_Documentation/Getting_Started/The_Basics_Of_Using_Burp.md) --->>> LinE
+        * [下一步](Burp_Suite_Documentation/Getting_Started/Next_Steps.md) --->>> LinE
     * [Burp 工程](Burp_Suite_Documentation/Burp_Projects/README.md)
         * [工程文件](Burp_Suite_Documentation/Burp_Projects/Project_Files.md)
         * [配置文件](Burp_Suite_Documentation/Burp_Projects/Configuration_Files/README.md)
