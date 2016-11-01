@@ -1,14 +1,8 @@
 # Burp Suite文档
 
-Burp Suite是一个对Web应用进行安全测试的集成平台。当初设计的时候就让他支持手动测试，不仅如此，还提供了对整个测试过程的完全控制，以及对结果的深入分析。Burp包含几个工程具，它们可以相互协作，实现您在测试中遇到的任何要求。 它可以用自定义的方式自动化测试各种任务，并允许您结合手动和自动化技术，使您的测试更快，更可靠且更有趣。  
-  
+Burp Suite是一个对Web应用进行安全测试的集成平台。Burp Suite以支持测试实践为设计理念，用户可以对测试行为进行完全的控制以及对结果的深入分析。Burp Suite包含数个可以相互协作的工具使您能在测试过程中搞定所有任务。Burp Suite可以自定义各种自动任务，并且让您组合使用手动和自动技术使您的测试更快，更可靠，更有趣。  
    
-注意：像其他安全测试软件一样，Burp Suite所具有的功能可能会损坏目标系统。 对某些缺陷的测试可能会以非标准的方式与目标进行交互，这种交互方式将可能导致某些较为脆弱的系统发生问题。 所以在使用Burp时应当小心谨慎，在使用前建议阅读相关文档，在测试之前应当备份目标系统，不要对未授权的系统使用Burp，或是具有授权，但是您和系统所有者不愿承担系统损坏的风险。
-
-
-Burp Suite is an integrated platform for performing security testing of web applications. It is designed to support the methodology of a hands-on tester, and gives you complete control over the actions that it performs, and deep analysis of the results. Burp contains several tools that work together to carry out virtually any task you will encounter in your testing. It can automate all kinds of tasks in customizable ways, and lets you combine manual and automated techniques to make your testing faster, more reliable and more fun.
-Note: Like any security testing software, Burp Suite contains functionality that can damage target systems. Testing for security flaws inherently involves interacting with targets in non-standard ways that can cause problems in some vulnerable targets. You should take due care when using Burp, read all documentation before use, back up target systems before testing, and not use Burp against any systems for which you are not authorized by the system owner, or for which the risk of damage is not accepted by you and the system owner.
-
+注意：同其他安全测试软件一样，Burp Suite包含了可能会损坏目标系统的功能。对安全漏洞进行的测试包含非标准的交互行为，这可能使某些脆弱的系统产生问题。所以在使用Burp Suite时应当小心谨慎，在使用前阅读相关文档，在测试之前应当备份目标系统，对未授权的系统或是虽然有授权，但是您和目标系统所有者无法接受系统损坏的风险时，不应使用Burp Suite。
 
 #####请点击以下链接获取有关Burp套件的帮助：
 * [Burp 入门](Getting_Started/README.md) - 如果你从未接触过 Burp 或是不了解其关键的基础信息，请从这里开始学习 Burp。
