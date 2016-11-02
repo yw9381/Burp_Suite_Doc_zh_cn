@@ -9,3 +9,6 @@
 * [**开始使用 Burp Intruder 组件**](../../Intruder/Getting_started.md)
 * [**使用 Burp Suite**](../Using_Burp_Suite/README.md)
 * [**故障排除常见问题**](../Troubleshooting.md)
+
+本节英文原版地址：  
+[https://portswigger.net/burp/help/suite_gettingstarted.html#nextsteps](https://portswigger.net/burp/help/suite_gettingstarted.html#nextsteps)
