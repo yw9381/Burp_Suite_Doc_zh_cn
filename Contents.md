@@ -1,6 +1,6 @@
 # 简介
 -----
-* [简介](README.md)
+* [本书简介](README.md)
 
 # Burp Suite 文档
 ----------------
@@ -384,13 +384,13 @@
         * [临时文件位置](Options/Misc_User_Options/Temporary_Files_Location.md)
         * [性能反馈](Options/Misc_User_Options/Performance_Feedback.md)
 
-# Burp 合作者
+# Burp Collaborator
 ------------
-* [Burp 合作者](Burp_Collaborator/README.md)
-    * [什么是 Burp 合作者？](Burp_Collaborator/What_Is_Burp_Collaborator.md)
-    * [合作者如何工作](Burp_Collaborator/How_Burp_Collaborator_Works.md)
-    * [合作者数据的安全性](Burp_Collaborator/Security_of_Collaborator_Data.md)
-    * [使用合作者的选项](Burp_Collaborator/Options_for_Using_Burp_Collaborator/README.md)
+* [Burp Collaborator 组件](Burp_Collaborator/README.md)
+    * [什么是 Burp Collaborator？](Burp_Collaborator/What_Is_Burp_Collaborator.md)
+    * [Collaborator 如何工作](Burp_Collaborator/How_Burp_Collaborator_Works.md)
+    * [Collaborator 数据的安全性](Burp_Collaborator/Security_of_Collaborator_Data.md)
+    * [使用 Collaborator 的选项](Burp_Collaborator/Options_for_Using_Burp_Collaborator/README.md)
         * [在私有服务器上部署](Burp_Collaborator/Options_for_Using_Burp_Collaborator/Deploying_a_Private_Server/README.md)
             * [安装和执行](Burp_Collaborator/Options_for_Using_Burp_Collaborator/Deploying_a_Private_Server/Installation_And_Execution.md)
             * [在闭环网络下的基本设置](Burp_Collaborator/Options_for_Using_Burp_Collaborator/Deploying_a_Private_Server/Basic_Set-up_On_A_Closed_Network.md)
@@ -401,6 +401,14 @@
             * [指标](Burp_Collaborator/Options_for_Using_Burp_Collaborator/Deploying_a_Private_Server/Metrics.md)
             * [测试安装](Burp_Collaborator/Options_for_Using_Burp_Collaborator/Deploying_a_Private_Server/Testing_the_Installation.md)
             * [配置文件格式](Burp_Collaborator/Options_for_Using_Burp_Collaborator/Deploying_a_Private_Server/Configuration_File_Format.md)
+
+# Burp Infiltrator
+------------
+* [Burp Infiltrator 组件](Burp_Infiltrator/README.md)
+    * [Burp Infiltrator 如何工作](Burp_Infiltrator/How_Burp_Infiltrator_Works.md)
+    * [安装 Burp Infiltrator](Burp_Infiltrator/Installing_Burp_Infiltrator/README.md)
+        * [非交互式安装](Burp_Infiltrator/Installing_Burp_Infiltrator/Non-interactive_Installation.md)
+    * [配置选项](Burp_Infiltrator/Configuration_Options.md)
 * [目录](Contents.md)
 * [译者简介](Translate_Introduction.md)
 * [翻译详情](Translate_Info.md)

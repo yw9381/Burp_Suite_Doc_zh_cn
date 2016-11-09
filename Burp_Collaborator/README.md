@@ -1,2 +1,2 @@
-# Burp 合作者
+# Burp Collaborator 组件
 
