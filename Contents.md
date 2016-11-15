@@ -5,7 +5,7 @@
 # Burp Suite 文档
 ----------------
 * [Burp Suite 文档](Burp_Suite_Documentation/README.md)
-    * [入门](Burp_Suite_Documentation/Getting_Started/README.md)
+    * [Burp 入门](Burp_Suite_Documentation/Getting_Started/README.md)
         * [启动 Burp](Burp_Suite_Documentation/Getting_Started/Launching_Burp.md)
         * [命令行参数](Burp_Suite_Documentation/Getting_Started/Command_Line_Arguments.md)
         * [启动向导](Burp_Suite_Documentation/Getting_Started/Startup_Wizard/README.md)

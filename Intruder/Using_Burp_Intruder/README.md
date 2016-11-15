@@ -1,2 +1,2 @@
-# 使用 Burp Intruder
+# 如何使用 Intruder 组件
 

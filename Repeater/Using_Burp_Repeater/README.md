@@ -1,2 +1,2 @@
-# 使用 Burp 的 Repeater 组件
+# 如何使用 Repeater 组件
 
