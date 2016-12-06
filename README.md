@@ -41,6 +41,7 @@
 - [ ] Suite Functions
 - [ ] Options
 - [ ] Burp Collaborator
+- [ ] Burp Infiltrator
 
 # 译者记录
 ---------
