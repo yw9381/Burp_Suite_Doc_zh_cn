@@ -26,28 +26,21 @@
 目前进度：本书结构已创建完成
 准备组建翻译团队，以页为单位分发翻译文章  
 
-已完成翻译的章节
+翻译情况
 
-- 暂无
-
-正在进行的章节
-
-- Burp Suite Documentation (LinE)
-
-还未开始的章节
-
-- Target
-- Proxy
-- Spider
-- Scanner
-- Intruder
-- Repeater
-- Squencer
-- Decoder
-- Extender
-- Suite Functions
-- Options
-- Burp Collaborator
+- [x] Burp Suite Documentation (LinE)
+- [ ] Target
+- [ ] Proxy
+- [ ] Spider
+- [ ] Scanner
+- [ ] Intruder
+- [ ] Repeater
+- [ ] Squencer
+- [ ] Decoder
+- [ ] Extender
+- [ ] Suite Functions
+- [ ] Options
+- [ ] Burp Collaborator
 
 # 译者记录
 ---------
