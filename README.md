@@ -1,8 +1,7 @@
 # Burp Suite 2.0 官方文档中文版
 -------------------------
 这是由官方在 Burp Suite 所放出的Support Center中的帮助文档翻译而来的中文版  
-英文原版地址：[https://support.portswigger.net/](https://support.portswigger.net/)  
-在每一页的结尾，会附上该页的英文原版，方便英文能力较好的朋友直接阅读
+英文原版地址：[https://portswigger.net/burp/documentation](https://portswigger.net/burp/documentation)  
 # 在线阅读
 ---------
 本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2-0_zh_cn/content/)   
