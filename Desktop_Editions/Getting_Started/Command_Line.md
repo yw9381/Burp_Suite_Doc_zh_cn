@@ -1,24 +1,22 @@
 本页适用于`专业版`及`社区版`
 
 # 从命令行启动 Burp
-To launch Burp Suite from the command line, you should download the plain JAR file version of Burp. The JAR file can be executed using Java, and there is no need to unpack the contents of the JAR file itself.
+要从命令行启动Burp Suite，您应该下载`JAR 版本`的Burp。可以使用`Java`来执行JAR文件，无需解压JAR文件。
 
-First check whether Java is installed:
+首先，你需要检查是否已经安装了Java：
 
-* At a command prompt, type: java -version
-* If Java is installed, you will see a message like: java version "1.8.0_162" . To run Burp, you will need a version of Java that is 1.8 or later.
-* If Java is not installed, or if your version of Java is older than 1.8, you will need to install Java. Download the latest Java Runtime Environment (JRE), run the installer, and then open a new command prompt and start again.
-With Java installed, in your command prompt type a command like:
-
+* 打开命令行，输入`java -version`来查看
+* 如果Java已经安装，你应该可以看到类似于`java version "1.8.0_162"`的输出。如果需要运行Burp，Java的版本应当不低于`1.8`.
+* 如果未安装Java，或者您的Java版本低于1.8，则你需要安装或是升级Java。你可以去Oracle官网下载最新的[Java运行时环境（JRE）](http://www.oracle.com/technetwork/java/javase/downloads/index.html)，然后运行安装程序，重新打开命令行，再次进行验证。
+当确定Java已经安装且版本大于1.8后，可以在命令行下键入如下命令来启动Burp：
 ```shell
 java -jar -Xmx4g /path/to/burp.jar
 ```
+在命令行中，`4`是要分配给Burp的内存量（以GB为单位），`/path/to/burp.jar`是你电脑上Burp JAR文件的位置。
 
-where 4 is the amount of memory (in Gb) that you want to assign to Burp, and `/path/to/burp.jar` is the location of the Burp JAR file on your computer.
-
-If everything is working, a splash screen should display for a few seconds, and then the main startup wizard window should appear. If nothing happens, or if an error message appears, please refer to the troubleshooting help.
+如果一切正常，那么你可以看到Burp显示的启动画面，等待几秒钟后，可以看到Burp显示了向导窗口。如果没有任何反应，或者出现错误消息，请参阅[故障排除](../Troubleshooting.md)。
 
 ## 命令行参数
-Various command line arguments are available to control Burp's behavior on startup. For example, you can tell Burp to prevent reloading of extensions, open a particular Burp project file, or load a particular configuration file.
+命令行参数可用于控制Burp在启动时的行为。例如，您可以禁止Burp加载[扩展](../Tools/Extender/README.md)，打开特定的Burp项目文件或加载特定的配置文件。
 
-You can view a list of available options using the command line argument `--help` .
+您可以使用命令行参数`--help`查看可用选项列表。

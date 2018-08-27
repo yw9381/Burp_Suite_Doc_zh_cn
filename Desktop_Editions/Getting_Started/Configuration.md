@@ -1,44 +1,44 @@
 本页适用于`专业版`及`社区版`
 
-# Configuration
-You can use Burp's configuration library to manage different Burp configurations for particular tasks. For example, you might create different configurations for different types of scans. Or you might need to load a particular configuration when working on a particular client engagement. You can also save and load configurations in the form of configuration files.
+# 配置
+您可以使用Burp的配置库来管理特定任务中不同Burp配置。例如，您可以为不同类型的扫描创建不同的配置。或是需要在处理特定客户端参与时来加载特定配置。您还可以以配置文件的形式保存和加载配置。
 
-## Configuration library
-Burp's configuration library stores configuration options for different types of task, and makes these easily available when performing actions like launching scans.
+## 配置库
+Burp的配置库存储了不同类型任务的配置选项，并在执行启动扫描等操作时可以使用这些配置，例如：[执行扫描](../Scanning_Web_Sites/Scan_Launcher.md)。
 
-The configuration library contains:
+配置库包含如下内容：
 
-Built-in configurations - These are predefined configurations that are useful for common purposes. For example, performing a fast crawl, or an audit only for critical vulnerabilities.
-Custom configurations - These are configurations defined and managed by the user.
-You can access Burp's configuration library via the Burp menu, and via other relevant functions like the scan launcher.
+* **内置配置** - 这些是Burp的默认配置，可用于大部分情况。例如，仅针对关键漏洞执行快速爬虫或审计。
+* **自定义配置** - 这些是用户定义和管理的配置。
+您可以通过Burp菜单或其他功能（例如：[执行扫描](../Scanning_Web_Sites/Scan_Launcher.md)）访问Burp的配置库。
 
-Each item in the configuration library applies to a specific function, such as "Crawling". When you create a new custom configuration or edit an existing one, Burp shows a configuration editor for the chosen function. There are typically multiple areas of configuration that can be defined for a given function. The configuration editor lets you choose which areas will be defined in that configuration. If a configuration does not define a particular area, then default or existing values will be used. This is useful because many Burp functions let you select multiple configurations; these are applied in sequence, allowing you to build up an effective configuration from multiple specific ones.
+配置库中的每个工程都适用于特定的功能，例如：`Crawling`。当您创建新的自定义配置或编辑现有配置时，Burp会显示所选功能的配置编辑器。这样你就可以给某个功能单独定义多个配置区域。配置编辑器允许您选择将在该配置中定义的区域。如果配置未定义特定区域，则将使用默认值。许多Burp的功能允许您选择多个配置，这些配置是按以此叠加应用的，这允许您从多个特定的配置中构建出最终有效的配置。
 
-Each configuration must be given a distinct name. You can export or import configurations as configuration files. These use a JSON format to represent the details of the configuration.
+你需要为每个配置指定一个不同的名称。您可以将配置导出或导入为配置文件。它们使用[JSON格式](#配置文件格式)来表示配置的详细信息。
 
-## User and Project Configuration Files
-Separate configuration files can be used to manage user-level and project-level options.
+## 用户及工程配置文件
+单独的配置文件可用于管理[用户级和工程级选项](../Options/README.md)。
 
-User configuration files contain options relating to the individual user's environment and UI, including:
+用户配置文件包含与单个用户的环境和UI相关的选项，包括：
 
-* Everything in the User options tab.
-* The Extender tool, including the list of configured extensions.
-* UI-related options in other tools, such as the selected view of the Target site map.
+* [用户选项](../Options/README.md)选项卡中的所有内容。
+* [Extender](../Tools/Extender/README.md)工具，包括已配置的扩展等。
+* 其他与UI相关的选项，例如：[Target site map](../Tools/Target/Target_Site_Map/README.md)的选定视图。
 
-Project configuration files contain options relating to the work that is being performed on a particular target application, including:
+工程配置文件包含在特定目标上执行的工作相关的选项，包括：
 
-* Everything in the Project options tab.
-* Non-UI-related options in individual Burp tools, such as Proxy and Scanner.
+* [工程选项](../Options/README.md)选项卡中的所有内容。
+* 各个Burp工具中的非UI相关选项，例如[Proxy](../Tools/Proxy/README.md)和[Scanner](../Tools/Scanner/README.md)。
 
-## Loading and Saving Configuration Files
-You can load and save configuration files in various ways:
+## 读取和保存配置文件
+您可以通过各种方式来加载和保存配置文件：
 
-* In Burp's configuration library, you can export or import configurations as configuration files.
-* From the Burp menu, you can load or save configuration files for all user-level or project-level options.
-* From individual configuration panels throughout Burp, you can use the "Options" button to load or save the configuration for just that panel.
-* In the startup wizard, when creating or reopening a project, you can specify a configuration file from which to load project-level options.
-* When starting Burp from the command line, you can use command line arguments to specify one or more configuration files from which to load user-level or project-level options.
-* Burp extensions can load or save configuration file contents via the API.
+* 在Burp的[配置库](#配置库)中，您可以将当前的配置导出或是导入。
+* 从Burp菜单中，您可以加载或保存所有用户级或工程级选项的配置文件。
+* 从Burp中的各个配置面板，您可以使用`Options`按钮加载或保存该面板的配置。
+* 在[开始向导](README.md#开始向导)中创建或重新打开工程时，可以指定用于加载工程级选项的配置文件。
+* 从命令行启动Burp时，可以使用[命令行参数](Command_Line.md#命令行参数)指定一个或多个配置文件，从中可以加载用户级或工程级选项。
+* [Burp扩展](../Tools/Extender/README.md)可以通过API加载或保存配置文件内容。
 
-## Configuration File Format
-Configuration files use the JSON format. The structure and naming scheme used within the JSON correspond to the way that options are presented within the Burp UI. The easiest way to generate a configuration file for a particular purpose is to create the desired configuration within the Burp UI and save a configuration file from it. If preferred, you can also hand-edit an existing configuration file, since the contents are human-readable and self-documenting.
+## 配置文件格式
+配置文件使用`JSON格式`。JSON中使用的结构和命名方案对应于在Burp UI中呈现选项的方式。为特定目的生成配置文件的最简单方法是在Burp UI中创建所需的配置并从中[保存配置文件](#读取和保存配置文件)。如果你比较了解其配置文件的内容。您可以手动编辑现有的配置文件。

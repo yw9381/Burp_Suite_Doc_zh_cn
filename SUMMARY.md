@@ -5,7 +5,7 @@
 * [文档目录](Contents.md)
 * [Burp Suite 专业版及社区版](Desktop_Editions/README.md)
     * [Burp 入门](Desktop_Editions/Getting_Started/README.md)
-        * [启动 Burp](Desktop_Editions/Getting_Started/README.md#启动-Burp)
+        * [启动 Burp](Desktop_Editions/Getting_Started/README.md#启动-burp)
         * [开始向导](Desktop_Editions/Getting_Started/README.md#开始向导)
         * [选择工程](Desktop_Editions/Getting_Started/README.md#选择工程)
         * [选择配置](Desktop_Editions/Getting_Started/README.md#选择配置)
