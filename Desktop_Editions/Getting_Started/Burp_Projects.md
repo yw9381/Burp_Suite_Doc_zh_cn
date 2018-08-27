@@ -1,0 +1,33 @@
+本页适用于`专业版`及`社区版`
+
+# Working With Burp Projects
+Burp projects are used to manage your work on different tasks or target applications. You can create two types of Burp projects:
+
+* **Temporary projects** are useful for quick tasks where your work doesn't need to be saved. All data is held in memory, and is lost when Burp exits.
+* **Disk-based projects** allow you to save your work and resume it later. All data is held on disk in a project file.
+
+## Project Files
+Burp project files hold all of the data and configuration for a particular piece of work. Data is saved incrementally into the file as you work. There is no need to specifically "save" your work when you are finished.
+
+You can reopen an existing project when Burp starts, using the startup wizard or command line arguments. Burp will reload the project's data and configuration, and you can resume working where you left off.
+
+**Note**: Testing of some applications can generate significant amounts of data, and so Burp project files can potentially grow to be very large (e.g. several gigabytes in size). You should ensure that you have sufficient free disk space available when using Burp project files.
+
+## Saving a Copy of a Project
+You can save a copy of the current project into a new project file by selecting "Save copy of project" from the Burp menu.
+
+You can choose the tools whose data you want to be included in the new project file, and whether you only want to save in-scope items.
+
+This feature can be useful to create a smaller project file after you have refined your project scope, or deleted some unwanted data.
+
+You can continue using Burp while the new project is being saved, although you may experience some brief delays if you try to perform an operation on data that Burp is in the process of saving, to prevent any data corruption.
+
+## Saving the Burp Collaborator Identifier
+When saving a copy of a project, you will be prompted whether to include within the project file the unique identifier that Burp uses to retrieve any ongoing Burp Collaborator interactions that are associated with the project. If two instances of Burp share the same identifier in ongoing work, then some Collaborator-based issues may be missed or incorrectly reported. You should not include the Collaborator identifier if you plan to pass the project file on to someone else and you do not want them to be able to receive details of any ongoing Collaborator interactions that are associated with your testing.
+
+## Importing Projects
+If you are using a disk-based project, then you can import another project into the current project by selecting "Import project" from the Burp menu.
+
+You can choose the tools whose data you want to import from the project file.
+
+You can continue using Burp while the project is being imported, although you may experience some brief delays if you try to perform an operation on data that Burp is in the process of importing, to prevent any data corruption.

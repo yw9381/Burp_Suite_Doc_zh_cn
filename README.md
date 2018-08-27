@@ -4,9 +4,7 @@
 英文原版地址：[https://portswigger.net/burp/documentation](https://portswigger.net/burp/documentation)  
 # 在线阅读
 ---------
-本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2-0_zh_cn/content/)   
-也可以[查看本书在GitBook的信息](https://yw9381.gitbooks.io/burp_suite_documentation_2-0_zh_cn/)  
-或是[查看目录](Contents.md)
+本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/content/)，也可以[查看本书在GitBook的信息](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/)或是[查看目录](Contents.md)
 
 # 贡献力量
 ---------
@@ -25,7 +23,7 @@
 使用MarkDown编辑器，md语法格式进行文档翻译及排版工作  
 完成之后Pull Request该分支  
 如没问题的话，我会合并到主分支  
-如果不太明白md的排版，可以吧翻译好的内容发送给我，我代为排版并提交  
+如果不太明白md的排版，可以把翻译好的内容发送给我，我代为排版并提交  
 如有其它问题，欢迎发送issue，谢谢~
 # 开源协议
 ---------
