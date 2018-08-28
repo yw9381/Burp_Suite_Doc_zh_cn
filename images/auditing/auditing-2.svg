@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="125" viewBox="0 0 807 125">
+  <title>auditing-2</title>
+  <g>
+    <rect x="45.5" y="89" width="297" height="16" fill="#fcf446"/>
+    <text transform="translate(1.5 29)" font-size="12" fill="#333332" font-family="Courier, Courier">POST /catalog/search HTTP/1.1<tspan x="0" y="14.4">Host: example.org</tspan><tspan x="0" y="28.8">Content-Type: application/x-www-form-urlencoded</tspan><tspan x="0" y="43.2">Content-Length: 47</tspan><tspan x="0" y="72">Query=%22%3e%3cscript%3ealert(1)%3c%2fscript%3e</tspan></text>
+  </g>
+</svg>

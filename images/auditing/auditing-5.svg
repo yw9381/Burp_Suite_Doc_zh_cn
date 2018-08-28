@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="220" viewBox="0 0 807 220">
+  <title>auditing-5</title>
+  <g>
+    <rect x="95.5" y="183.5" width="200" height="18" fill="#fcf446"/>
+    <rect x="46.5" y="89.5" width="274" height="18" fill="#fcf446"/>
+    <polygon points="153.75 119.77 168.84 161.07 163.41 163.06 173.5 171.5 175.77 158.54 170.34 160.53 155.25 119.23 153.75 119.77" fill="#606467"/>
+    <text transform="translate(2.5 30)" font-size="12" fill="#333332" font-family="Courier, Courier">POST /catalog/search HTTP/1.1<tspan x="0" y="14.4">Host: example.org</tspan><tspan x="0" y="28.8">Content-Type: application/x-www-form-urlencoded</tspan><tspan x="0" y="43.2">Content-Length: 44</tspan><tspan x="0" y="72">Query=Ij48c2NyaXB0PmFsZXJ0KDEpPC9zY3JpcHQ%2b</tspan></text>
+    <text transform="translate(98.5 196)" font-size="12" fill="#333332" font-family="Courier, Courier">&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;</text>
+  </g>
+</svg>

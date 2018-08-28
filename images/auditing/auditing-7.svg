@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="375" viewBox="0 0 807 375">
+  <title>auditing-7</title>
+  <g>
+    <rect x="44" y="208" width="299" height="18" fill="#fcf446"/>
+    <rect x="101" y="338" width="299" height="18" fill="#fcf446"/>
+    <rect x="188" y="20" width="299" height="18" fill="#fcf446"/>
+    <polygon points="119.21 74.5 119.21 107.11 113.42 107.11 120 118.5 126.58 107.11 120.79 107.11 120.79 74.5 119.21 74.5" fill="#606467"/>
+    <polygon points="119.21 248.5 119.21 281.11 113.42 281.11 120 292.5 126.58 281.11 120.79 281.11 120.79 248.5 119.21 248.5" fill="#606467"/>
+    <text transform="translate(2 32.17)" font-size="12" fill="#333332" font-family="Courier, Courier">GET /catalog/search?Query=%22%3e%3cscript%3ealert(1)%3c%2fscript%3e HTTP/1.1<tspan x="0" y="14.4">Host: example.org</tspan></text>
+    <text transform="translate(2 148.17)" font-size="12" fill="#333332" font-family="Courier, Courier">POST /catalog/search HTTP/1.1<tspan x="0" y="14.4">Host: example.org</tspan><tspan x="0" y="28.8">Content-Type: application/x-www-form-urlencoded</tspan><tspan x="0" y="43.2">Content-Length: 47</tspan><tspan x="0" y="72">Query=%22%3e%3cscript%3ealert(1)%3c%2fscript%3e</tspan></text>
+    <text transform="translate(2 321.17)" font-size="12" fill="#333332" font-family="Courier, Courier">GET /catalog/search HTTP/1.1<tspan x="0" y="14.4">Host: example.org</tspan><tspan x="0" y="28.8">Cookie: Query=%22%3e%3cscript%3ealert(1)%3c%2fscript%3e</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="220" viewBox="0 0 807 220">
+  <title>auditing-1</title>
+  <g>
+    <rect x="44.5" y="22" width="52" height="17" fill="#fcf446"/>
+    <rect x="180" y="22.5" width="83" height="16" fill="#fcf446"/>
+    <rect x="102" y="22.5" width="44" height="16" fill="#fcf446"/>
+    <rect x="84" y="51.5" width="386" height="17" fill="#fcf446"/>
+    <rect x="65" y="94.5" width="249" height="17" fill="#fcf446"/>
+    <rect x="109" y="137.5" width="206" height="17" fill="#fcf446"/>
+    <rect x="44.5" y="182" width="22" height="16" fill="#fcf446"/>
+    <rect x="124.5" y="182" width="43" height="16" fill="#fcf446"/>
+    <rect x="240.5" y="182" width="22" height="16" fill="#fcf446"/>
+    <text transform="translate(1.5 35)" font-size="12" fill="#333332" font-family="Courier, Courier">POST /catalog/search?tok=19476137218 HTTP/1.1<tspan x="0" y="14.4">Host: example.org</tspan><tspan x="0" y="28.8">User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:56.0)</tspan><tspan x="0" y="43.2">Accept: text/html,application/xhtml+xml,application/xml</tspan><tspan x="0" y="57.6">Accept-Encoding: gzip, deflate</tspan><tspan x="0" y="72">Referer: https://example.org/catalog/search</tspan><tspan x="0" y="86.4">Content-Type: application/x-www-form-urlencoded</tspan><tspan x="0" y="100.8">Content-Length: 36</tspan><tspan x="0" y="115.2">Cookie: sessid=fkd29fh2kg0t0g13fdf; lang=en</tspan><tspan x="0" y="129.6">Connection: close</tspan><tspan x="0" y="158.4">Query=abc&amp;Action=Search&amp;Category=183</tspan></text>
+  </g>
+</svg>

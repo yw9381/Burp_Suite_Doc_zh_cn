@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="420" viewBox="0 0 807 420">
+  <title>auditing-14</title>
+  <g>
+    <rect x="3" y="117.5" width="100" height="121" fill="#fcf1e0" stroke="#ffaf10" stroke-miterlimit="10"/>
+    <rect x="218" y="117.5" width="100" height="25" fill="#fcf1e0" stroke="#ffaf10" stroke-miterlimit="10"/>
+    <rect x="217" y="149.5" width="100" height="25" fill="#fcf1e0" stroke="#ffaf10" stroke-miterlimit="10"/>
+    <rect x="217" y="181.5" width="100" height="25" fill="#fcf1e0" stroke="#ffaf10" stroke-miterlimit="10"/>
+    <rect x="217" y="213.5" width="100" height="25" fill="#fcf1e0" stroke="#ffaf10" stroke-miterlimit="10"/>
+    <rect x="3" y="245.5" width="100" height="153" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="218" y="245.5" width="100" height="25" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="217" y="277.5" width="100" height="25" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="217" y="309.5" width="100" height="25" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="217" y="341.5" width="100" height="25" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="217" y="373.5" width="100" height="25" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="3" y="21.5" width="100" height="89" fill="#d0f1f7" stroke="#60bcd8" stroke-miterlimit="10"/>
+    <rect x="218" y="21.5" width="100" height="25" fill="#d0f1f7" stroke="#60bcd8" stroke-miterlimit="10"/>
+    <rect x="217" y="53.5" width="100" height="25" fill="#d0f1f7" stroke="#60bcd8" stroke-miterlimit="10"/>
+    <rect x="217" y="85.5" width="100" height="25" fill="#d0f1f7" stroke="#60bcd8" stroke-miterlimit="10"/>
+    <g>
+      <line x1="2.5" y1="242" x2="6.5" y2="242" fill="none" stroke="#009145" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="14.48" y1="242" x2="361.51" y2="242" fill="none" stroke="#009145" stroke-miterlimit="10" stroke-width="2" stroke-dasharray="7.98 7.98"/>
+      <line x1="365.5" y1="242" x2="369.5" y2="242" fill="none" stroke="#009145" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <polygon points="103 36.29 205 36.29 205 42.08 216.39 35.5 205 28.92 205 34.71 103 34.71 103 36.29" fill="#606467"/>
+    <polygon points="104.11 67.29 206.11 67.29 206.11 73.08 217.5 66.5 206.11 59.92 206.11 65.71 104.11 65.71 104.11 67.29" fill="#606467"/>
+    <polygon points="104.11 98.29 206.11 98.29 206.11 104.08 217.5 97.5 206.11 90.92 206.11 96.71 104.11 96.71 104.11 98.29" fill="#606467"/>
+    <polygon points="103 130.29 205 130.29 205 136.08 216.39 129.5 205 122.92 205 128.71 103 128.71 103 130.29" fill="#606467"/>
+    <polygon points="104.11 161.29 206.11 161.29 206.11 167.08 217.5 160.5 206.11 153.92 206.11 159.71 104.11 159.71 104.11 161.29" fill="#606467"/>
+    <polygon points="104.11 192.29 206.11 192.29 206.11 198.08 217.5 191.5 206.11 184.92 206.11 190.71 104.11 190.71 104.11 192.29" fill="#606467"/>
+    <polygon points="104.11 224.29 206.11 224.29 206.11 230.08 217.5 223.5 206.11 216.92 206.11 222.71 104.11 222.71 104.11 224.29" fill="#606467"/>
+    <g>
+      <path d="M339.16,62.34a8,8,0,1,0,0,11.32A8,8,0,0,0,339.16,62.34Zm-.43,10.9a7.41,7.41,0,1,1,0-10.48A7.42,7.42,0,0,1,338.73,73.24Z" fill="#70d16d"/>
+      <polygon points="332.02 70.69 328.78 67.44 328.37 67.85 332.02 71.5 338.62 64.9 338.22 64.5 332.02 70.69" fill="#70d16d"/>
+    </g>
+    <g>
+      <path d="M339.16,188.34a8,8,0,1,0,0,11.32A8,8,0,0,0,339.16,188.34Zm-.43,10.9a7.41,7.41,0,1,1,0-10.48A7.42,7.42,0,0,1,338.73,199.24Z" fill="#70d16d"/>
+      <polygon points="332.02 196.69 328.78 193.44 328.37 193.85 332.02 197.5 338.62 190.9 338.22 190.5 332.02 196.69" fill="#70d16d"/>
+    </g>
+    <g>
+      <path d="M339.16,284.34a8,8,0,1,0,0,11.32A8,8,0,0,0,339.16,284.34Zm-.43,10.9a7.41,7.41,0,1,1,0-10.48A7.42,7.42,0,0,1,338.73,295.24Z" fill="#70d16d"/>
+      <polygon points="332.02 292.69 328.78 289.44 328.37 289.85 332.02 293.5 338.62 286.9 338.22 286.5 332.02 292.69" fill="#70d16d"/>
+    </g>
+    <g>
+      <path d="M339.16,317.34a8,8,0,1,0,0,11.32A8,8,0,0,0,339.16,317.34Zm-.43,10.9a7.41,7.41,0,1,1,0-10.48A7.42,7.42,0,0,1,338.73,328.24Z" fill="#d60000"/>
+      <polygon points="337.05 319 333.5 322.55 329.94 319 329.5 319.44 333.05 323 329.5 326.56 329.94 327 333.5 323.45 337.05 327 337.5 326.56 333.94 323 337.5 319.44 337.05 319" fill="#d60000"/>
+    </g>
+    <path d="M435.5,323.79h82.62s.14,0,.17,0V241.92a2.64,2.64,0,0,0,0-.71h-8v-5.79l-10.47,6.05-.92.53.92.53,10.47,6.05v-5.79h6.46a2.53,2.53,0,0,1,0,.56v78.84s-.09,0-.13,0H435.5Z" fill="#db1d1d"/>
+    <polygon points="103 258.29 205 258.29 205 264.08 216.39 257.5 205 250.92 205 256.71 103 256.71 103 258.29" fill="#606467"/>
+    <polygon points="104.11 290.12 206.11 290.12 206.11 295.9 217.5 289.32 206.11 282.75 206.11 288.53 104.11 288.53 104.11 290.12" fill="#606467"/>
+    <polygon points="104.11 321.94 206.11 321.94 206.11 327.73 217.5 321.15 206.11 314.57 206.11 320.36 104.11 320.36 104.11 321.94" fill="#606467"/>
+    <polygon points="104.11 354.79 206.11 354.79 206.11 360.58 217.5 354 206.11 347.42 206.11 353.21 104.11 353.21 104.11 354.79" fill="#606467"/>
+    <polygon points="104.11 386.29 206.11 386.29 206.11 392.08 217.5 385.5 206.11 378.92 206.11 384.71 104.11 384.71 104.11 386.29" fill="#606467"/>
+    <text transform="translate(16.48 184)" font-size="11" fill="#ffaf10" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Check for XSS</text>
+    <text transform="translate(238.5 135)" font-size="11" fill="#ffaf10" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 4</text>
+    <text transform="translate(237.5 167)" font-size="11" fill="#ffaf10" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 5</text>
+    <text transform="translate(237.5 199)" font-size="11" fill="#ffaf10" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 6</text>
+    <text transform="translate(237.5 231)" font-size="11" fill="#ffaf10" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 7</text>
+    <text transform="translate(25.69 316)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Check for <tspan x="-8.05" y="13.2">SQL injection</tspan></text>
+    <text transform="translate(238.5 263)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 8</text>
+    <text transform="translate(237.5 295)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 9</text>
+    <text transform="translate(237.5 327)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 10</text>
+    <text transform="translate(237.5 359)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 11</text>
+    <text transform="translate(239.5 391)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 12</text>
+    <text transform="translate(18.65 57)" font-size="11" fill="#0071bc" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Check for OS<tspan x="7.5" y="13.2">command</tspan><tspan x="10.4" y="26.4">injection</tspan></text>
+    <text transform="translate(238.5 39)" font-size="11" fill="#0071bc" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 1</text>
+    <text transform="translate(237.5 71)" font-size="11" fill="#0071bc" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 2</text>
+    <text transform="translate(237.5 103)" font-size="11" fill="#0071bc" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Request 3</text>
+    <text transform="translate(347.5 72)" font-size="11" fill="#70d16d" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Session valid</text>
+    <text transform="translate(347.5 199)" font-size="11" fill="#70d16d" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Session valid</text>
+    <text transform="translate(347.5 326)" font-size="11" fill="#d60000" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Session invalid</text>
+    <text transform="translate(432.14 246)" font-size="11" fill="#159c80" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Checkpoint</text>
+    <text transform="translate(525.5 278)" font-size="11" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Roll back and resume<tspan x="0" y="13.2">from latest checkpoint</tspan></text>
+    <text transform="translate(347.5 295)" font-size="11" fill="#70d16d" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Session valid</text>
+  </g>
+</svg>

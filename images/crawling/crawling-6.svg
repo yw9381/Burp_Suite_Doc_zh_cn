@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="566" viewBox="0 0 807 566">
+  <title>crawling-6</title>
+  <g>
+    <rect x="173.78" y="159" width="19" height="19" rx="9.5" ry="9.5" fill="#ebf0f2" stroke="#4c5054" stroke-miterlimit="10"/>
+    <rect x="173.78" y="218" width="19" height="19" rx="9.5" ry="9.5" fill="blue"/>
+    <path d="M184.5,223.82a2.08,2.08,0,0,0-.92.2,2,2,0,0,0-.68.58,2.77,2.77,0,0,0-.41.92,5.11,5.11,0,0,0-.14,1.22,5,5,0,0,0,.13,1.22,2.63,2.63,0,0,0,.38.9,1.82,1.82,0,0,0,.67.56,2.4,2.4,0,0,0,1,.19,4.7,4.7,0,0,0,1.05-.12,9.43,9.43,0,0,0,1.14-.34v1.53c-.19.08-.38.14-.56.2a5.07,5.07,0,0,1-.56.13,5.59,5.59,0,0,1-.59.08c-.2,0-.42,0-.65,0a4.33,4.33,0,0,1-1.72-.32,3.25,3.25,0,0,1-1.2-.89,3.75,3.75,0,0,1-.7-1.38,6.71,6.71,0,0,1-.23-1.8,5.69,5.69,0,0,1,.27-1.79,3.84,3.84,0,0,1,.77-1.39,3.41,3.41,0,0,1,1.26-.91,4.22,4.22,0,0,1,1.72-.33,5.1,5.1,0,0,1,1.28.16,7.18,7.18,0,0,1,1.23.44l-.59,1.48c-.32-.15-.64-.28-1-.4A3,3,0,0,0,184.5,223.82Z" fill="#333332"/>
+    <rect x="52" y="271.5" width="19" height="19" rx="9.5" ry="9.5" fill="#ebf0f2" stroke="#4c5054" stroke-miterlimit="10"/>
+    <rect x="52" y="100.5" width="19" height="19" rx="9.5" ry="9.5" fill="#ebf0f2" stroke="#4c5054" stroke-miterlimit="10"/>
+    <rect x="173.78" y="218" width="19" height="19" rx="9.5" ry="9.5" fill="#ebf0f2" stroke="#4c5054" stroke-miterlimit="10"/>
+    <path d="M44.12,21.75a15,15,0,1,0,15,15A15,15,0,0,0,44.12,21.75ZM41.28,45.13V28.24l10.14,8.1Z" fill="#b8e8b5" stroke="#59b254" stroke-miterlimit="10"/>
+    <polygon points="43.49 74.5 43.49 146.11 37.71 146.11 44.28 157.5 50.86 146.11 45.08 146.11 45.08 74.5 43.49 74.5" fill="#606467"/>
+    <polygon points="42.52 236.5 42.52 418.11 36.73 418.11 43.31 429.5 49.88 418.11 44.1 418.11 44.1 236.5 42.52 236.5" fill="#606467"/>
+    <rect x="5.78" y="365" width="73.5" height="19" rx="9.5" ry="9.5" fill="#fcebe8" stroke="#f63" stroke-miterlimit="10"/>
+    <path d="M391.71,489v44.2s0,.08,0,.09h87.06s0,0,0-.06V470.9c0-.09,0-.25-.1-.2h-.61l-4.89.05-26.31.31-.07-5.78-1.88,1.12-6.28,3.72L435.5,472l3.2,1.8,6.36,3.57,1.91,1.07-.07-5.78,25.91-.31,3.84,0h.48c.11,0,.07.09.08.16v59.19c0,.06,0,.06-.07.06H393.3s0-.05,0-.07V489Z" fill="#606467"/>
+    <polygon points="82.5 190.04 337.49 190.04 337.49 195.83 348.88 189.25 337.49 182.67 337.49 188.46 82.5 188.46 82.5 190.04" fill="#606467"/>
+    <polygon points="348.88 205.46 93.89 205.46 93.89 199.67 82.5 206.25 93.89 212.83 93.89 207.04 348.88 207.04 348.88 205.46" fill="#606467"/>
+    <path d="M43.5,327.79H391.65c.09,0,0,.09.06.14v89.68h-5.79l3.87,6.7L392.5,429l2.71-4.69,3.87-6.7h-5.79V326.38c0-.06,0-.21-.07-.17H43.5Z" fill="#606467"/>
+    <polygon points="357 469.46 97.39 469.7 97.39 463.91 86 470.5 97.4 477.06 97.39 471.28 357 471.04 357 469.46" fill="#606467"/>
+    <rect x="182.78" y="317" width="73.5" height="19" rx="9.5" ry="9.5" fill="#fcebe8" stroke="#f63" stroke-miterlimit="10"/>
+    <text transform="translate(197.28 171.5)" font-size="11" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">View item</text>
+    <text transform="translate(78.5 114)" font-size="11" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Go to store</text>
+    <text transform="translate(197.78 231)" font-size="11" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Add to cart</text>
+    <text transform="translate(183.28 464)" font-size="11" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Remove item</text>
+    <text transform="translate(387.5 547.5)" font-size="11" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Update quantity</text>
+    <text transform="translate(29.93 65)" font-size="11" fill="#59b254" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Start</text>
+    <text transform="translate(16.78 379)" font-size="11" fill="#f63" font-family="DroidSans-Bold, Droid Sans" font-weight="700">In state 1</text>
+    <text transform="translate(193.78 331)" font-size="11" fill="#f63" font-family="DroidSans-Bold, Droid Sans" font-weight="700">In state 2</text>
+    <text transform="translate(179.28 172.5)" font-size="12" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">B</text>
+    <text transform="translate(57.5 285)" font-size="12" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">D</text>
+    <text transform="translate(57 113.5)" font-size="12" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">A</text>
+    <text transform="translate(178.78 232)" font-size="12" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">C</text>
+    <text transform="translate(78.42 284.36)" font-size="11" fill="#4c5054" font-family="DroidSans-Bold, Droid Sans" font-weight="700">View cart</text>
+    <rect x="2.5" y="430.08" width="83.76" height="79.84" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="2.5" y1="460.49" x2="86.26" y2="460.49" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <g>
+      <polyline points="25.27 473.32 29.97 471.75 33.11 489.78 51.92 489 54.27 479.59 30.36 475.67" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <circle cx="36.63" cy="494.87" r="1.96" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <circle cx="48.39" cy="494.87" r="1.96" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <polyline points="53.09 492.13 33.5 492.13 33.11 489.78" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    </g>
+    <text transform="translate(8.77 441.36)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Empty <tspan x="0" y="13.2">cart</tspan></text>
+    <rect x="349.5" y="157.34" width="84" height="79.84" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="349.5" y1="187.75" x2="433.5" y2="187.75" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <g>
+      <polygon points="359.5 199.75 368.63 196 377.63 199.25 377.63 209.75 368.5 214 359.5 210.25 359.5 199.75" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <polyline points="377.56 199.31 368.69 203.06 368.56 214" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <line x1="359.56" y1="199.81" x2="368.69" y2="203.06" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    </g>
+    <line x1="387" y1="195.5" x2="407" y2="195.5" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="391.5" y1="201" x2="423.5" y2="201" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="386.5" y1="207" x2="423.5" y2="207" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="386.5" y1="213" x2="423.5" y2="213" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="386.5" y1="219" x2="423.5" y2="219" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="386.5" y1="225" x2="423.5" y2="225" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="416.5" y1="231" x2="423.5" y2="231" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="409.5" y1="231" x2="413.5" y2="231" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="359.5" y1="218" x2="377.5" y2="218" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <text transform="translate(358.4 169.03)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Item <tspan x="0" y="13.2">details</tspan></text>
+    <rect x="350.5" y="430.08" width="84" height="79.84" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="350.5" y1="460.49" x2="434.5" y2="460.49" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <g>
+      <polyline points="375.5 473.32 380.2 471.75 383.34 489.78 402.15 489 404.5 479.59 380.6 475.67" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <circle cx="386.86" cy="494.87" r="1.96" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <circle cx="398.62" cy="494.87" r="1.96" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <polyline points="403.32 492.13 383.73 492.13 383.34 489.78" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    </g>
+    <text transform="translate(357 441.36)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Populated <tspan x="0" y="13.2">cart</tspan></text>
+    <g>
+      <polygon points="385.01 475.13 392.62 472 400.12 474.71 400.12 483.46 392.51 487 385.01 483.88 385.01 475.13" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <polyline points="400.06 474.76 392.67 477.88 392.56 487" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <line x1="385.06" y1="475.18" x2="392.67" y2="477.89" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    </g>
+    <rect x="2.62" y="157.34" width="83.76" height="79.84" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="2.62" y1="187.75" x2="86.38" y2="187.75" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <text transform="translate(9.4 176.36)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Store</text>
+    <g>
+      <polyline points="58 208.5 58 226.5 39.83 226.5 40 215.5 32 215.5 31.71 226.5 27 226.5 27 208.5" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <rect x="45" y="212.5" width="9" height="8" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <path d="M31.62,199.12,25,205.75a3.24,3.24,0,0,0,6.07,1.59,3.22,3.22,0,0,0,5.63,0,3.22,3.22,0,0,0,5.63,0,3.23,3.23,0,0,0,5.64,0,3.22,3.22,0,0,0,5.74-.2,3.24,3.24,0,0,0,6.17-1.39l-6.56-6.57Z" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    </g>
+  </g>
+</svg>

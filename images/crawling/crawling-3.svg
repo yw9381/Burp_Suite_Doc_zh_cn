@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="420" viewBox="0 0 807 420">
+  <title>crawling-3</title>
+  <g>
+    <rect x="2.91" y="20.5" width="84" height="79.13" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="2.91" y1="52.64" x2="86.91" y2="52.64" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="2.91" y="220.74" width="84" height="79.13" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="2.91" y1="252.89" x2="86.91" y2="252.89" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="2.91" y="120.62" width="84" height="79.13" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="2.91" y1="152.77" x2="86.91" y2="152.77" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="2.91" y="320.87" width="84" height="79.13" fill="#eee7f2" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="2.91" y1="353.01" x2="86.91" y2="353.01" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <g>
+      <polyline points="25.77 67.32 30.47 65.75 33.61 83.78 52.42 83 54.77 73.59 30.86 69.67" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <circle cx="37.13" cy="88.87" r="1.96" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <circle cx="48.89" cy="88.87" r="1.96" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+      <polyline points="53.59 86.13 34 86.13 33.61 83.78" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    </g>
+    <rect x="11.52" y="164.5" width="66" height="7" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="11.27" y="181.5" width="66" height="7" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="10.77" y1="160.5" x2="36.77" y2="160.5" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <line x1="10.77" y1="177.5" x2="41.27" y2="177.5" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <path d="M66.31,287C53,273.21,38.25,299.55,23.22,288V269c15,11.6,29.74-14.73,43.09-1Z" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <path d="M33.58,283a2.4,2.4,0,0,1-.19,1,2.18,2.18,0,0,1-.55.78,3,3,0,0,1-.91.55,4.51,4.51,0,0,1-1.25.28V287h-.95v-1.4c-.31,0-.59,0-.85-.06a5.1,5.1,0,0,1-.73-.11,5.54,5.54,0,0,1-.65-.19,6.44,6.44,0,0,1-.61-.24v-1.84a6.24,6.24,0,0,0,.63.28q.35.13.72.24c.24.07.49.14.75.19a4.82,4.82,0,0,0,.74.09v-2.21l-.12-.05-.11,0-.1,0a9.82,9.82,0,0,1-1.11-.5,3.56,3.56,0,0,1-.79-.6,2.09,2.09,0,0,1-.47-.72,2.47,2.47,0,0,1,0-1.85,2.14,2.14,0,0,1,.57-.74,2.63,2.63,0,0,1,.9-.52,4.63,4.63,0,0,1,1.19-.26v-1.09h.95v1.05a7.85,7.85,0,0,1,1.24.17,7.13,7.13,0,0,1,1.33.44l-.7,1.63a8.82,8.82,0,0,0-.95-.32,4,4,0,0,0-.92-.18v2l.27.1a10.06,10.06,0,0,1,1.16.5,3.24,3.24,0,0,1,.82.58,2.11,2.11,0,0,1,.49.71A2.66,2.66,0,0,1,33.58,283ZM29,278.85a.85.85,0,0,0,.18.55,1.29,1.29,0,0,0,.58.37v-1.63a1.07,1.07,0,0,0-.57.21A.62.62,0,0,0,29,278.85ZM31.48,283a.85.85,0,0,0,0-.29.57.57,0,0,0-.15-.23,1,1,0,0,0-.24-.19l-.37-.19v1.76a1,1,0,0,0,.61-.27A.84.84,0,0,0,31.48,283Z" fill="#ae75c3"/>
+    <path d="M62.58,276a2.4,2.4,0,0,1-.19,1,2.18,2.18,0,0,1-.55.78,3,3,0,0,1-.91.55,4.51,4.51,0,0,1-1.25.28V280h-1v-1.4c-.31,0-.59,0-.85-.06a5.1,5.1,0,0,1-.73-.11,5.54,5.54,0,0,1-.65-.19,6.44,6.44,0,0,1-.61-.24v-1.84a6.24,6.24,0,0,0,.63.28q.34.13.72.24c.24.07.49.14.75.19a4.82,4.82,0,0,0,.74.09v-2.21l-.12-.05-.11,0-.1,0a9.82,9.82,0,0,1-1.11-.5,3.56,3.56,0,0,1-.79-.6,2.09,2.09,0,0,1-.47-.72,2.47,2.47,0,0,1,0-1.85,2.14,2.14,0,0,1,.57-.74,2.63,2.63,0,0,1,.9-.52,4.63,4.63,0,0,1,1.19-.26v-1.09h1v1.05a7.85,7.85,0,0,1,1.24.17,7.13,7.13,0,0,1,1.33.44l-.7,1.63a8.82,8.82,0,0,0-.95-.32,4,4,0,0,0-.92-.18v2l.27.1a10.06,10.06,0,0,1,1.16.5,3.24,3.24,0,0,1,.82.58,2.11,2.11,0,0,1,.49.71A2.66,2.66,0,0,1,62.58,276ZM58,271.85a.85.85,0,0,0,.18.55,1.29,1.29,0,0,0,.58.37v-1.63a1.07,1.07,0,0,0-.57.21A.62.62,0,0,0,58,271.85ZM60.48,276a.85.85,0,0,0,0-.29.57.57,0,0,0-.15-.23,1,1,0,0,0-.24-.19l-.37-.19v1.76a1,1,0,0,0,.61-.27A.84.84,0,0,0,60.48,276Z" fill="#ae75c3"/>
+    <path d="M44.77,277h0a3,3,0,0,1,3,3v3a0,0,0,0,1,0,0h-6a0,0,0,0,1,0,0v-3A3,3,0,0,1,44.77,277Z" fill="#ae75c3"/>
+    <path d="M46.77,275a2,2,0,0,1-4,0v-1c.36-.37,3.44,0,4,0Z" fill="#ae75c3"/>
+    <polygon points="42.77 274 46.77 274 46.77 272 45.77 273 44.77 272 43.77 273 42.77 272 42.77 274" fill="#ae75c3"/>
+    <circle cx="26.75" cy="389.23" r="4.59" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <circle cx="57.67" cy="389.41" r="4.59" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <rect x="33.25" y="384.45" width="17.26" height="2.05" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <path d="M68.44,377l-5.6-8.52a2,2,0,0,0-1.67-.9H53.71v15.38l5.58,0a6,6,0,0,1,6,5.83v.07h3.49V378.07A1.92,1.92,0,0,0,68.44,377Zm-11.64.15a.54.54,0,0,1-.52-.54V371a.54.54,0,0,1,.54-.53h4.65a.53.53,0,0,1,.47.28c.65,1.22,3.2,6,3.52,6.33S58.77,377.2,56.8,377.13Z" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <path d="M48.7,362.42H24.58a2.81,2.81,0,0,0-2.81,2.81v14.58a2.81,2.81,0,0,0,2.81,2.81H48.7a2.81,2.81,0,0,0,2.81-2.81V365.23A2.81,2.81,0,0,0,48.7,362.42ZM36.09,380.05a7.35,7.35,0,1,1,7.34-7.35A7.34,7.34,0,0,1,36.09,380.05Z" fill="none" stroke="#ae75c3" stroke-miterlimit="10"/>
+    <polygon points="31.77 372.88 32.97 371.68 35.24 373.95 38.84 370.35 40.04 371.55 35.24 376.35 31.77 372.88" fill="#ae75c3"/>
+    <polygon points="43.62 100.13 43.62 114.43 40.73 114.43 44.02 120.13 47.31 114.43 44.42 114.43 44.42 100.13 43.62 100.13" fill="#606467"/>
+    <polygon points="43.37 201 43.37 215.3 40.48 215.3 43.77 221 47.06 215.3 44.17 215.3 44.17 201 43.37 201" fill="#606467"/>
+    <polygon points="43.37 301 43.37 315.3 40.48 315.3 43.77 321 47.06 315.3 44.17 315.3 44.17 301 43.37 301" fill="#606467"/>
+    <text transform="translate(12.27 42)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Buy item</text>
+    <text transform="translate(12.04 133)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Enter name <tspan x="0.13" y="13.2">and address</tspan></text>
+    <text transform="translate(9.27 232.36)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Make <tspan x="0" y="13.2">payment</tspan></text>
+    <text transform="translate(9.27 333.36)" font-size="11" fill="#ae75c3" font-family="DroidSans-Bold, Droid Sans" font-weight="700">Order <tspan x="0" y="13.2">confirmed</tspan></text>
+    <text transform="translate(94.27 113)" font-size="12" fill="#4c5054" font-family="Courier, Courier">POST /buy/next</text>
+    <text transform="translate(93.27 214)" font-size="12" fill="#4c5054" font-family="Courier, Courier">POST /buy/next</text>
+    <text transform="translate(94.27 315)" font-size="12" fill="#4c5054" font-family="Courier, Courier">POST /buy/next</text>
+  </g>
+</svg>

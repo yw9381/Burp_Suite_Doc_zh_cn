@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="150" viewBox="0 0 807 150">
+  <title>auditing-3</title>
+  <g>
+    <rect x="87.5" y="101" width="210" height="17" fill="#fcf446"/>
+    <text transform="translate(1.5 27.5)" font-size="12" fill="#333332" font-family="Courier, Courier">POST /catalog/search HTTP/1.1<tspan x="0" y="14.4">Host: example.org</tspan><tspan x="0" y="28.8">Content-Type: application/json</tspan><tspan x="0" y="43.2">Content-Length: 48</tspan><tspan x="0" y="72">{</tspan><tspan x="0" y="86.4" xml:space="preserve">  &quot;Query&quot;: &quot;\&quot;&gt;&lt;script&gt;alert(1)&lt;\/script&gt;&quot;</tspan><tspan x="0" y="100.8">}</tspan></text>
+  </g>
+</svg>

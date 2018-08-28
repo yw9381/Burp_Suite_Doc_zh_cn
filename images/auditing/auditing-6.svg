@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="807" height="376" viewBox="0 0 807 376">
+  <title>auditing-6</title>
+  <g>
+    <polygon points="452.5 118 264.5 118 264.5 132 2.5 132 2.5 105 46.5 105 46.5 87 452.5 87 452.5 118" fill="#fcf446"/>
+    <polygon points="476.5 226 419.5 226 419 240 78.5 240 78.5 225 124.5 225 124.5 210 476.5 210 476.5 226" fill="#fcf446"/>
+    <rect x="239.5" y="327" width="209" height="18" fill="#fcf446"/>
+    <polygon points="207.75 144.27 222.84 185.57 217.41 187.56 227.5 196 229.77 183.04 224.34 185.03 209.25 143.73 207.75 144.27" fill="#606467"/>
+    <polygon points="249.75 256.27 264.85 297.57 259.41 299.56 269.5 308 271.77 295.04 266.34 297.03 251.25 255.73 249.75 256.27" fill="#606467"/>
+    <text transform="translate(2 28.17)" font-size="12" fill="#333332" font-family="Courier, Courier">POST /catalog/search HTTP/1.1<tspan x="0" y="14.4">Host: example.org</tspan><tspan x="0" y="28.8">Content-Type: application/x-www-form-urlencoded</tspan><tspan x="0" y="43.2">Content-Length: 160</tspan><tspan x="0" y="72">Input=PERhdGE%2beyYjeDBhOyAgJnF1b3Q7UXVlcnkmcXVvdDs6ICZxdW90O1</tspan><tspan x="0" y="86.4">wmcXVvdDsmZ3Q7Jmx0O3NjcmlwdCZndDthbGVydCgxKSZsdDtcL3NjcmlwdCZn</tspan><tspan x="0" y="100.8">dDsmcXVvdDsmI3gwYTt9PC9EYXRhPg%3d%3d</tspan></text>
+    <text transform="translate(80 221.5)" font-size="12" fill="#333332" font-family="Courier, Courier"><tspan xml:space="preserve">&lt;Data&gt;{&amp;#x0a;  &amp;quot;Query&amp;quot;: &amp;quot;\&amp;quot;&amp;gt;&amp;lt;</tspan><tspan x="0" y="14.4">script&amp;gt;alert(1)&amp;lt;\/script&amp;gt;&amp;quot;&amp;#x0a;}&lt;/Data&gt;</tspan></text>
+    <text transform="translate(152 325.5)" font-size="12" fill="#333332" font-family="Courier, Courier">{<tspan x="0" y="14.4" xml:space="preserve">  &quot;Query&quot;: &quot;\&quot;&gt;&lt;script&gt;alert(1)&lt;\/script&gt;&quot;</tspan><tspan x="0" y="28.8">}</tspan></text>
+  </g>
+</svg>
