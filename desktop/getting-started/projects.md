@@ -1,107 +1,35 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../../styles/css/ps.css">
-</head>
-<body>
-<section class="container ps-breadcrumbs">
-    <ol>
-        <li>
-            <a href="https://support.portswigger.net/">Support Center</a>
-        </li>
-        <li>
-            <a href="../../index.html">Documentation</a>
-        </li>
-        <li>
-            <a href="../index.html">Desktop Editions</a>
-        </li>
-        <li>
-            <a href="index.html">Getting Started</a>
-        </li>
-        <li>
-            <a href="projects.html">Burp Projects</a>
-        </li>
-    </ol>
-</section>
-<section class="container edition-labels">
-	<span class="pro-edition-feature-label">Professional</span>&nbsp;<span class="pro-edition-feature-label">Community</span>
-</section>
-<section class="maincontainer">
-    <div class="container main">
-        <h1>Working With Burp Projects</h1>
-        <p>
-            Burp projects are used to manage your work on different tasks or target applications. You can create two
-            types of Burp projects:
-        </p>
-        <ul>
-            <li>
-                <strong>Temporary projects</strong> are useful for quick tasks where your work doesn't need to be saved.
-                All data is held in memory, and is lost when Burp exits.
-            </li>
-            <li>
-                <strong>Disk-based projects</strong> allow you to save your work and resume it later. All data is held
-                on disk in a project file.
-            </li>
-        </ul>
-        <h2 id="project-files">Project Files</h2>
-        <p>
-            Burp project files hold all of the data and configuration for a particular piece of work. Data is saved
-            incrementally into the file as you work. There is no need to specifically "save" your work when you are
-            finished.
-        </p>
-        <p>
-            You can reopen an existing project when Burp starts, using the <a href="index.html#startup-wizard">startup wizard</a> or <a href="launching-from-command-line.html#command-line-arguments"> command line arguments</a>. Burp will reload the
-            project's data and configuration, and you can resume working where you left off.
-        </p>
-        <p>
-            <strong>Note:</strong> Testing of some applications can generate significant amounts of data, and so Burp
-            project files can potentially grow to be very large (e.g. several gigabytes in size). You should ensure that
-            you have sufficient free disk space available when using Burp project files.
-        </p>
-        <h3 id="saving-a-copy-of-a-project">Saving a Copy of a Project</h3>
-        <p>
-            You can save a copy of the current project into a new project file by selecting "Save copy of project" from
-            the Burp menu.
-        </p>
-        <p>
-            You can choose the tools whose data you want to be included in the new project file, and whether you only
-            want to save <a href="../tools/target/scope.html">in-scope items</a>.
-        </p>
-        <p>
-            This feature can be useful to create a smaller project file after you have refined your project scope, or
-            deleted some unwanted data.
-        </p>
-        <p>
-            You can continue using Burp while the new project is being saved, although you may experience some brief
-            delays if you try to perform an operation on data that Burp is in the process of saving, to prevent any data
-            corruption.
-        </p>
-        <h3 id="saving-the-burp-collaborator-identifier">Saving the Burp Collaborator Identifier</h3>
-        <p>
-            When saving a copy of a project, you will be prompted whether to include within the project file the unique
-            identifier that Burp uses to retrieve any ongoing <a href="../../collaborator/index.html">Burp Collaborator</a> interactions that are associated with the project. If two instances of Burp share the same identifier in
-            ongoing work, then some Collaborator-based issues may be missed or incorrectly reported. You should not
-            include the Collaborator identifier if you plan to pass the project file on to someone else and you do not
-            want them to be able to receive details of any ongoing Collaborator interactions that are associated with
-            your testing.
-        </p>
-        <h3 id="importing-projects">Importing Projects</h3>
-        <p>
-            If you are using a disk-based project, then you can import another project into the current project by
-            selecting "Import project" from the Burp menu.
-        </p>
-        <p>
-            You can choose the tools whose data you want to import from the project file.
-        </p>
-        <p>
-            You can continue using Burp while the project is being imported, although you may experience some brief
-            delays if you try to perform an operation on data that Burp is in the process of importing, to prevent any
-            data corruption.
-        </p>
-    </div>
-</section>
-</body>
-</html>
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [开始入门](index.md) >> [Burp 工程](projects.md)
+
+本页适用于`专业版`及`社区版`
+
+# Burp 工程
+Burp工程用于管理您在不同任务或目标应用程序上的工作。 您可以创建两种类型的Burp工程：
+
+* **临时工程** - 对于不需要保存工作的快速任务非常有用。所有数据都保存在内存中，并在Burp退出时丢失。
+* **基于磁盘的工程** - 允许您保存您的工作并在以后恢复。所有数据都保存在工程文件中。
+
+## 工程文件
+Burp工程文件包含特定工作的所有数据和配置。在您工作时，数据会逐步保存到文件中。完成后无需专门“保存”您的工作。
+
+你可以使用[开始向导](index.md#开始向导)或[命令行参数](launching-from-command-line.md#命令行参数)重新打开现有工程。Burp将重新加载工程的数据和配置，您可以从上次停止的地方恢复工作。
+
+**注意**：某些应用程序的测试可能会生成大量数据，因此Burp工程文件可能会变得非常大（例如，上百MB甚至几GB）。使用Burp工程文件时，应确保有足够的可用磁盘空间。
+
+## 保存工程的副本
+通过从Burp菜单中选择`Project` -> `Save copy`，可以将当前工程的副本保存到新工程文件中。
+
+您可以根据需求选择要包含在新工程文件中的数据范围。
+
+在确定要保存的[数据范围](../tools/target/scope.md)之后，可以删除一些不需要的数据，此功能可用于创建较小的工程文件。
+
+您可以在保存新工程时继续使用Burp，但如果您尝试对Burp正在保存的数据执行操作，可能会遇到一些短暂的延迟，这是为了防止任何情况下可能造成的数据损坏的问题。
+
+## 保存 Burp Collaborator 标识符
+保存工程副本时，系统将提示您是否在工程文件中包含Burp用于检索与工程关联的任何正在进行的[Burp Collaborator](../../collaborator/index.md)交互的唯一标识符。如果两个Burp实例在正在进行的工作中使用了相同的标识符，则可能会遗漏或错误的报告出某些基于Collaborator的问题。如果您计划将工程文件传递给其他人，并且您不希望他们能够接收与您的测试相关的任何正在进行的Collaborator交互的详细信息，则不应包括Collaborator标识符。
+
+## 导入工程
+如果您使用的是基于磁盘的工程，则可以通过从Burp菜单中选择`Project` -> `Import project`将另一个工程导入当前工程。
+
+您可以从工程文件中选择要导入的数据。
+
+您可以在导入工程时继续使用Burp，但如果您尝试对Burp正在导入的数据执行操作，则可能会遇到一些短暂的延迟，以防止任何数据损坏。

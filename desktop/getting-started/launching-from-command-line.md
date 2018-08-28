@@ -1,90 +1,26 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../../styles/css/ps.css">
-</head>
-<body>
-<section class="container ps-breadcrumbs">
-    <ol>
-        <li>
-            <a href="https://support.portswigger.net/">Support Center</a>
-        </li>
-        <li>
-            <a href="../../index.html">Documentation</a>
-        </li>
-        <li>
-            <a href="../index.html">Desktop Editions</a>
-        </li>
-        <li>
-            <a href="index.html">Getting Started</a>
-        </li>
-        <li>
-            <a href="launching-from-command-line.html">Command Line</a>
-        </li>
-    </ol>
-</section>
-<section class="container edition-labels">
-    <span class="pro-edition-feature-label">Professional</span>
-    &nbsp;
-    <span class="pro-edition-feature-label">Community</span>
-</section>
-<section class="maincontainer">
-    <div class="container main">
-        <h1>Launching Burp Suite From the Command Line</h1>
-        <p>
-            To launch Burp Suite from the command line, you should download the plain JAR file version of Burp. The JAR file can be executed using Java, and there is no need to unpack the contents of the JAR file itself.
-        </p>
-        <p>
-            First check whether Java is installed:
-        </p>
-        <ul>
-            <li>
-                At a command prompt, type:
-                <span class="InlineCode">java -version</span>
-            </li>
-            <li>
-                If Java is installed, you will see a message like:
-                <span class="InlineCode">java version "1.8.0_162"</span>
-                . To run Burp, you will need a version of Java that is 1.8 or later.
-            </li>
-            <li>
-                If Java is not installed, or if your version of Java is older than 1.8, you will need to install Java. <a href="http://www.oracle.com/technetwork/java/javase/downloads/"> Download the latest Java
-                Runtime Environment (JRE)</a>, run the installer, and then open a new command prompt and start
-                again.
-            </li>
-        </ul>
-        <p>
-            With Java installed, in your
-            command prompt type a command like:
-        </p>
-        <p class="InlineCode">
-            java -jar -Xmx4g /path/to/burp.jar
-        </p>
-        <p>
-            where
-            <span class="InlineCode">4</span>
-            is the amount of memory (in Gb) that you want to assign to Burp, and
-            <span class="InlineCode"> /path/to/burp.jar </span>
-            is the location of the Burp JAR file on your computer.
-        </p>
-        <p>
-            If everything is working, a splash screen should display for a few seconds, and then the main startup wizard
-            window should appear. If nothing happens, or if an error message appears, please refer to the <a href="../troubleshooting.html">troubleshooting help</a>.
-        </p>
-        <h2 id="command-line-arguments">Command Line Arguments</h2>
-        <p>
-            Various command line arguments are available to control Burp's behavior on startup. For example, you can
-            tell Burp to prevent reloading of <a href="../tools/extender.html">extensions</a>, open a particular <a href="projects.html#project-files"> Burp project file</a>, or load a particular <a href="configuration.html">configuration file</a>.
-        </p>
-        <p>
-            You can view a list of available options using the command line argument
-            <span class="InlineCode">--help</span>
-            .
-        </p>
-    </div>
-</section>
-</body>
-</html>
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [开始入门](index.md) >> [命令行](launching-from-command-line.md)
+
+本页适用于`专业版`及`社区版`
+
+# 从命令行启动 Burp
+要从命令行启动Burp Suite，您应该下载`JAR 版本`的Burp。可以使用`Java`来执行JAR文件，无需解压JAR文件。
+
+首先，你需要检查是否已经安装了Java：
+
+* 打开命令行，输入`java -version`来查看
+* 如果Java已经安装，你应该可以看到类似于`java version "1.8.0_162"`的输出。如果需要运行Burp，Java的版本应当不低于`1.8`.
+* 如果未安装Java，或者您的Java版本低于1.8，则你需要安装或是升级Java。你可以去Oracle官网下载最新的[Java运行时环境（JRE）](http://www.oracle.com/technetwork/java/javase/downloads/index.html)，然后运行安装程序，重新打开命令行，再次进行验证。
+当确定Java已经安装且版本大于1.8后，可以在命令行下键入如下命令来启动Burp：
+
+```shell
+java -jar -Xmx4g /path/to/burp.jar
+```
+
+在命令行中，`4`是要分配给Burp的内存量（以GB为单位），`/path/to/burp.jar`是你电脑上Burp JAR文件的位置。
+
+如果一切正常，那么你可以看到Burp显示的启动画面，等待几秒钟后，可以看到Burp显示了向导窗口。如果没有任何反应，或者出现错误消息，请参阅[故障排除](../troubleshooting.md)。
+
+## 命令行参数
+命令行参数可用于控制Burp在启动时的行为。例如，您可以禁止Burp加载[扩展](../tools/extender.md)，打开特定的[Burp项目文件](projects.md#工程文件)或加载特定的[配置文件](configuration.md)。
+
+你可以输入`--help`来查看所有可用的命令行参数
