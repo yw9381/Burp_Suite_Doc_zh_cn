@@ -1,130 +1,68 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../../styles/css/ps.css">
-</head>
-<body>
-<section class="container ps-breadcrumbs">
-    <ol>
-        <li>
-            <a href="https://support.portswigger.net/">Support Center</a>
-        </li>
-        <li>
-            <a href="../../index.html">Documentation</a>
-        </li>
-        <li>
-            <a href="../index.html">Desktop Editions</a>
-        </li>
-        <li>
-            <a href="index.html">Scanning Web Sites</a>
-        </li>
-        <li>
-            <a href="scan-launcher.html">Scan Launcher</a>
-        </li>
-    </ol>
-</section>
-<section class="container edition-labels">
-	<span class="pro-edition-feature-label">Professional</span>
-</section>
-<section class="maincontainer">
-    <div class="container main">
-        <h1>Scan Launcher</h1>
-<p>
-            You can launch scans via the "New scan" button on the Burp Dashboard or the "Scan" option on the context menu that appears throughout Burp. Using one of these methods will display the scan launcher, which lets you configure various details of the scan.
-        </p>
-        <h2 id="scan-details">Scan details</h2>
-        <p>
-            The "Scan details" section of the scan launcher lets you select the scan type, and the details of what will be scanned.
-        </p>
-        <h4>Scan type</h4>
-        <p>
-            The following scan types can be selected:
-        </p>
-        <ul>
-            <li>
-                Crawl and audit.&nbsp;This will perform a crawl from one or more starting URLs, and then audit the discovered content for vulnerabilities.
-            </li>
-            <li>
-                Crawl. This will perform a crawl from one or more starting URLs.
-            </li>
-            <li>
-                Audit selected items. This option is only available when the launcher was initiated by selecting one or more requests/responses within Burp, and choosing the "Scan" option on the context menu.
-            </li>
-        </ul>
-        <p>
-            Depending on the scan type that is selected, the scan launcher will show options for the scope of the scan or the individual items to be scanned.
-        </p>
-        <h4>URLs to Scan</h4>
-        <p>
-            This section is displayed for "Crawl and audit" and "Crawl" scan types. You can configure one or more URLs from which Burp will perform the crawl. These URLs will be the starting point of the crawl, and Burp will follow links from there into the application.
-        </p>
-        <p>
-            By default, the scope of the crawl will be restricted to the configured URLs truncated to the final folder (if any). For example, if you specify a start URL of
-            <span class="InlineCode">https://example.org/myapp/welcome.php</span>
-            then the crawler will begin at this URL, and will crawl content within the path
-    <span class="InlineCode">https://example.org/myapp/</span>
-            .
-        </p>
-        <p>
-            You can override the default behavior and provide a different scope configuration by opening the "Detailed scope configuration" toggle. This lets you define the scope of the crawl using either URL prefixes or advanced matching rules, as for Burp's <a href="../tools/target/scope.html">Target scope</a>. Note that you still need to specify the URLs to scan, since these are the starting points for the crawl, and the URLs to scan must fall within the defined scope.
-        </p>
-        <h4>Items to Scan </h4>
-        <p>
-            This section is displayed for the "Audit selected items" scan type. The URLs of the selected items are listed. Note that the same URL will appear more than once if there are multiple requests to the same URL with different parameters.
-        </p>
-        <p>
-            If you have made a large selection of items to scan, it is often useful to consolidate the selected items to improve the efficiency of the scan. Clicking "Consolidate items" displays a wizard that lets you choose whether to remove items with various features:
-        </p>
-        <ul>
-            <li>
-                Duplicate items in the selection (those with matching URL and parameter names)
-            </li>
-            <li>
-                Out-of-scope items (based on the current suite scope)
-            </li>
-            <li>
-                Items with no parameters
-            </li>
-            
-            <li>
-                Items with specific file extensions
-            </li>
-        </ul>
-        <p>
-            For each item, Burp shows the number of affected items. If
-            any option would result in none or all of the items being removed, then this option will be
-            unavailable.
-        </p>
-        <p>
-            The consolidation wizard then displays the full list of items that will be scanned. You can double-click any item in the
-            list to view full request and response. You can manually remove any further items that you do not
-            wish to scan.
-        </p>
-        <h2 id="scan-configuration">Scan configuration</h2>
-        <p>
-            The "Scan configuration" section of the scan launcher lets you select configurations to control how the scan is carried out.
-        </p>
-        <p>
-            You can select multiple configurations, and these will be applied in turn to determine the final configuration that is used for the scan. This allows you to apply a general configuration first (for example, your prefered general scan settings), followed by a more specific configuration (for example, some specific options that are useful for this particular application). If no configurations are selected, then Burp Scanner's default settings will be used.
-        </p>
-        <p>
-            You can create new configurations on the fly, or select existing configurations from your <a href="../getting-started/configuration.html#configuration-library">library</a>, or import from a configuration file.
-        </p>
-        <h2 id="application-login-options">Application login options</h2>
-        <p>
-            The "Application login" section of the scan launcher lets you specify account credentials that should be submitted to any login functions. The crawler will use these to discover authenticated content behind login functions. The crawler will also attempt to self-register accounts, and use these credentials in addition to those provided.
-        </p>
-        <p>
-            This section is not available when "Audit selected items" is selected as the scan type, because no crawling is performed.
-        </p>
-        <h2 id="resource-pool-options">Resource pool options</h2>
-        <p>
-            The "Resource pool" section of the scan launcher lets you specify the resouce pool in which the scan will be run. Resource pools are used to manage the usage of system resources across multiple tasks. Each resource pool can be configured with different settings for the maximum number of concurrent requests, and throttling between requests.
-        </p>
-    </div>
-</section>
-</body>
-</html>
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [扫描Web网站](index.md) >> [启动扫描](scan-launcher.md)
+
+本页适用于`专业版`
+
+# 扫描启动器
+------------
+
+您可以通过`Burp 控制台(Burp Dashboard)`上的`新的扫描(New scan)`按钮或是 Burp 中出现的菜单中的`Scan`选项来启动扫描。利用这些方法可打开扫描启动窗口，然后您可以使用它配置扫描中的各种详细参数。
+
+# 扫描细节
+------------
+
+扫描启动界面的`详细的扫描信息(Scan details)`部分允许您选择扫描类型，配置要扫描的内容等等信息。
+
+## 扫描类型
+
+您可以选择以下扫描类型：
+
+* **抓取并审计(Crawl and audit)** 该选项将从一个或多个URL开始进行爬取，然后进行审计并查找发现漏洞。
+* **仅抓取(Crawl)** 该选项将从一个或多个URL开始进行爬取，但是不进行审计工作。
+* **审计所选项目(Audit selected items)** 该选项仅在通过在 Burp 中选择一个或多个请求/响应并在上下文菜单中选择`扫描(Scan)`选项来启动扫描器时才可用。
+
+根据所选的扫描类型，扫描启动器将显示扫描范围或要扫描的各个项目的选项。
+
+## 需要扫描的URL
+
+当选择`抓取并审计(Crawl and audit)`或`仅抓取(Crawl)`这二者之一的扫描类型时。您可以配置一个或多个URL，Burp将从这些URL开始进行爬取。
+
+默认情况下，爬虫的范围将限制在截断到最终文件夹（如果有的话）的已配置URL。例如，如果您指定起始网址为`https://example.org/myapp/welcome.php`，那么爬虫将从此网址开始，并将在路径限制为`https://example.org/myapp/`之内。
+
+您可以点击`详细范围配置(Detailed scope configuration)`来对爬虫进行进一步的配置，例如设置不同的爬取范围。您可以使用URL前缀或是自定义的匹配规则来定义爬虫的范围，如Burp的[目标范围](../tools/target/scope.html)。无论如何，您需要指定至少一个要扫描的URL，因为这些是爬虫的起点，要扫描的URL必须在定义的范围内。
+
+## 需要扫描的项目
+
+当选择`审计所选项目(Audit selected items)`扫描类型时。Burp 将列出所选项目的URL。如果同一个URL有多个不同参数的请求，则这一个URL将多次出现。
+
+如果您要扫描大量项目，则可以合并所选项目以提高扫描效率。单击`合并项目(Consolidate items)`后，Burp将显示一个向导，您可以根据需求选择是否对单个项目启用对应的功能：
+
+* 重复的项目（URL和参数名称相同的项目）
+* 超出范围的项目（针对于当前的范围而言）
+* 没有参数的项目
+* 具有特定文件扩展名的项目
+
+对于每个项目，Burp 将显示受影响的项目的数量。如果因为任何选项导致没有项目列出或是所有项目被删除，则此选项将不可用。
+
+然后，合并向导将显示将要扫描的项目的完整列表。您可以双击列表中的任何项目以查看完整的请求和响应。您可以手动删除任何您不想扫描的项目。
+
+
+# 配置扫描
+------------------
+
+扫描启动器的`扫描配置(Scan configuration)`部分允许您选择配置以控制扫描的执行方式。
+
+您可以选择多个配置，然后依次应用这些配置以确定用于扫描的最终配置。您可以首先应用常规配置（例如，您首选的常规扫描设置），然后是更具体的配置（例如，某些对特定应用程序有用的特定选项）。如果未选择任何配置，则将使用Burp Scanner的默认设置。
+
+您可以动态创建新配置，或从[配置库](../getting-started/configuration.md#配置库)中选择现有配置，或从配置文件导入。
+
+# 应用登陆配置
+-------------------------
+
+扫描启动器的`应用程序登陆凭据(Application login)`部分允许您为 Burp 指定用于登录的帐户凭据。爬虫将使用这些凭据来发现登录后的需要进行身份验证的内容。爬虫还将尝试自行注册帐户，并使用新注册的账户的凭据尝试爬取。
+
+当选择`审计所选项目(Audit selected items)`扫描类型时，此部分不可用，因为任何爬虫程序都不会执行。
+
+# 资源池配置
+---------------------
+
+扫描启动器的`资源池(Resource pool)`部分允许您指定运行扫描任务的资源池。资源池用于管理跨多个任务的系统资源的使用情况。您可以为每个资源池配置不同的设置，以确定最大并发请求数和请求之间的限制。
