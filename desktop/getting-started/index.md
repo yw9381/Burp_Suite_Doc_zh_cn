@@ -52,9 +52,9 @@
 --------------
 第一次运行Burp时，您值得花点时间来检查显示设置。Burp允许您为UI的不同部分选择不同大小的字体，您可能希望根据屏幕分辨率来更改这些设置。
 
-Burp的UI包括`Burp菜单`，`标签标题`，`按钮`和`其他显示的文本`等。如果要更改主UI字体大小，请转到`Options`选项卡，然后转到`Display`子选项卡，并在[`User Interface`](index.md)部分中编辑字体大小。 然后重启Burp并检查新字体是否合适。
+Burp的UI包括`Burp菜单`，`标签标题`，`按钮`和`其他显示的文本`等。如果要更改主UI字体大小，请转到`选项(Options)`选项卡，然后转到`查看(Display)`子选项卡，并在[`用户界面(User Interface)`](index.md)部分中编辑字体大小。 然后重启Burp并检查新字体是否合适。
 
-然后转到`Repeater`选项卡，可以看到请求面板中显示的HTTP消息。如果要更改HTTP消息的字体大小，请转到`Options`选项卡，然后转到`Display`子选项卡，并在[`HTTP Message Display`](index.md)部分中编辑字体大小。设置HTTP消息字体不需要重启Burp。
+然后转到`Repeater`选项卡，可以看到请求面板中显示的HTTP消息。如果要更改HTTP消息的字体大小，请转到`选项(Options)`选项卡，然后转到`查看(Display)`子选项卡，并在[`HTTP消息查看(HTTP Message Display)`](index.md)部分中编辑字体大小。设置HTTP消息字体不需要重启Burp。
 
 ## 了解更多
 --------------
