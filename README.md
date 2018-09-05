@@ -1,15 +1,50 @@
 # Burp Suite 2.0 官方文档中文版
 -------------------------
-![翻译完成度](https://img.shields.io/badge/翻译完成度-7/88-green.svg?style=plastic) [![PDF下载](https://img.shields.io/badge/downloads-PDF-blue.svg?style=plastic)](https://legacy.gitbook.com/download/pdf/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-ePub-blue.svg?style=plastic)](https://legacy.gitbook.com/download/epub/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-Mobi-blue.svg?style=plastic)](https://legacy.gitbook.com/download/mobi/book/yw9381/burp_suite_documentation_2_0_zh_cn) 
+![翻译完成度](https://img.shields.io/badge/翻译完成度-8/89-green.svg?style=plastic) [![PDF下载](https://img.shields.io/badge/downloads-PDF-blue.svg?style=plastic)](https://legacy.gitbook.com/download/pdf/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-ePub-blue.svg?style=plastic)](https://legacy.gitbook.com/download/epub/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-Mobi-blue.svg?style=plastic)](https://legacy.gitbook.com/download/mobi/book/yw9381/burp_suite_documentation_2_0_zh_cn) 
 
 这是由官方在 Burp Suite 所放出的Support Center中的帮助文档翻译而来的中文版  
 英文原版地址：[https://portswigger.net/burp/documentation](https://portswigger.net/burp/documentation)  
 
 # 开始阅读
 ---------
-本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/content/)，也可以[查看本书在GitBook的信息](https://legacy.gitbook.com/book/yw9381/burp_suite_documentation_2_0_zh_cn/details)或是[查看目录](contents.md)
+本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/content/)，也可以[查看本书在GitBook的信息](https://legacy.gitbook.com/book/yw9381/burp_suite_documentation_2_0_zh_cn/details)或是[查看目录](Contents.md)
 
 [Burp Suite 文档主页](index.md)
+
+# 构建本书
+-------------------------
+本书基于`GitBook`制作，所以首先要使用npm安装GitBook
+
+1. 下载并安装[NodeJS](https://nodejs.org/en/download/)
+2. 下载并安装[Git](https://git-scm.com/downloads)
+3. 使用npm安装gitbook
+    ```bash
+    npm install gitbook-cli -g
+    ```
+4. 使用npm安装电子书转换工具
+    ```bash
+    npm install ebook-convert -g
+    ```
+5. 克隆本项目
+    ```bash
+    git clone https://github.com/yw9381/Burp_Suite_Documentation_2.0_zh_cn
+    ```
+6. 生成电子书
+    1. 生成 PDF
+        ```bash
+        cd Burp_Suite_Documentation_2.0_zh_cn/
+        gitbook pdf ./ ./Burp_Suite_官方文档中文版_2.0.pdf
+        ```
+    2. 生成 ePub
+        ```bash
+        cd Burp_Suite_Documentation_2.0_zh_cn/
+        gitbook epub ./ ./Burp_Suite_官方文档中文版_2.0.epub
+        ```
+    3. 生成 Mobi
+        ```bash
+        cd Burp_Suite_Documentation_2.0_zh_cn/
+        gitbook mobi ./ ./Burp_Suite_官方文档中文版_2.0.mobi
+        ```
 
 # 贡献力量
 -------------------------
