@@ -1,6 +1,6 @@
 # Burp Suite 2.0 官方文档中文版
 -------------------------
-![翻译完成度](https://img.shields.io/badge/翻译完成度-6/88-green.svg?style=plastic) [![PDF下载](https://img.shields.io/badge/downloads-PDF-blue.svg?style=plastic)](https://legacy.gitbook.com/download/pdf/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-ePub-blue.svg?style=plastic)](https://legacy.gitbook.com/download/epub/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-Mobi-blue.svg?style=plastic)](https://legacy.gitbook.com/download/mobi/book/yw9381/burp_suite_documentation_2_0_zh_cn) 
+![翻译完成度](https://img.shields.io/badge/翻译完成度-7/88-green.svg?style=plastic) [![PDF下载](https://img.shields.io/badge/downloads-PDF-blue.svg?style=plastic)](https://legacy.gitbook.com/download/pdf/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-ePub-blue.svg?style=plastic)](https://legacy.gitbook.com/download/epub/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-Mobi-blue.svg?style=plastic)](https://legacy.gitbook.com/download/mobi/book/yw9381/burp_suite_documentation_2_0_zh_cn) 
 
 这是由官方在 Burp Suite 所放出的Support Center中的帮助文档翻译而来的中文版  
 英文原版地址：[https://portswigger.net/burp/documentation](https://portswigger.net/burp/documentation)  

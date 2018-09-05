@@ -1,79 +1,35 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../../styles/css/ps.css">
-</head>
-<body>
-<section class="container ps-breadcrumbs">
-    <ol>
-        <li>
-            <a href="https://support.portswigger.net/">Support Center</a>
-        </li>
-        <li>
-            <a href="../../index.html">Documentation</a>
-        </li>
-        <li>
-            <a href="../index.html">Desktop Editions</a>
-        </li>
-        <li>
-            <a href="index.html">Scanning Web Sites</a>
-        </li>
-        <li>
-            <a href="live-scans.html">Live Scans</a>
-        </li>
-    </ol>
-</section>
-<section class="container edition-labels">
-	<span class="pro-edition-feature-label">Professional</span>
-</section>
-<section class="maincontainer">
-    <div class="container main">
-        <h1>Live Scans</h1>
-        <p>
-            Live scans can be used to perform some scanning operations automatically on requests and responses that are processed by Burp's tools.
-        </p>
-        <p>
-            You can use live scans to audit for vulnerabilities, or add observed resources to Burp's Target <a href="../tools/target/site-map/index.html">site map</a>.
-        </p>
-        <p>
-            You can create live scans via the "New live task" button on the Burp <a href="../dashboard/index.html">Dashboard</a>. Some default live tasks are created automatically in new projects.
-        </p>
-        <h2 id="live-scan-configuration">Live scan configuration</h2>
-        <p>
-            All types of live scanning task must be configured with the following options:
-        </p>
-        <ul>
-            <li>
-                <strong>Tools scope</strong> - You can select the tools whose traffic will be inspected to select items that are processed by the live scan.
-            </li>
-            <li>
-                <strong>URL scope</strong> - You can define which items are processed by the live scan, based on their URL. You can choose to include everything, only items that fall within the defined <a href="../tools/target/scope.html">suite scope</a>, or items within a custom scope.
-            </li>
-            <li>
-                <strong>Deduplication</strong> - You can select whether items to be processed are deduplicated based on their URL and parameter names. This is particularly useful for <a href="#live-audit">live audit</a> tasks, where it might not be desirable to repeatedly scan the same item more than once.
-            </li>
-        </ul>
-        <h2 id="live-audit">Live audit</h2>
-        <p>
-            This type of live task performs an <a href="../../scanner/auditing.html">audit</a> of the items that are selected by the <a href="#live-scan-configuration">live scan configuration</a>. You can select the <a href="../scanning/audit-options.html">audit configuration</a> to be used.
-        </p>
-        <p>
-            Common uses for live audit tasks are to perform passive auditing of all traffic via the Proxy, or active auditing of only in-scope items.
-        </p>
-        <h2 id="live-passive-crawl">Live passive crawl </h2>
-        <p>
-            This type of live task analyses HTTP messages and adds entries to the Target <a href="../tools/target/site-map/index.html">site map</a>.
-        </p>
-        <p>
-            In the task configuration, you can select which types of observed items to add: links and form submissions.
-        </p>
-        <p>
-            You can also select which items are added based on URL. You can choose to include everything, the item itself, items on the same domain as the requested URL, and items within the defined <a href="../tools/target/scope.html">suite scope</a>, or items within a custom scope.
-        </p>
-</div>
-</section>
-</body>
-</html>
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [扫描Web网站](index.md) >> [实时扫描](live-scans.html)
+
+本页适用于`专业版`
+
+# 实时扫描
+----------
+
+实时扫描可根据 Burp 的子工具中的请求和响应自动执行一些扫描操作。
+
+您可以使用实时扫描来审计漏洞， 或是吧观察到的资源添加到 Burp 的 `Target` 工具的[`站点地图(Site map)`](../tools/target/site-map/index.html)
+
+## 实时扫描配置
+----------
+
+实时扫描需要配置以下内容才可以进行使用：
+
+* **工具范围** - 您可以选择要检查其流量的工具，以选择由实时扫描处理的项目。
+* **URL范围** - 您可以根据URL来定义实时扫描处理的项目。 您可以选择包含所有内容，或是仅包含定义的[套件范围](../tools/target/scope.html)中的项目或自定义范围内的项目。
+* **重复数据删除** - 某些情况下，您可能不希望多次重复扫描同一项目，此时您可以根据URL和参数名称选择要处理的项目是否进行重复数据删除，这对于[实时审计](#实时审计)会很有帮助。
+
+## 实时审计
+----------
+
+您可以在[实时扫描配置](#实时扫描配置)中为选择的项目进行[审计](../../scanner/audit.html)。对于需要升级的项目，可以指定要使用的[审计配置](../scanning/audit-options.html)。
+
+实时审计任务的常见用途是通过代理对所有流量进行被动审计，或是仅对某些范围内项目进行主动审计。
+
+## 实时被动爬取
+------------------
+
+被动爬取会实时分析HTTP消息，并将条目添加到`Target`的[`站点地图(Site map)`](../tools/target/site-map/index.html)中。
+
+在任务配置中，您可以选择要添加的观察项目类型，例如链接和表单提交。
+
+您还可以根据URL选择要添加的项目。您可以选择某个项目的所有内容、项目本身、与请求的URL在同一域中的项目、定义好的`Target`[范围](../tools/target/scope.html)中的项目，或自定义范围内的项目。
