@@ -7,7 +7,7 @@
 
 # 开始阅读
 ---------
-本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/content/)，也可以[查看本书在GitBook的信息](https://legacy.gitbook.com/book/yw9381/burp_suite_documentation_2_0_zh_cn/details)或是[查看目录](Contents.md)
+本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/content/)，也可以[查看本书在GitBook的信息](https://legacy.gitbook.com/book/yw9381/burp_suite_documentation_2_0_zh_cn/details)或是[查看目录](contents.md)
 
 [Burp Suite 文档主页](index.md)
 
