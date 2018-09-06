@@ -1,58 +1,63 @@
-[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [扫描Web网站](index.md) >> [Crawl Options](crawl-options.html)
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [扫描Web网站](index.md) >> [抓取选项](crawl-options.html)
 
 本页适用于`专业版`
 
-# Crawl Options
+# 抓取选项
+
 ------------------
 
-Numerous options are available to configure the behavior of Burp Scanner during crawl-based scans. These can be configured on-the-fly when [launching a scan](../scanning/scan-launcher.html), or can be maintained in Burp's [configuration library](../getting-started/configuration.html#configuration-library).
+在基于爬虫的扫描期间，可以使用许多选项来配置Burp Scanner的行为。这些可以在[启动扫描](../scanning/scan-launcher.html)时来配置，或者可以在Burp的[配置库](../getting-started/configuration.html#配置库)中进行配置。
 
-## Crawl optimization
+## 抓取优化
+
 ------------------
 
-These settings control the behavior of the crawl logic to reflect the objectives of the crawl and the nature of the application.
+这些设置控制爬虫逻辑的行为，以反映爬虫的目标和应用程序的性质。
 
-### Maximum link depth
+### 最大链接深度
 
-The maximum link depth represents the maximum number of navigational transitions (clicking links and submitting forms) that the crawler will make from the start URL(s). Modern applications tend to build a mass of navigation into every response, in locations like menus and the page footer. For this reason, it is normally possible to reach the vast majority of an application's content and functionality within a small number of hops from the start URL. Fully covering multi-stage processes (like viewing an item, adding it to a shopping cart, and checking out) will require more hops.
+最大链接深度表示爬虫程序将从起始URL创建的链接的最大跃点深度(包括单击链接和提交表单)。现代应用程序倾向于在菜单和页脚等位置为每个响应构建大量导航链接。因此可以在起始URL的少量跃点内达到应用程序的绝大部分内容和功能。完全覆盖多阶段流程(如查看项目、添加到购物车、登出)将需要更多的跃点。
 
-Some applications contain extremely long navigational sequences that don't lead to interestingly different functionality. For example, a shopping application might have a huge number of product categories, sub-categories, and view filters. To a crawler, this can appear as a very deep nested tree of links, all returning different content. In this situation, there are clearly diminishing returns to crawling deeply into the navigational structure,  so it is sensible to limit the maximum link depth to a small number, such as 8.
+某些应用程序包含极长的导航链接，这些链接中可能不会有很多的信息或是功能。例如，购物应用程序可能包含大量产品类别，子类别和视图过滤器。对于爬虫，这可能会显示为非常深的嵌套链接树，所有链接都返回不同的内容。在这种情况下，爬虫进行爬取导航结构时将会出现很多无用的信息，因此将最大链路深度限制为较小的数量是明智的，例如8。
 
-### Crawl strategy
+### 抓取策略
 
-Real-world applications differ hugely in the way they organize content and navigation, the volatility of their responses, and the extent and complexity of application state. At one extreme, an application might employ a unique and stable URL for each distinct function, return deterministic content in each response, and contain no server-side state. At the other extreme, an application might employ ephemeral URLs that change each time a function is accessed, overloaded URLs that reach different functions through different navigational paths, volatile content that changes non-deterministically, and heavily stateful functions where user actions cause changes in the content and behavior that is subsequently observed.
+真实世界的应用程序在组织内容、导航的方式、响应的波动性、应用程序状态的范围和复杂性方面存在很大差异。在一个极端情况下，应用程序可能会为每个不同的函数使用唯一且稳定的URL，在每个响应中返回确定性内容，并且不包含服务器端状态。在另一个极端，应用程序可能会使用每次访问函数时更改的临时URL，通过不同导航路径到达不同功能的重载URL，非确定性更改的易失性内容，以及用户操作导致更改的重度有状态函数随后观察到的内容和行为。
 
-Burp's crawler can handle both of these extremes. Where required, it can handle [ephemeral and overloaded URLs](../../scanner/crawling.html#core-approach), [volatile content](../../scanner/crawling.html#crawling-volatile-content), and [changes in application state](../../scanner/crawling.html#detecting-changes-in-application-state). However, fully handling these cases imposes a material overhead in the quantity of work that is involved in the crawl. You can use the crawl strategy setting to tune the approach that is taken to specific applications. In practice, this setting represents a trade-off between the speed of the crawl and the completeness of coverage that is achieved. The default strategy represents a trade-off between speed and coverage that is appropriate for typical applications. You can select a strategy that is more optimized for speed, when crawling an application with more stable and unique URLs, and no stateful functionality. Or you can select a strategy that is more optimized for completeness, when crawling an application with more volatile or overloaded URLs, or more complex stateful functionality.
+Burp的爬虫可以处理这两种极端情况。如果需要，它可以处理[临时和重载的URL](../../scanner/crawling.html#core-approach)，[经常变化的内容](../../scanner/crawling.html#crawling-volatile-content)和[应用程序状态的变化](../../scanner/crawling.html#detected-changes-in-application-state)。但是，完全处理这些情况会对爬虫的性能要求较高，而且其工作量也会增加。您可以使用爬虫策略设置来调整针对特定应用程序的配置。实际上，此设置表示了爬虫速度与覆盖完整性之间的权衡。默认策略表示适用于大部分应用程序的速度和覆盖率之间的权衡。在使用更稳定和唯一的URL对应用程序进行爬虫时，您可以选择速度更优策略。或者，您可以选择完整性更优策略，在爬取时使用更多临时或过载的URL或更复杂的功能。
 
-## Crawl limits
+## 抓取限制
+
 ------------------
 
-Crawling modern applications is sometimes an open-ended exercise, due to the amount of stateful functionality, volatile content, and unbounded navigation. Burp's crawler uses various techniques to maximise discovery of unique content early in the crawl. The settings for crawl limits let you impose a limit on the extent of the crawl, as it reaches the point of diminishing returns. It is generally sensible to configure a limit to the extent of the crawl, based on your knowledge of the application being scanned.
+由于应用程序中存在大量的状态功能，易变的内容和无边界的导航，爬取应用程序有时是一个开放式活动。Burp的爬虫使用各种技术在爬虫的早期最大限度地发现内容。爬虫限制的设置允许您对爬虫范围施加限制。根据您对扫描的应用程序的了解，配置对爬虫程度的限制是一件很有必要的事情。
 
-You can choose to limit the crawl based on:
+您可以选择根据以下内容限制抓取：
 
-*   The time taken.
-*   The number of unique locations discovered. A location represents a distinct unit of content or functionality, based on the chosen [crawl strategy](#crawl-strategy).
-*   The number of HTTP requests that are made.
+* 爬取所需要的时间。
+* 发现的唯一位置数。 位置表示基于所选[抓取策略](#抓取策略)的不同内容或功能单元。
+* 发出的HTTP请求数。
 
-## Login functions
+## 登陆功能
+
 ------------------
 
-These settings control how the crawler will interact with any login functionality that is encountered during the crawl.
+这些设置控制爬虫程序与爬取期间遇到的任何登录功能的交互方式。
 
-There are separate settings for [application login](../scanning/scan-launcher.html#application-login-options) which let you specify some existing account credentials that should be submitted to login functions, to access authenticated content behind the login. Here, you can configure:
+针对[应用程序中的登陆](../scanning/scan-launcher.html#application-login-options)的设置，可让您指定一些应提交给登录功能的帐户凭据，以访问登录之后的内容。在这里，您可以配置：
 
-*   Whether the crawler should attempt to self-register a user. This can be useful in many applications, by removing the need to manually set up a user account before the crawl.
-*   Whether the crawler should trigger login failures using invalid usernames. This can be useful to reach account recovery features that are accessed when invalid credentials are submitted. Note that Burp's crawler will not deliberately submit any of the configured [application login](../scanning/scan-launcher.html#application-login-options) accounts using invalid passwords, so as not to trigger account lockout on those accounts.
+* 爬虫是否尝试自行注册用户。这样就不必在爬取之前手动设置用户帐户。
+* 爬虫是否使用无效的用户名触发登录失败。这样可以实现提交无效凭据时访问帐户恢复功能。请注意，Burp的抓取工具不会故意使用无效密码提交任何已配置的[应用程序中的登陆](../scanning/scan-launcher.html#application-login-options)帐户，以免触发这些帐户的帐户锁定。
 
-## Handling application errors during crawl
+## 在抓取时处理错误
+
 ------------------
 
-These settings control how Burp Scanner [handles application errors](../../scanner/auditing.html#handling-application-errors) (connection failures and transmission timeouts) that arise during the crawl phase of the scan.
+这些设置控制爬虫阶段出现在 Burp Scanner 中[处理应用程序的错误](../../scanner/auditing.html#handling-application-errors)(例如连接失败和传输超时)的方式。
 
-You can configure the following options:
+您可以配置以下选项：
 
-*   The number of consecutive timed out requests, or the overall percentage of timed out requests, before pausing the task.
-*   The number of follow-up passes that are performed on completion of the crawl, to retry requests that timed out.
+* 暂停任务之前连续超时请求的数量，或超时请求的总百分比。
+* 完成爬虫时执行的后续传递次数，以重试超时请求。
 
-You can leave any setting blank to disable it.
+您可以将其设置为空以禁用它。
