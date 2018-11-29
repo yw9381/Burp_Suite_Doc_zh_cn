@@ -3,7 +3,7 @@
 -------------------------
 ![翻译完成度](https://img.shields.io/badge/翻译完成度-9/89-green.svg?style=plastic) [![PDF下载](https://img.shields.io/badge/downloads-PDF-blue.svg?style=plastic)](https://legacy.gitbook.com/download/pdf/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-ePub-blue.svg?style=plastic)](https://legacy.gitbook.com/download/epub/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-Mobi-blue.svg?style=plastic)](https://legacy.gitbook.com/download/mobi/book/yw9381/burp_suite_documentation_2_0_zh_cn)
 
-本文档使用GitBook制作，基于 BurpSuite 内置的HTML文档，文档以Burp 版本号作为标示，最新的文档可至[官方网站文档中心](https://portswigger.net/burp/documentation)查看
+本文档使用GitBook制作，基于 BurpSuite 内置的HTML文档，文档以Burp 版本号作为标示，最新的文档可至[官方网站文档中心](https://portswigger.net/burp/documentation)查看
 
 ## 开始阅读
 
@@ -11,7 +11,7 @@
 [Burp Suite 文档主页](index.md)
 
 当前中文文档版本 `v2.0beta` | [点击阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/content/) | [查看目录](contents.md) | [查看本书在GitBook的信息](https://legacy.gitbook.com/book/yw9381/burp_suite_documentation_2_0_zh_cn/details)  
-当前英文文档版本 `v2.0.08beta` | [点击阅读](https://yw9381.github.io/Burp_Suite_Documentation_2.0_en_us/burp/documentation/index.html) | [查看仓库](https://github.com/yw9381/Burp_Suite_Documentation_2.0_en_us)
+当前英文文档版本 `v2.0.08beta` | [点击阅读](https://yw9381.github.io/Burp_Suite_Documentation_2.0_en_us/burp/documentation/index.html) | [查看仓库](https://github.com/yw9381/Burp_Suite_Documentation_2.0_en_us)
 
 
 
