@@ -39,11 +39,11 @@
     cd Burp_Suite_Documentation_2.0_zh_cn/
     gitbook pdf ./ ./Burp_Suite_官方文档中文版_2.0.pdf   # 生成PDF
     gitbook epub ./ ./Burp_Suite_官方文档中文版_2.0.epub # 生成ePub
-    gitbook mobi ./ ./Burp_Suite_官方文档中文版_2.0.mobi # 生成Mobi
+    gitbook mobi ./ ./Burp_Suite_官方文档中文版_2.0.mobi # 生成Mobi
     ```
 7. 基于某一版本构建
     ```bash
-    # 首先切换到某个版本，xxx代表版本标记，即git的tag
+    # 首先切换到某个版本，xxx代表版本标记，即git的tag
     git checkout xxx
     # 构建电子书，此处以pdf为例，xxx为保存文件的文件名中的版本号
     gitbook pdf ./ ./Burp_Suite_官方文档中文版_xxx.pdf
