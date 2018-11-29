@@ -1,129 +1,149 @@
-   
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [扫描Web网站](index.md) >> [审计选项](audit-options.md)
 
-1.  [Support Center](https://support.portswigger.net/)
-2.  [Documentation](../../index.html)
-3.  [Desktop Editions](../index.html)
-4.  [Scanning Web Sites](index.html)
-5.  [Audit Options](audit-options.html)
+本页适用于`专业版`
 
-Professional
+# 审计选项
 
-Audit Options
-=============
-
-Numerous options are available to configure the behavior of Burp Scanner during audit scans. These can be configured on-the-fly when [launching a scan](../scanning/scan-launcher.html), or can be maintained in Burp's [configuration library](../getting-started/configuration.html#configuration-library).
-
-Audit Optimization
 ------------------
 
-These settings let you tune the behavior of the audit logic to reflect the objectives of the audit and the nature of the target application.
+有许多选项可用于在审计扫描期间配置Burp Scanner的行为。这些可以在Burp[启动扫描](../scanning/scan-launcher.md)时即时配置，或是在 Burp 的[配置库](../getting-started/configuration.md#配置库)中修改其配置。
 
-The following options are available:
+## 优化审计
 
-*   **Audit speed** \- This option determines how thorough certain audit checks will be when checking for vulnerabilities. The "Fast" setting makes fewer requests, and checks for fewer derivations of some vulnerabilities. The "Thorough" setting makes many more requests and checks for more derivative types of vulnerabilities. The "Normal" setting is mid-way between the two, and represents a suitable trade-off between speed and thoroughness for many applications.
-*   **Audit accuracy** \- This option determines the amount of evidence that the Scanner will require before reporting certain types of vulnerabilities. Some issues can only be detected using "blind" techniques, in which Burp infers the probable existence of a vulnerability based on some observed behavior, such as a time delay or a differential response. Because these observed behaviors can occur anyway, in the absence of the associated vulnerability, the techniques are inherently more prone to false positives than other techniques, such as the observation of error messages. To attempt to reduce false positives, Burp repeats certain tests a number of times when a putative issue is inferred, to try to establish a reliable correlation between submitted inputs and observed behaviors. The accuracy option is used to control how many times Burp will retry these tests. The "Minimize false negatives" setting performs fewer retries, and so is more likely to report false positive issues, but is also less likely to miss genuine issues due to inconsistent application behavior. The "Minimize false positives" setting performs many more retries, and so is less likely to report false positive issues, but may as a result wrongly miss some genuine issues, because some of the retry requests might just happen to fail to return the result being tested for. The "Normal" setting is mid-way between the two, and represents a suitable trade-off between false positive and false negative issues for many applications.
-*   **Skip checks unlikely to be effective due to insertion point's base value** \- This option makes scans more efficient by omitting checks that appear irrelevant given the base value of the parameter at each insertion point. For example, if a parameter's value contains characters that do not normally appear in filenames, Burp will skip file path traversal checks for this parameter. Using this option can speed up your scans, with a relatively low risk of missing actual vulnerabilities that exist.
-*   **Conslidate frequently occurring passive issues** \- This option controls whether Burp will [consolidate frequently occurring passive issues](../../scanner/auditing.html#consolidation-of-frequently-occurring-passive-issues). Using this option considerably reduces noise when the same issue (such as Clickjacking) appears in many locations or even throughout an entire application.
-*   **Automatically maintain session** \- This option controls whether Burp will [automatically maintain session](../../scanner/auditing.html#automatic-session-handling) during the audit phase of the scan. This is only applicable to crawl-driven audits where the navigational pathways identified during the crawl phase can be used to maintain session during the audit phase. In modern applications, it is normally essential to maintain session to achieve good audit coverage. However, there is an overhead to maintaining session in terms of numbers of requests made, and you can disable this option if you know it is not necessary.
-*   **Follow redirections where necessary** -  Some vulnerabilities can only be detected by following redirections (for example, cross-site scripting in an error message which is only returned after following a redirection). Because some applications issue redirections to third-party URLs that include parameter values that you have submitted, Burp protects you against inadvertently attacking third-party applications, by not following just any redirection which is received. If the request being scanned is within the defined [target scope](../tools/target/scope.html) (i.e. you are using target scope to control what gets scanned), then Burp will only follow redirections that are within that same scope. If the request being scanned is not in scope (i.e. you have manually initiated a scan of an out-of-scope request), Burp will only follow redirections which (a) are to the same host/port as the request being scanned; and (b) are not explicitly covered by a suite-wide scope exclusion rule (e.g. "logout.aspx").
+------------------
 
-Issues Reported
----------------
+通过这些设置，您可以调整审计的整体逻辑行为，来达到针对目标的一个更好的审计效果。
 
-These settings control which [issues](https://portswigger.net/kb/issues) Burp will check for.
+优化审计可以使用如下配置：
 
-You can select issue types individually, or according to the nature of the [audit activity](../../scanner/auditing.html#issue-types) that is involved in detecting them. If you select individual issues, you can also select the detection methods that are used for some types of issues. Use the context menu on relevant issue types, and choose "Edit detection methods".
+* **审计速度** - 此选项确定在检查漏洞时某些审计的深度。
+  * `快速(Fast)`会进行较少的请求，检查某些漏洞时也只是做一个基础审计。  
+  * `深入(Thorough)`会产生更多请求并检查更多衍生类型的漏洞。
+  * `正常(Normal)`则会位于两者之间，其代表了审计过程在速度和深度之间的适当折中。
+* **审核准确度** - 此选项确定在报告某些类型的漏洞之前扫描程序需要的数据量。
+  有些问题只能使用`盲猜(blind)`来检测。Burp会根据某些观察到的行为（例如延迟的不同或响应的不同）推断出可能存在的漏洞。因为这些观察到的行为随时都可能发生，所以会很容易出现误报。为了减少误报，当推断出可能的问题时，Burp会多次重复某些测试，来确定提交的输入和应程序的反馈是否多次表现一致。
+  精度选项用于控制Burp重试这些测试的次数。
+  * `尽量减少漏报(Minimize false negatives)`会尽可能少的去尝试，因此更有可能误报问题，但因为目标的返回可能不是每次都一样，所以也不太可能错过真正的问题。 
+  * `尽量减少误报(Minimize false positives)`会尽可能多的去尝试，因此不太可能会误报，但因为测试的不确定性，可能因此会错过了一些真正的问题，因为某些请求可能恰好无法返回结果测试了。 
+  * `正常(Normal)`则是位于两者之间，代表了误报和漏报之间的权衡。
+* **跳过不太可能有效的插入点的基值** - 此选项会忽略在给定参数的每个插入点基值而显得无关的检查，会使扫描更有效。例如，如果参数的值包含通常不会出现在文件名中的字符，则Burp将跳过此参数的路径遍历漏洞的检查。使用此选项可以加快扫描速度，但是会存在漏报的情况。
 
-Each check that is performed increases the number of requests made, and the overall time of the audit. You can turn individual issues on or off based on your knowledge of an application's technologies. For example, if you know that an application does not use any LDAP, you can turn off LDAP injection. Or if you know which back-end database the application uses, you can turn off SQL injection detection methods that are specific to other database types.
+* **合并经常发生的被动问题** - 此选项控制Burp是否[合并经常发生的被动问题](../../scanner/auditing.md#consally-of-occurrence-orive-passive-issues)。 使用此选项可以在许多位置甚至整个应用程序中出现相同问题（例如`点击劫持(Clickjacking)`）时大大减少某些干扰测试的因素。
+* **自动保持会话** - 此选项控制Burp在扫描的审计阶段是否[自动保持会话](../../scanner/auditing.md#automatic-session-handling)。 这仅适用于基于爬虫的审计，其中在爬虫爬取阶段识别的导航路径可用于在审计阶段维护会话。 在现代应用程序中，通常必须保持会话以实现良好的审计范围。 但是随着请求的数量增加，维护会话会逐渐产生额外开销，如果您不知道这样做或是想人工维护会话，则可以禁用此选项。
+*   **Follow redirections where necessary** -  Some vulnerabilities can only be detected by following redirections (for example, cross-site scripting in an error message which is only returned after following a redirection). Because some applications issue redirections to third-party URLs that include parameter values that you have submitted, Burp protects you against inadvertently attacking third-party applications, by not following just any redirection which is received. If the request being scanned is within the defined [target scope](../tools/target/scope.md) (i.e. you are using target scope to control what gets scanned), then Burp will only follow redirections that are within that same scope. If the request being scanned is not in scope (i.e. you have manually initiated a scan of an out-of-scope request), Burp will only follow redirections which (a) are to the same host/port as the request being scanned; and (b) are not explicitly covered by a suite-wide scope exclusion rule (e.g. "logout.aspx").
+* **必要时进行重定向** - 某些漏洞只能通过以下重定向来检测（例如某些错误消息中的XSS问题，只有在重定向后才会得知结果）。由于某些应用程序会向第三方URL发起请求，请求的过程中会带着提交的参数，因此Burp不会进行所有的重定向请求，这样可以防止在测试的过程中跑飞。如果正在扫描的请求在定义的[目标范围](../tools/target/scope.md)内（即您使用目标范围来控制扫描的内容），那么Burp将只重定向在目标范围之内的URL。如果正在扫描的请求不在范围内（即您已手动启动对范围外请求的扫描），则Burp将仅遵循以下两种可能的重定向：
+    * 与扫描请求相同的主机/端口的重定向;
+    * 未被套件范围的排除规则明确涵盖（例如“logout.aspx”）
+
+## 问题报告
+
+------------------
+
+这些设置控制Burp将会检查的[检查点](https://portswigger.net/kb/issues)。
+
+您可以单独选择检查点类型，也可以根据检测它们所涉及的[审计活动](../../scanner/auditing.md#issue-types)的性质选择检查点类型。如果选择单个检查点，还可以选择用于某些类型的检测方法。使用相关问题类型的上下文菜单，然后选择`编辑检测方法(Edit detection methods)`。
+
+执行的每项检查都会增加请求的数量以及审计的总时间。您可以根据您对应用程序技术的了解来打开或关闭单个检查点。例如，如果您知道应用程序没有使用LDAP，则可以关闭关于LDAP方面的检查点。或者，如果您知道应用程序使用哪个后端数据库，则可以关闭用于其他类型数据库的SQL注入检查。
 
 **Note:** if any issues are enabled that are labelled "active", then Burp Scanner will send requests to the application designed to detect those issues. Depending on the issues selected, these requests might be reasonably viewed as malicious or might damage the application or its data.
 
-Handling Application Errors during audit
-----------------------------------------
+**注意：** 如果启用任何标记为`活动(active)`的问题，则Burp Scanner 会向应用程序发送相应的检查请求。根据所选问题，这些请求可能会被告警为恶意攻击或可能会导致应用程序损坏或数据丢失。
 
-These settings control how Burp Scanner [handles application errors](../../scanner/auditing.html#handling-application-errors) (connection failures and transmission timeouts) that arise during the audit phase of the scan.
+## 审计期间处理应用程序错误
 
-You can configure the following options:
+------------------
 
-*   The number of consecutive failed audit checks before skipping the remaining checks in the current insertion point.
-*   The number of consecutive failed insertion points before skipping the remaining insertion points and flagging the audit item as failed.
-*   The number of consecutive failed audit items, or the overall percentage of failed audit items, before pausing the task.
-*   The number of follow-up passes that are performed on completion of each audit phase, to retry failed operations.
+这些设置控制 Burp Scanner 在扫描审计阶段出现[应用程序错误该怎么处理](../../scanner/auditing.md#handling-application-errors)，例如连接失败和传输超时。
 
-You can leave any setting blank to disable it.
+您可以配置以下选项：
 
-Insertion Point Types
----------------------
+* 在跳过当前插入点中的其余检查之前连续失败的审核检查的数量。
+* 在跳过剩余插入点并将审核项标记为失败之前连续失败的插入点数。
+* 暂停任务之前连续失败的审计项目数或失败的审计项目的总百分比。
+* 在每个审计阶段完成时执行的后续过程的数量，以重试失败的操作。
 
-These settings control how the Scanner places [insertion points](../../scanner/auditing.html#insertion-points) into each HTTP request that is audited.
+您可以将任何设置留空以禁用它。
 
-Burp Scanner gives you fine-grained control over the placement of insertion points, and careful configuration of these options will let you tailor the audit to the nature of the application you are targeting. The configuration of insertion points also represents a trade-off between the speed and comprehensiveness of your scans.
+## 插入点类型
 
-The following categories of insertion point can be selected:
+------------------
 
-*   **URL parameter values** \- Standard parameter values within the URL query string.
-*   **Body parameter values** \- Parameter values in the message body, including standard form-generated parameters, attributes of multipart-encoded parameters such as uploaded file names, XML parameter values and attributes, and JSON values.
-*   **Cookie values** \- The values of HTTP cookies.
-*   **Parameter name** \- The name of an arbitrarily added parameter. A URL parameter is always added, and a body parameter is also added to POST requests. Testing an added parameter name can often detect unusual bugs that are missed if only parameter values are tested.
-*   **HTTP headers** \- The values of the Referer and User-Agent headers. Testing these insertion points can often detect issues like SQL injection or persistent XSS within logging functionality.
-*   **Entire body** \- The whole of the request body. This applies to requests with XML or JSON content in the request body.
-*   **URL path filename** \- The value of the filename part of the URL path (after the final path folder and before the query string).
-*   **URL path folders** \- The values of all folder tokens within the URL path (before the filename part).
+这些设置控制扫描程序如何将[插入点](../../scanner/auditing.md#insert-points)放入每个被审计的HTTP请求中。
 
-**Note:** As well as letting Burp automatically assign insertion points, it is possible to fully customize these, so you can specify arbitrary locations within a request where attacks should be placed. To use this function, send the request to Intruder, use the [payload positions](../tools/intruder/positions.html) tab to define the start and end of each insertion point in the usual way, and select the Intruder menu option "Audit defined insertion points". You can also specify custom insertion point locations programmatically using [Burp Extender](../tools/extender.html).
+Burp Scanner 可以对插入点的位置进行细粒度控制，仔细配置这些选项将使您可以根据所针对的应用程序进行定制审计。插入点的配置也代表了扫描速度和全面性之间的权衡。
 
-Modifying parameter locations options
--------------------------------------
+可以选择以下类别的插入点：
 
-These settings let you configure the Scanner to [move parameters](../../scanner/auditing.html#modifying-parameter-locations) to other locations within the request, in addition to testing them in their original position. For example, you can move each URL parameter into the message body and retest it there. Or you can move each body parameter into a cookie and retest it there.
+* **URL参数值** - URL查询字符串中的标准参数值。
+* **Body参数值** - 消息正文中的参数值，包括标准表单生成的参数，多层编码参数的属性，例如上载的文件名，XML参数值和属性以及JSON值等。
+* **Cookie值** - HTTP Cookie的值。
+* **参数名称** - 欲添加的参数名称。该选项会在始终在每个HTTP包的URL中添加参数，同时对于POST请求会在body中添加参数。如果仅测试参数值，则测试过程中添加的参数名称通常可以检测错过的异常错误。
+* **HTTP标头** - Referer和User-Agent标头的值。测试这些插入点通常可以在日志记录功能中检测SQL注入或存储型XSS等问题。
+* **HTTP报文** - 整个请求报文。这适用于请求正文中包含XML或JSON内容的请求。
+* **URL路径文件名** - URL路径的文件名部分的值，它位于最终路径文件夹之后和查询字符串之前。
+  例如`http://www.example.com/a/b/c/index.php?a=1`，该选项表示选择的是`index.php`。
+* **URL路径文件夹** -  URL路径中所有路径的值，它位于文件名部分之前
+例如`http://www.example.com/a/b/c/index.php?a=1`，该选项表示选择的是`/a/b/c/`。
 
-Moving parameters in this way can often bypass defensive filters. Many applications and application firewalls perform per-parameter input validation assuming that each parameter is in its expected location within the request. Moving the parameter to a different location can evade this validation. When the application code later retrieves the parameter to implement its main logic, it may do so using an API that is agnostic as to the parameter's location. If so, then moving the parameter may enable you to reach vulnerable code paths using input that would normally be filtered before being processed.
+**注意：** 除了让Burp自动分配插入点之外，还可以自定义插入点，因此您可以在发出攻击的请求中指定任意位置。要使用此功能，请将请求发送到 Intruder，使用[载荷位置(`payload positions`)](../tools/intruder/positions.md)选项卡以常规方式定义每个插入点的开始和结束，然后选择Intruder菜单选项“审计定义的插入点”。您还可以使用[Burp扩展(`Burp Extender`)](../tools/extender.md)以编程方式指定自定义插入点位置。
 
-The following options are available for changing parameter locations:
+## 修改参数位置选项
 
-*   URL to body
-*   URL to cookie
-*   Body to URL
-*   Body to cookie
-*   Cookie to URL
-*   Cookie to body
+------------------
 
-Note that changing parameter locations results in many more scan requests, because each request parameter is effectively scanned multiple times.
+通过这些设置，您可以将 Scanner 的参数位置[移动](../../scanner/auditing.md#modifying-parameter-locations)到请求中的其他位置，然后在原始位置进行测试。例如，您可以将每个URL参数移动到邮件正文中并在那里重新进行测试。或者您可以将每个body参数移动到cookie中并在那里重新测试。
 
-Ignored insertion points
-------------------------
+以这种方式移动参数通常可以绕过某些防御过滤器。许多应用程序和WAF会对每个都在请求中的预期位置的参数进行验证。将参数移动到其他位置可以避开此验证。当应用程序代码检索参数以实现其主逻辑时，它可以使用与参数的位置无关的API来执行此操作。如果是这样，那么移动参数的方式可以使您能够进行过滤处理之前来发起针对某个路径的攻击。
 
-These settings let you specify request parameters for which Burp Scanner should skip certain audit checks. There are separate lists for skipping server-side injection checks (such as SQL injection) and for skipping all checks.
+以下选项可用于更改参数位置：
 
-Server-side injection checks are relatively time-consuming, because Burp sends multiple requests probing for various blind vulnerabilities on the server. If you believe that certain parameters appearing within requests are not vulnerable (for example, built-in parameters used only by the platform or web server), you can tell Burp not to test these. (Testing for client-side bugs like cross-site scripting involve much less overhead because testing each parameter imposes minimal overhead on the duration of the scan if the parameter is not vulnerable.)
+* URL中GET的参数到POST
+* URL中GET的参数到Cookie
+* POST参数到GET
+* POST参数到Cookie
+* Cookie参数到GET
+* Cookie参数到POST
 
-Skipping all checks may be useful if a parameter is handled by an application component that you do not wish to test, or if modifying a parameter is known to cause application instability.
+请注意，更改参数位置会引发更多的扫描请求，因为每个请求参数都会被有效扫描多次。
 
-Each item in the list specifies the parameter type, the item to be matched (name or value), the match type (literal string or regex), and the expression to match.
+## 忽略插入点
 
-You can identify parameters within URL path folders by their position (slash-delimited) within the URL path. To do this, select "URL path folder" from the parameter drop-down, "name" from the item drop-down, and specify the index number (1-based) of the position within the URL path that you wish to exclude from testing. You can also specify URL path folder parameters by value.
+------------------
 
-Frequently occurring insertion points
--------------------------------------
+通过这些设置，您可以指定Burp Scanner应跳过某些审核检查的请求参数。有单独的列表可以跳过服务器端注入检查（例如SQL注入）和跳过所有检查。
 
-These settings let you configure whether Burp Scanner will avoid duplication in [frequently occuring insertion points](../../scanner/auditing.html#handling-of-frequently-occurring-insertion-points). If configured, Burp will identify insertion points that have proven to be uninteresting (occurring frequently without any issues generated) and will drop to performing a more lightweight audit of those insertion points.
+服务器端注入检查相对耗时，因为Burp发送多个请求来探测服务器上的各种盲漏洞。如果您认为请求中出现的某些参数不易受攻击（例如，仅由平台或Web服务器使用的内置参数），您可以告诉Burp不要测试这些参数。 （测试跨站点脚本等客户端错误涉及的开销要少得多，因为如果参数不易受攻击，测试每个参数会对扫描持续时间产生最小的开销。）
 
-You can select which insertion point types this optimization is applied to.
+如果参数由您不希望测试的应用程序组件处理，或者已知修改参数会导致应用程序不稳定，则跳过所有检查可能很有用。
 
-Misc insertion point options
-----------------------------
+列表中的每个项目都指定参数类型，要匹配的项目（名称或值），匹配类型（文字字符串或正则表达式）以及要匹配的表达式。
 
-You can select whether to use [nested insertion points](../../scanner/auditing.html#nested-insertion-points). Nested insertion points are used when an insertion point's base value contains data in a recognized format. For example, a URL parameter might contain Base64-encoded data, and the decoded value might in turn contain JSON or XML data. With the option to use nested insertion points enabled, Burp will create suitable insertion points for each separate item of input at each level of nesting. Using this option imposes no overhead when scanning requests containing only conventional request parameters, but enables Burp to reach more of the attack surface of complex applications where data is encapsulated within different formats.
+您可以通过URL路径中的位置（斜线分隔）来标识URL路径文件夹中的参数。要执行此操作，请从参数下拉列表中选择“URL路径文件夹”，从项目下拉列表中选择“名称”，并指定要从中排除的URL路径中的位置的索引号（从1开始）测试。您还可以按值指定URL路径文件夹参数。
 
-You can configure whether to set a limit on the number of insertion points that will be generated for each base request, thereby preventing your scans from becoming stalled if they encounter requests containing huge numbers of parameters. In cases where the number of insertion points is curtailed by this limit, the item's entry in the [audit items view](audit-items.html) will indicate the number of insertion points that were skipped, enabling you to manually review the base request and decide if it is worth performing a full scan of all its possible insertion points.
+## 频繁发生的插入点
 
-JavaScript analysis options
----------------------------
+------------------
 
-These settings control how Burp Scanner detects DOM-based vulnerabilities in JavaScript. The following options are available:
+通过这些设置，您可以配置Burp Scanner 是否可以避免[频繁出现的插入点](../../scanner/auditing.md#handling-of-frequently-occurring-insertion-points)。 如果该选项已被配置，Burp 将识别已被证明无用的插入点（频繁发生而不会产生任何问题），并将放弃对这些插入点执行以实现更轻量的审计工作。
 
-*   Whether to make HTTP requests for any missing JavaScript dependencies.
-*   Whether to use [static or dynamic techniques](../../scanner/auditing.html#javascript-analysis) or both. Note that you can also configure per individual issue type whether to use static or dynamic techniques by editing the enabled [detection methods](#issues-reported) for DOM-based issues. These settings allow you to globally disable static or dynamic techniques for all JavaScript analysis.
-*   The maximum time that Burp will spend on static analysis for each individual item that is scanned. This setting can be useful if Burp encounters items containing very large or complex scripts, which may cause the static analysis engine to consume excessive system resources. If the analysis of a particular item is truncated because the maximum time was reached, then Burp shows an alert identifying the item affected. You can specify zero or a blank value to indicate that no limit should be applied.
+您可以选择该选项以优化的插入点类型。
 
-**Note:** JavaScript analysis can consume large amounts of memory and processing, and so it may be desirable to restrict the analysis to key targets of interest. Additionally, it may be necessary to [launch Burp](../getting-started/index.html#launching-burp) with greater amounts of memory when performing JavaScript analysis.
+## 其他的插入点设置
+
+------------------
+
+您可以选择是否使用[嵌套插入点](../../scanner/auditing.md#nested-insertion-points)。当插入点的基值包含可识别格式的数据时，将使用嵌套插入点。例如，URL参数可能包含Base64编码的数据，而解码的值可能又包含JSON或XML数据。通过启用嵌套插入点的选项，Burp将为每个嵌套级别的每个单独输入项创建合适的插入点。使用此选项在扫描仅包含常规请求参数的请求时不会产生任何开销，但是能够使Burp访问一些复杂应用程序中以不同格式封装的数据的请求，以发现更多攻击面。
+
+您可以配置是否对每个请求生成的插入点数量设置限制，从而防止扫描在遇到包含大量参数的请求时停止。如果此限制减少了插入点的数量，则[审计项目视图](audit-items.md)中的项目条目将指示跳过的插入点数，使您可以手动查看请求并决定是否值得对其所有可能的插入点进行全面扫描。
+
+## JavaScript分析选项
+
+------------------
+
+这些设置控制Burp Scanner如何检测JavaScript中基于DOM的漏洞。可以使用以下选项：
+
+* 是否对任何缺少的 JavaScript 依赖项发出HTTP请求。
+* 是否使用[静态或动态技术](../../scanner/auditing.md#javascript-analysis)或两者兼具。请注意，您还可以通过编辑基于DOM的问题和已启用的[检测方法](#问题报告)来配置每个问题类型是否使用静态或动态技术。通过这些设置，您可以全局禁用所有针对JavaScript分析的静态/动态技术。
+* 针对每个扫描项目进行静态分析所花费的最大时长。如果 Burp 遇到包含非常大或很复杂脚本，这可能会导致静态分析引擎消耗过多的系统资源。如果由于达到最大时间而截断特定项目的分析，则 Burp 会显示标识受影响项目的警报。您可以指定零或空值以表示不应用任何限制。
+
+**注意：** JavaScript分析会消耗大量系统资源，因此可能需要将分析限制在关键的目标上。此外，在执行JavaScript分析时，可能需要在[启动Burp](../getting-started/index.md#启动-burp)的时候具有更大的内存量。

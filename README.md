@@ -1,17 +1,19 @@
 # Burp Suite 2.0 官方文档中文版
 
 -------------------------
-![翻译完成度](https://img.shields.io/badge/翻译完成度-8/89-green.svg?style=plastic) [![PDF下载](https://img.shields.io/badge/downloads-PDF-blue.svg?style=plastic)](https://legacy.gitbook.com/download/pdf/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-ePub-blue.svg?style=plastic)](https://legacy.gitbook.com/download/epub/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-Mobi-blue.svg?style=plastic)](https://legacy.gitbook.com/download/mobi/book/yw9381/burp_suite_documentation_2_0_zh_cn)
+![翻译完成度](https://img.shields.io/badge/翻译完成度-9/89-green.svg?style=plastic) [![PDF下载](https://img.shields.io/badge/downloads-PDF-blue.svg?style=plastic)](https://legacy.gitbook.com/download/pdf/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-ePub-blue.svg?style=plastic)](https://legacy.gitbook.com/download/epub/book/yw9381/burp_suite_documentation_2_0_zh_cn) [![PDF下载](https://img.shields.io/badge/downloads-Mobi-blue.svg?style=plastic)](https://legacy.gitbook.com/download/mobi/book/yw9381/burp_suite_documentation_2_0_zh_cn)
 
-这是由官方在 Burp Suite 所放出的Support Center中的帮助文档翻译而来的中文版  
-英文原版地址：[https://portswigger.net/burp/documentation](https://portswigger.net/burp/documentation)  
+本文档使用GitBook制作，基于 BurpSuite 内置的HTML文档，文档以Burp 版本号作为标示，最新的文档可至[官方网站文档中心](https://portswigger.net/burp/documentation)查看
 
 ## 开始阅读
 
 -------------------------
-本文档使用GitBook制作，可直接[在线阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/content/)，也可以[查看本书在GitBook的信息](https://legacy.gitbook.com/book/yw9381/burp_suite_documentation_2_0_zh_cn/details)或是[查看目录](contents.md)
-
 [Burp Suite 文档主页](index.md)
+
+当前中文文档版本 `v2.0beta` | [点击阅读](https://yw9381.gitbooks.io/burp_suite_documentation_2_0_zh_cn/content/) | [查看目录](contents.md) | [查看本书在GitBook的信息](https://legacy.gitbook.com/book/yw9381/burp_suite_documentation_2_0_zh_cn/details)  
+当前英文文档版本 `v2.0.08beta` | [点击阅读](https://yw9381.github.io/Burp_Suite_Documentation_2.0_en_us/burp/documentation/index.html) | [查看仓库](https://github.com/yw9381/Burp_Suite_Documentation_2.0_en_us)
+
+
 
 ## 构建本书
 
@@ -32,22 +34,20 @@
     ```bash
     git clone https://github.com/yw9381/Burp_Suite_Documentation_2.0_zh_cn
     ```
-6. 生成电子书
-    - 生成 PDF
-        ```bash
-        cd Burp_Suite_Documentation_2.0_zh_cn/
-        gitbook pdf ./ ./Burp_Suite_官方文档中文版_2.0.pdf
-        ```
-    - 生成 ePub
-        ```bash
-        cd Burp_Suite_Documentation_2.0_zh_cn/
-        gitbook epub ./ ./Burp_Suite_官方文档中文版_2.0.epub
-        ```
-    - 生成 Mobi
-        ```bash
-        cd Burp_Suite_Documentation_2.0_zh_cn/
-        gitbook mobi ./ ./Burp_Suite_官方文档中文版_2.0.mobi
-        ```
+6. 生成最新版电子书
+    ```bash
+    cd Burp_Suite_Documentation_2.0_zh_cn/
+    gitbook pdf ./ ./Burp_Suite_官方文档中文版_2.0.pdf   # 生成PDF
+    gitbook epub ./ ./Burp_Suite_官方文档中文版_2.0.epub # 生成ePub
+    gitbook mobi ./ ./Burp_Suite_官方文档中文版_2.0.mobi # 生成Mobi
+    ```
+7. 基于某一版本构建
+    ```bash
+    # 首先切换到某个版本，xxx代表版本标记，即git的tag
+    git checkout xxx
+    # 构建电子书，此处以pdf为例，xxx为保存文件的文件名中的版本号
+    gitbook pdf ./ ./Burp_Suite_官方文档中文版_xxx.pdf
+    ```
 
 ## 贡献力量
 
