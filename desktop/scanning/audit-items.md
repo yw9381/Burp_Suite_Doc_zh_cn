@@ -1,137 +1,49 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../../styles/css/ps.css">
-</head>
-<body>
-<section class="container ps-breadcrumbs">
-    <ol>
-        <li>
-            <a href="https://support.portswigger.net/">Support Center</a>
-        </li>
-        <li>
-            <a href="../../index.html">Documentation</a>
-        </li>
-        <li>
-            <a href="../index.html">Desktop Editions</a>
-        </li>
-        <li>
-            <a href="index.html">Scanning Web Sites</a>
-        </li>
-        <li>
-            <a href="audit-items.html">Audit Items</a>
-        </li>
-    </ol>
-</section>
-<section class="container edition-labels">
-	<span class="pro-edition-feature-label">Professional</span>
-</section>
-<section class="maincontainer">
-    <div class="container main">
-        <h1>Audit Items View</h1>
-<p>
-            You can access the audit items view from the Burp <a href="../dashboard/index.html">dashboard</a> by opening the <a href="../dashboard/task-details.html">task details window</a> for a scanning task that includes auditing.
-        </p>
-<p>
-            The following details about each item are shown:
-        </p>
-        <ul>
-            <li>
-                An index number for the item.
-            </li>
-            <li>
-                The destination protocol, host and URL.
-            </li>
-            <li>
-                The current status of the item.
-            </li>
-            <li>
-                The progress completed for the various <a href="../../scanner/auditing.html#audit-phases">phases of the audit</a>, as applicable (passive, active, and JavaScript analysis).
-            </li>
-            <li>
-                The number of <a href="../tools/target/site-map/index.html#issues-view">issues</a> identified for the item, categorized by severity.
-            </li>
-            <li>
-                The number of requests made while auditing the item. Note that this is not a linear function of the
-                number of insertion points - observed application behavior feeds back into subsequent requests,
-                just as it would for a human tester.
-            </li>
-            <li>
-                The number of network errors encountered.
-            </li>
-            <li>
-                The number of <a href="../../scanner/auditing.html#insertion-points"> insertion points</a> created for the item.
-            </li>
-        </ul>
-        <p>
-            This information lets you easily monitor the progress of individual audit items. If you find that some scans
-            are progressing too slowly, you can understand the reasons why, such as large numbers of insertion points,
-            slowness in application responses, network errors, etc. Given this information, you can then take action to
-            optimize your scans, by changing the configuration for <a href="audit-options.html#audit-optimization">audit optimization</a>, the <a href="audit-options.html#issues-reported">issues</a> being tested, or <a href="audit-options.html#insertion-point-types"> insertion points</a>.
-        </p>
-        <p>
-            You can double-click any item to display the issues identified so far, and view the base
-            request and response for the item.
-        </p>
-        <p>
-            You can use the context menu to perform various actions to control the audit process.
-            The exact options that are available depend upon the status of the selected item(s), and include:
-        </p>
-        <ul>
-            <li>
-                <strong>Show details</strong> - This opens a window showing the issues identified so far, and the base
-                request and response for the item.
-            </li>
-            <li>
-                <strong>Cancel</strong> - This cancels the selected item(s) so they will not be audited. If auditing is already in progress, there will typically be a short delay while the pending requests are completed, and
-                the item is fully canceled.
-            </li>
-            <li>
-                <strong>Audit again</strong> - This duplicates the selected item(s) and adds these to the end of the
-                list.
-            </li>
-            <li>
-                <strong>Add comment</strong> - You can use this function to add a comment to the selected item(s). See <a href="#audit-items-annotations"> Annotations</a> for more details.
-            </li>
-            <li>
-                <strong>Highlight</strong> - You can use this function to apply a highlight to the selected item(s). See <a href="#audit-items-annotations"> Annotations</a> for more details.
-            </li>
-            <li>
-                <strong>Send to ...</strong> - These options are used to send the base request for the selected item to
-                other Burp tools.
-            </li>
-        </ul>
-        <h2 id="audit-items-annotations">Audit items annotations</h2>
-        <p>
-            You can annotate audit items by adding comments and highlights. This can be useful to flag up
-            interesting items for further investigation or to help manage your manual workflow.
-        </p>
-        <p>
-            You can add highlights in two ways:
-        </p>
-        <ul>
-            <li>
-                You can highlight individual items using the drop-down menu on the left-most table column.
-            </li>
-            <li>
-                You can highlight one or more selected items using the "Highlight" item on the context menu.
-            </li>
-        </ul>
-        <p>
-            You can add comments in two ways:
-        </p>
-        <ul>
-            <li>
-                You can double-click the relevant entry, within the Comment column, to add or edit a comment in-place.
-            </li>
-            <li>
-                You can comment one or more selected items using the "Add comment" item on the context menu.
-            </li>
-        </ul>
-    </div>
-</section>
-</body>
-</html>
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [扫描Web网站](index.md) >> [审计项目查看](audit-items.md)
+
+本页适用于`专业版`
+
+# 审计项目查看
+
+----------------
+
+您可以从Burp [仪表板(dashboard)](../dashboard/index.md)中打开[任务详细信息窗口(task details)](../dashboard/task-details.md)来访问扫描任务中含有审计的具体项目。
+
+该栏显示了每个项目的以下详细信息：
+
+* 项目的编号。
+* 目标主机的协议，Host和URL。
+* 该项的当前状态。
+* 针对被动，主动或是JS分析的各个[审计阶段](../../scanner/auditing.md#audit-phases)已完成进度。
+* 该项按严重性分类后已确定的问题[问题](../tools/target/site-map/index.md#issues-view)数量。
+* 审计时发出的请求数。请注意，这不是针对插入点数量的线性函数 - 观察到的应用程序行为会像人工测试那样反馈到后续请求中。
+* 遇到的网络错误数量。
+* 为项目创建的[插入点](../../scanner/audit.md#insert-points)的数量。
+
+通过此信息，您可以轻松监控各个审计项目的进度。如果您发现某些扫描进展太慢，您可以了解原因，例如因为存在大量插入点而导致的应用程序响应缓慢或是网络错误等。根据此信息，您可以通过更改[优化审计(audit optimization)](audit-options.md#优化审计)的配置，正在测试的[问题报告(issues)](audit-options.md#问题报告)或是[插入点](audit-options.md#插入点类型)等措施来优化扫描。
+
+您可以双击任何项目来查看到目前为止识别到的问题，并查看该项的基本请求以及响应。
+
+您可以使用上下文菜单执行各种操作来控制审计过程。可用的选项取决于所选项目的状态，包括：
+
+* **显示详细信息** - 该选项打开一个窗口，显示到目前为止发现的问题，以及项目的基本请求和响应。
+* **取消** - 该选项将取消该项操作，该项后续不会被审计。如果审计已经在进行当中，则在挂起的请求完成时会有短暂的延迟，之后该项将完全取消。
+* **再次审核** - 该选项会复制所选项并将这些项目添加到列表末尾，从而使得审计程序再次进行审计。
+* **添加备注** - 该选项可向所选项添加备注。有关详细信息，请参阅[审计项目注解](#审计项目注解)。
+* **突出显示** - 该选项可使所选项突出显示。有关详细信息，请参阅[审计项目注解](#审计项目注解)。
+* **发送到...** - 该选项用于将所选项的请求发送到Burp的其他工具中。
+
+## 审计项目注解
+
+----------------
+
+您可以通过添加备注和突出显示来标记审核的项目。这样您就可以将感兴趣的项目标记出来以供进一步分析。
+
+您可以通过两种方式添加突出显示：
+
+* 您可以使用最左侧表格列的下拉菜单突出显示各个项目。
+* 您可以使用上下文菜单中的`突出显示(Highlight)`项突出显示一个或多个所选项目。
+
+您可以通过两种方式添加评论：
+
+* 您可以双击`备注(Comment)`列中的相关条目来添加或编辑备注。
+* 您可以使用上下文菜单中的`添加备注(Add comment)`项来备注一个或多个所选项目。

@@ -154,7 +154,7 @@
         </p>
         <ul>
             <li>
-                Quickly perform a <a href="../../scanning/index.html#launching-scans">vulnerability scan</a> of just that
+                Quickly perform a <a href="../../scanning/index.html#启动扫描">vulnerability scan</a> of just that
                 request, using Burp Scanner.
             </li>
             <li>

@@ -43,7 +43,7 @@
         </p>
         <h3>Project Options</h3>
         <p>
-            Project-level options are stored within the <a href="../getting-started/projects.html#project-files">Burp project
+            Project-level options are stored within the <a href="../getting-started/projects.html#工程文件">Burp project
             file</a> for disk-based projects. They can also be saved and loaded from project <a href="../getting-started/configuration.html">configuration files</a>.
         </p>
         <div class="rounded-corner-box">

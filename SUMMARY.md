@@ -54,3 +54,5 @@
       * [频繁发生的插入点](desktop/scanning/audit-options.md#频繁发生的插入点)
       * [其他的插入点设置](desktop/scanning/audit-options.md#其他的插入点设置)
       * [JavaScript分析选项](desktop/scanning/audit-options.md#javascript分析选项)
+    * [审计项目查看](desktop/scanning/audit-items.md#审计项目查看)
+      * [审计项目注解](desktop/scanning/audit-items.md#审计项目注解)

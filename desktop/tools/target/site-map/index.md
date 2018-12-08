@@ -77,7 +77,7 @@
             </li>
             <li>
                 Any items that have been inferred by analyzing the responses to proxy requests (provided you have not
-                disabled <a href="../../../scanning/live-scans.html#live-passive-crawl">passive crawling</a>).
+                disabled <a href="../../../scanning/live-scans.html#实时被动抓取">passive crawling</a>).
             </li>
             <li>
                 Content discovered using the <a href="../../../scanning/index.html">Scanner</a> or <a href="../../../functions/content-discovery.html">content discovery</a> functions.
@@ -88,7 +88,7 @@
         </ul>
         <p>
             Items in the site map that have been requested are shown in black. Items that have not yet been requested
-            are shown in gray. By default (with <a href="../../../scanning/live-scans.html#live-passive-crawl">passive crawling</a> enabled)
+            are shown in gray. By default (with <a href="../../../scanning/live-scans.html#实时被动抓取">passive crawling</a> enabled)
             when you begin browsing a typical application, a large amount of content will appear in gray before you even
             get as far as requesting it, because Burp has discovered links to it in the content that you have requested.
             You can remove uninteresting content (for example, on other domains that are linked to from your target

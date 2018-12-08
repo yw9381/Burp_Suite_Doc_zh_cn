@@ -62,7 +62,7 @@
         </p>
         <ol>
             <li>
-                First, ensure that Burp is <a href="../../getting-started/index.html#launching-burp">installed and running</a>, and
+                First, ensure that Burp is <a href="../../getting-started/index.html#启动-burp">installed and running</a>, and
                 that you have <a href="../../getting-started/projects.html"> configured your browser</a> to work with
                 Burp.
             </li>

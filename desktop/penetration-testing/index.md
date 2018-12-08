@@ -249,7 +249,7 @@
         <ul>
             <li>
                 You can perform <a href="../scanning/index.html">scans</a> using Burp Scanner.
-                You can select items anywhere in Burp, and <a href="../scanning/index.html#launching-scans">initiate
+                You can select items anywhere in Burp, and <a href="../scanning/index.html#启动扫描">initiate
                     scans</a> using the context menu. Or you can configure Burp to do <a href="../scanning/live-scans.html">live scanning</a> of all in-scope
                 requests passing through the Proxy.
             </li>

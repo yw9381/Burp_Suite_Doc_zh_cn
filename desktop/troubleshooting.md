@@ -35,7 +35,7 @@
         </p>
         <h4>Burp doesn't run</h4>
         
-<p>Make sure you have a <a href="getting-started/index.html#launching-burp"> suitable version of Java installed</a>. Then <a href="getting-started/index.html#launching-burp"> start Burp
+<p>Make sure you have a <a href="getting-started/index.html#启动-burp"> suitable version of Java installed</a>. Then <a href="getting-started/index.html#启动-burp"> start Burp
                 from the command line</a>. Look at any error messages or other output that appears on the command line,
                 which should indicate the cause of the problem.
                 </p>
@@ -61,7 +61,7 @@
                 <p>
 You don't need to unpack or unzip the Burp
                 JAR file. This probably happened because your computer is associating the .JAR file extension with some
-                unarchiving software. You can change this association to associate with Java, or better, you can <a href="getting-started/index.html#launching-burp"> start Burp from the command line</a>.
+                unarchiving software. You can change this association to associate with Java, or better, you can <a href="getting-started/index.html#启动-burp"> start Burp from the command line</a>.
                 </p>
                 <h4>My browser can't make any requests</h4>
                 <p>
@@ -164,7 +164,7 @@ If your browser is always waiting and not showing any
         <p>
             Burp is constrained by the amount of memory that your computer
             makes available to the Java process. You can request additional memory for Burp by starting Burp from
-            the command line using the -Xmx argument. See <a href="getting-started/index.html#launching-burp">Launching
+            the command line using the -Xmx argument. See <a href="getting-started/index.html#启动-burp">Launching
                 Burp</a> for more details.
                 </p>
                 <h4>How do I run a scan?</h4>

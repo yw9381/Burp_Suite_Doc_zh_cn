@@ -51,7 +51,7 @@
         </p>
         <ol>
             <li>
-                First, ensure that Burp is <a href="../../getting-started/index.html#launching-burp">installed and running</a>, that
+                First, ensure that Burp is <a href="../../getting-started/index.html#启动-burp">installed and running</a>, that
                 you have <a href="../../getting-started/projects.html"> configured your browser</a> to work with Burp, and
                 that you have browsed your target application to <a href="../proxy/getting-started.html"> populate your
                 Proxy history</a>.

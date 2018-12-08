@@ -59,7 +59,7 @@
         </ul>
         <p>
             This manual mapping process will populate the Target <a href="site-map/index.html">site map</a> with all of
-            the content requested via the Proxy, and also (via <a href="../../scanning/live-scans.html#live-passive-crawl">live passive
+            the content requested via the Proxy, and also (via <a href="../../scanning/live-scans.html#实时被动抓取">live passive
             crawling</a>) any further content that can be inferred from application responses (via links, forms, etc.).
             This manual mapping process will build up a fairly complete record in the site map of all the visible
             application content, and also fully familiarize you with the application.
@@ -125,7 +125,7 @@
         <ul>
             <li>
                 You can select branches and items and use the context menu to send these to other Burp tools to carry
-                out particular tasks, such as <a href="../../scanning/index.html#launching-scans"> automated vulnerability
+                out particular tasks, such as <a href="../../scanning/index.html#启动扫描"> automated vulnerability
                 scanning</a> using Burp Scanner, <a href="../intruder/using.html#fuzzing-for-vulnerabilities">fuzzing using Burp
                 Intruder</a>, or manually testing using <a href="../repeater/using.html">Burp Repeater</a>.
             </li>
