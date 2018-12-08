@@ -3,6 +3,7 @@
 * [简介](README.md)
 * [文档目录](contents.md)
 * [文档主页](index.md)
+* [桌面版本](desktop/index.md)
   * [开始入门](desktop/getting-started/index.md#开始入门)
     * [启动 Burp](desktop/getting-started/index.md#启动-burp)
     * [开始向导](desktop/getting-started/index.md#开始向导)

@@ -1,85 +1,32 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../styles/css/ps.css">
-</head>
-<body>
-<section class="container ps-breadcrumbs">
-    <ol>
-        <li>
-            <a href="https://support.portswigger.net/">Support Center</a>
-        </li>
-        <li>
-            <a href="../index.html">Documentation</a>
-        </li>
-        <li>
-            <a href="index.html">Desktop Editions</a>
-        </li>
-    </ol>
-</section>
-<section class="container edition-labels">
-	<span class="pro-edition-feature-label">Professional</span>&nbsp;<span class="pro-edition-feature-label">Community</span>
-</section>
-<section class="maincontainer">
-    <div class="container main">
-        <h1>Burp Suite documentation: desktop editions</h1>
-        <p>
-            Burp Suite contains a wealth of features and capabilities to support manual and automated security testing. Use the links below for more information.
-        </p>
-        <h3>How do I?</h3>
-<ul class="link-list">
-            <li>
-                <a href="getting-started/index.html">Get started with Burp Suite</a>
-            </li>
-		    <li>
-		        <a href="scanning/index.html"> Scan a website </a>
-	        </li>
-		    <li>
-		        <a href="penetration-testing/index.html">Use Burp Suite for penetration testing</a>
-	        </li>
-		    <li>
-		        <a href="mobile-testing.html">Test mobile applications</a>
-	        </li>
-		    <li>
-		        <a href="extensibility.html">Extend Burp Suite's capabilities</a>
-	        </li>
-            <li>
-                <a href="troubleshooting.html">Troubleshoot a problem</a>
-            </li>
-		</ul>
-<h3>Reference</h3>
-<ul class="link-list">
-		    <li>
-		        <a href="dashboard/index.html">The Burp Suite dashboard </a>
-	        </li>
-		    <li>
-		        <a href="tools/index.html">Burp Suite tools</a>
-	        </li>
-		    <li>
-                <a href="functions/index.html">Useful functions</a>
-            </li>
-            
-            <li>
-                <a href="options/index.html">Options</a>
-            </li>
-            <li>
-                <a href="../contents.html">Full documentation contents</a>
-            </li>
-		</ul>
-		<div class="rounded-corner-box">
-            <p>
-                <strong>Note:</strong> Like any security testing software, Burp Suite contains functionality that can
-                damage target systems. Testing for security flaws inherently involves interacting with targets in
-                non-standard ways that can cause problems in some vulnerable targets. You should take due care when
-                using Burp, read all documentation before use, back up target systems before testing, and not use Burp
-                against any systems for which you are not authorized by the system owner, or for which the risk of
-                damage is not accepted by you and the system owner.
-            </p>
-        </div>
-    </div>
-</section>
-</body>
-</html>
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../index.md) >> [桌面版本](index.md)
+
+本页适用于`专业版`及`社区版`
+
+# Burp Suite 文档
+
+--------------
+
+Burp Suite包含丰富的功能和功能，可支持手动和自动安全测试。使用以下链接获取更多信息。
+
+## 我该如何做？
+
+--------------
+
+* [Burp Suite入门](getting-started/index.md)
+* [扫描网站](scanning/index.md)
+* [使用Burp Suite进行渗透测试](penetration-testing/index.md)
+* [测试移动应用程序](mobile-testing.md)
+* [扩展Burp Suite的功能](extensibility.md)
+* [问题排查](troubleshooting.md)
+
+## 参考
+
+--------------
+
+* [Burp Suite仪表板](dashboard/index.md)
+* [Burp Suite工具](tools/index.md)
+* [有用的功能](functions/index.md)
+* [选项](options/index.md)
+* [完整文档内容](../contents.md)
+
+**注意：** 与任何安全测试软件一样，Burp Suite包含的功能可能会对目标系统造成破坏。测试并发现安全漏洞的过程本身就会以非标准方式与目标进行交互，从而发现目标的某些缺陷。您应该小心谨慎使用Burp时，请在使用前阅读所有文档，在测试前备份目标系统，不要对未经授权的系统使用Burp，如因使用Burp造成了目标系统损坏的，其风险由您和系统所有者来共同承担。
