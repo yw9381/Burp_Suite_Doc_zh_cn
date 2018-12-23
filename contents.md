@@ -72,7 +72,7 @@
     * [工具配置](desktop/penetration-testing/index.md#工具配置)
     * [漏洞检测和利用](desktop/penetration-testing/index.md#漏洞检测和利用)
     * [了解更多](desktop/penetration-testing/index.md#了解更多)
-    * [Configuring Your Browser](desktop/penetration-testing/configuring-your-browser.md)
+    * [配置你的浏览器](desktop/penetration-testing/configuring-your-browser.md)
   * [Mobile Testing](desktop/mobile-testing.md)
   * [Extensibility](desktop/extensibility.md)
   * [Troubleshooting](desktop/troubleshooting.md)

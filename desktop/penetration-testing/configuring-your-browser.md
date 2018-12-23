@@ -1,118 +1,23 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../../styles/css/ps.css">
-</head>
-<body>
-<section class="container ps-breadcrumbs">
-    <ol>
-        <li>
-            <a href="https://support.portswigger.net/">Support Center</a>
-        </li>
-        <li>
-            <a href="../../index.html">Documentation</a>
-        </li>
-        <li>
-            <a href="../index.html">Desktop Editions</a>
-        </li>
-        <li>
-            <a href="index.html">Penetration Testing</a>
-        </li>
-        <li>
-            <a href="configuring-your-browser.html">Configuring Your Browser</a>
-        </li>
-    </ol>
-</section>
-<section class="container edition-labels">
-	<span class="pro-edition-feature-label">Professional</span>&nbsp;<span class="pro-edition-feature-label">Community</span>
-</section>
-<section class="maincontainer">
-    <div class="container main">
-        <h1>Configuring Your Browser to Work With Burp Suite</h1>
-        <p>
-            Burp is designed to be used alongside your browser. Burp functions as an HTTP proxy server, and all HTTP/S
-            traffic from your browser passes through Burp. To do any kind of testing with Burp, you need to configure
-            your browser to work with it.
-        </p>
-        <p>
-            Firstly, you need to confirm that Burp's Proxy listener is active and working. Go to the Proxy tab, then the
-            Options sub-tab, and look in the Proxy Listeners section. You should see an entry in the table with the
-            checkbox ticked in the Running column, and "127.0.0.1:8080" showing in the Interface column. If this is not
-            the case, try pressing the "Restore defaults" button to the left of the panel. If the listener is still not
-            running, then Burp was not able to open the default Proxy listener port (8080). You will need to select the
-            table entry, click "Edit", and change the port number of the listener to a different number. See the <a href="../tools/proxy/options/index.html#proxy-listeners">Proxy listeners</a> help for more details.
-        </p>
-        <p>
-            Secondly, you need to configure your browser to use the Burp Proxy listener as its HTTP proxy server. To do
-            this, you need to change your browser's proxy settings to use the proxy host address (by default, 127.0.0.1)
-            and port (by default, 8080) for both HTTP and HTTPS protocols, with no exceptions. The details of how to do
-            this vary by browser and version, but are roughly as follows:
-        </p>
-        <ul>
-            <li>
-                <strong>Internet Explorer</strong> - Go to the Tools menu, select Internet Options, go to the
-                Connections tab, and click on the "LAN settings" button. Make sure the "Automatically detect settings"
-                box is unchecked. Make sure the "Use automatic configuration script" box is unchecked. Make sure the
-                "Use a proxy server for your LAN" box is checked. Enter your Burp Proxy listener address in the
-                "Address" field (by default, 127.0.0.1). Enter your Burp Proxy listener port in the "Port" field (by
-                default, 8080). Make sure the "Bypass proxy server for local addresses" box is unchecked. Then click on
-                the "Advanced" button. Make sure the "Use the same proxy server for all protocols" box is checked.
-                Delete anything that appears in the "Exceptions" field. Then click "OK" to close all of the options
-                dialogs.
-            </li>
-            <li>
-                <strong>Chrome</strong> - The Chrome browser picks up the HTTP proxy settings configured on the host
-                computer. If you are using Chrome, you can open your computer's built-in browser and follow the
-                instructions for configuring that. If you aren't sure where the built-in proxy settings are, open
-                Chrome, go to the Customize menu, select Settings, click on "Show advanced settings", and click the
-                "Change proxy settings ..." button. This will open the relevant configuration options for your host
-                computer.
-            </li>
-            <li>
-                <strong>Firefox</strong> - Go to the Firefox menu, click on Options, click on Advanced, go to the
-                Network tab, and click on the Settings button in the Connection section. Select the "Manual proxy
-                configuration" radio button. Enter your Burp Proxy listener address in the "HTTP proxy" field (by
-                default, 127.0.0.1). Enter your Burp Proxy listener port in the "Port" field (by default, 8080). Make
-                sure the "Use this proxy server for all protocols" box is checked. Delete anything that appears in the
-                "No proxy for" field. Then click "OK" to close all of the options dialogs.
-            </li>
-            <li>
-                <strong>Safari</strong> - Go the Safari menu, click on Preferences, click on Advanced, and by the
-                Proxies label click the "Change Settings" button. This will open the Network configuration settings for
-                your current network adapter. In the Proxies tab, check the "Web Proxy (HTTP)" box, and enter your Burp
-                Proxy listener address in the "Web Proxy Server" field (by default, 127.0.0.1), and your Burp Proxy
-                listener port in the (unlabeled) port field (by default, 8080). Ensure the "Bypass proxy settings for
-                these Hosts &amp; Domains" box is empty. Repeat these steps for the "Secure Web Proxy (HTTPS)" checkbox.
-                Click "OK" and "Apply" and close the open dialogs.
-            </li>
-        </ul>
-        <p>
-            When you've configured your browser, you need to test that it is working properly. With Burp running, in
-            your browser go to any HTTP URL (don't use HTTPS for the moment). Your browser should sit waiting for the
-            request to complete. In Burp, go to the Proxy tab, and then the Intercept sub-tab. These tabs should be
-            highlighted, and there should be an HTTP request showing in the main panel. Click on the "Intercept is on"
-            button so that it says "Intercept is off". Go back to your browser, and you should (shortly) see the URL you
-            requested being loaded in the normal way. If things aren't working in the way described, please refer to the <a href="../troubleshooting.html">troubleshooting help</a>.
-        </p>
-        <p>
-            Finally, you need to configure your browser to be able to send HTTPS requests through Burp without any
-            problems. This step isn't strictly necessary to use Burp in a basic way or only for non-HTTPS URLs, but it
-            only needs to be done once and is necessary to get the most out of Burp when testing applications that use
-            HTTPS. The reason for this requirement is that Burp breaks SSL connections between your browser and
-            destination web servers, in order to view and modify the plain contents of HTTPS messages. SSL is designed
-            to prevent this happening, and so by default your browser will show a security warning when you visit an
-            HTTPS URL using Burp. To ensure that applications using HTTPS function properly, you need to install Burp's
-            Certificate Authority (CA) SSL certificate in your browser trust store. For detailed help on doing this,
-            please refer to the <a href="../tools/proxy/options/installing-ca-certificate.html"> help on installing Burp's CA
-            certificate</a>. When you have done this, you can confirm things are working properly by closing all your
-            browser windows, opening a new browser and visiting any HTTPS URL. The browser should not display any
-            security warnings, and the page should load in the normal way (you will need to turn off interception again
-            in the Proxy Intercept tab if you have re-enabled this).
-        </p>
-    </div>
-</section>
-</body>
-</html>
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [渗透测试](index.md) >> [配置你的浏览器](configuring-your-browser.md)
+
+本页适用于`专业版`及`社区版`
+
+# 配置你的浏览器
+
+--------------
+
+Burp 需要与您的浏览器一起使用。 Burp 作为 HTTP 代理服务器，所有来自浏览器的 HTTP/HTTPS 流量都通过 Burp。 要使用 Burp 进行任何类型的测试，您需要配置浏览器以使用它。
+
+首先，您需要确认 Burp 的代理侦听器是正常工作的。 转到`代理(Proxy)`选项卡，然后`选项(Options)`子选项卡，并查看`代理侦听器(Proxy Listeners)`部分。您应该在表中看到一个条目，其中在`运行(Running)`列中选中复选框，并在`接口(Interface)`列中显示`127.0.0.1:8080`。如果不是这样，请尝试按面板左侧的齿轮图标，选择`恢复默认值(Restore defaults)`按钮。如果侦听器仍然未运行，则 Burp 无法打开默认代理侦听器端口(8080)。 您将需要选择表项，点击`编辑(Edit)`，然后将侦听器的端口号更改为其他数字。 有关更多详细信息，请参阅[代理侦听器](../tools/proxy/options/index.md#proxy-listeners)章节获取更多帮助。
+
+其次，您需要配置浏览器以使用 Burp 代理侦听器作为其 HTTP 代理服务器。 为此，您需要更改浏览器的代理设置，来设置针对HTTP/HTTPS协议的代理，需要设置主机地址(默认为127.0.0.1)和端口(默认为8080)。具体操作方法因浏览器和版本而异，大致如下：
+
+* **Internet Explorer** - 转到`工具`菜单，选择`Internet选项`，转到`连接`选项卡，然后单击`局域网设置`按钮。 将`自动检测设置`复选框`设为未选中`状态。 将`使用自动配置脚本`复选框`设为未选中`状态。 将`为LAN使用代理服务器`复选框`设为选中`状态。 在`地址`字段中输入您的 Burp 代理侦听器地址(默认值为`127.0.0.1`)。 在`端口`字段中输入您的 Burp 代理侦听器端口(默认值为`8080`)。 将`"对于本地地址不使用代理服务器"`复选框`设为未选中`状态。 然后点击`高级`按钮。 将`为所有协议使用相同的代理服务器`复选框`设为选中`状态。 删除出现在`例外`字段中的任何内容。 然后单击`确定`关闭所有选项对话框。
+* **Chrome** - Chrome 浏览器默认会使用计算机内置浏览器上配置的HTTP代理设置。 如果您使用的是 Chrome，则可以打开计算机的内置浏览器，并按照说明进行配置。 如果您不确定内置代理设置的位置，请打开Chrome，转到`自定义菜单`，选择`设置`，点击`显示高级设置`，然后找到`网络`，点击`"更改代理服务器设置..."`按钮。 然后打开您的主机的相关配置选项，进行配置，对于Chrome浏览器，可以安装 SwitchyOmega 插件，然后按照插件说明配置代理，译者觉得这种方法比原文中提到的更为方便快捷。
+* **Firefox** - 注意：如果您使用 Firefox 并且在 Firefox 中安装了 `Plug-n-hack` 插件，则可以将浏览器配置为自动使用 Burp。 使用浏览器，访问代理侦听器的URL(如上所述，例如：`http://127.0.0.1:8080`)，然后点击`Plug-n-hack`链接，FireFox，可以安装SwitchyOmega 插件，然后按照插件说明配置代理，译者觉得这种方法比原文中提到的更为方便快捷。
+  如果您没有在 Firefox 中安装 Plug-n-hack 插件，请转到 `Firefox 菜单`，单击`选项`，单击`高级`，转到`网络`选项卡，然后找到`连接`部分中的`设置`按钮。 选择`手动代理配置`。 在`HTTP代理`字段中输入您的Burp 代理侦听器地址(默认值为`127.0.0.1`)。 在`端口`字段中输入您的Burp 代理侦听器端口(默认值为`8080`)。将`为所有协议使用相同代理`复选框`设为选中`。 删除`不使用代理`字段中显示的任何内容。 然后单击`确定`关闭所有选项对话框。
+* **Safari** - 转到 Safari 菜单，单击`偏好设置`，单击`高级`，然后找到`代理`并单击`更改设置`按钮。 然后会打开当前网络适配器的`网络配置`设置。 在`代理`选项卡中，选中`网页代理(HTTP)`框，然后在`网页代理服务器`字段中输入您的Burp 代理侦听器地址(默认为`127.0.0.1`)，和端口(默认为`8080`)。确保`忽略这些主机与域的代理设置`框为空。 然后选中`安全网页代理(HTTPS)`复选框，重复这些步骤。 单击`*确定`*和`应用`，然后关闭打开的对话框。
+
+配置好浏览器之后，您需要测试它能否正常工作。首先启动 Burp，然后在浏览器中访问任何 HTTP URL(暂时不要访问 HTTPS 的站点)。然后您的浏览器应该在等待请求完成。转到 Burp 中，转到代理(Proxy)选项卡，然后转到截取(Intercept)子选项卡。 这些选项卡会高亮显示，在主面板中会有一个HTTP 请求。 点击`Intercept is on`按钮，使其显示`Intercept is off`。 回到浏览器，您很快就会看到浏览器以正常方式加载的网址。 如果操作不正常，请参阅故障[排除帮助](../troubleshooting.md)。
+
+最后，您需要配置能够使 HTTPS 请求通过 Burp 代理侦听器。此步骤不是必须的的，您可以以基本方式使用 Burp 或仅用于非 HTTPS URL，但设置过程只需要设置一次，在测试使用 HTTPS 的应用程序时可以充分利用Burp。之所以要单独设置的原因是 Burp 破坏了浏览器和目标 Web 服务器之间的 SSL 连接的信任关系，这样做的原因是以便与 Burp 查看和修改 HTTPS 消息的明文内容。 SSL 旨在防止发生这种情况(中间人攻击)，在默认情况下，当您使用 Burp 访问 HTTPS 网址时，浏览器将显示安全警告。要确保使用 HTTPS 的应用程序正常工作，您需要在浏览器信任库中安装 `Burp 的证书颁发机构(CA)的 SSL 证书`。有关执行此操作的详细帮助，请参阅有关[安装 Burp 的 CA 证书](../tools/proxy/options/installing-ca-certificate.md)的帮助。完成该操作后，您需要关闭浏览器的所有窗口，然后重新打开浏览器，访问任何一个 HTTPS 网址，查看Burp中是否能够收到消息明文。同时浏览器不在显示任何安全警告，页面会以正常方式加载(如果您已经打开 Intercept 开关，则需要在`Intercept`选项卡中再次点击 `Intercept is on` 来关闭拦截)。
