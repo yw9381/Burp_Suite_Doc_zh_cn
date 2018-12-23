@@ -71,3 +71,4 @@
     * [漏洞检测和利用](desktop/penetration-testing/index.md#漏洞检测和利用)
     * [了解更多](desktop/penetration-testing/index.md#了解更多)
     * [配置你的浏览器](desktop/penetration-testing/configuring-your-browser.md)
+  * [移动端测试](desktop/mobile-testing.md)
