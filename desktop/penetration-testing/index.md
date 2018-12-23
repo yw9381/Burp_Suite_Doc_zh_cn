@@ -1,389 +1,155 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../../../styles/css/ps.css">
-</head>
-<body>
-<section class="container ps-breadcrumbs">
-    <ol>
-        <li>
-            <a href="https://support.portswigger.net/">Support Center</a>
-        </li>
-        <li>
-            <a href="../../index.html">Documentation</a>
-        </li>
-        <li>
-            <a href="../index.html">Desktop Editions</a>
-        </li>
-        <li>
-            <a href="index.html">Penetration Testing</a>
-        </li>
-    </ol>
-</section>
-<section class="container edition-labels">
-	<span class="pro-edition-feature-label">Professional</span>&nbsp;<span class="pro-edition-feature-label">Community</span>
-</section>
-<section class="maincontainer">
-    <div class="container main">
-        <h1>Penetration Testing</h1>
-<p>
-            The sections below describe the essentials of how to use Burp Suite within your web application testing. For
-            much more information about general techniques and methodologies for web application testing, please refer
-            to <a href="http://mdsec.net/wahh/">The Web Application Hacker's Handbook</a>, which was co-authored by
-            the creator of Burp Suite.
-        </p>
-<div class="rounded-corner-box">
-            <p>
-                Also in the <a href="https://support.portswigger.net/">Burp Suite Support Center</a>:
-            </p>
-            <ul class="link-list">
-                <li>
-                    <a href="https://support.portswigger.net/customer/portal/topics/720229-using-burp-suite/articles"> Using Burp Suite</a>
-                </li>
-            </ul>
-        </div>
-		
-		
-        <h2 id="the-basics-of-using-burp">The Basics of Using Burp</h2>
-        <p>
-            For help with installing and launching Burp, starting projects, and configuring display settings, please see the help on <a href="../getting-started/index.html">Getting started with Burp Suite</a>.
-        </p>
-        <p>
-            To use Burp for penetration testing, you need to <a href="configuring-your-browser.html">configure your browser</a> to work with Burp, and <a href="../tools/proxy/options/installing-ca-certificate.html">install Burp's CA
-            certificate</a> in your browser.
-        </p>
-        <p>
-            Once you have Burp running and configured your browser, go to the Proxy Intercept tab, and ensure that interception is turned on (if the button
-            says "Intercept is off" then click it to toggle the interception status). Then go to your browser and visit
-            any URL.
-        </p>
-        <p>
-            Each HTTP request made by your browser is displayed in the Intercept tab. You can view each message, and
-            edit it if required. You then click the "Forward" button to send the request on to the destination web
-            server. If at any time there are intercepted messages pending, you will need to forward all of these in
-            order for your browser to complete loading the pages it is waiting for. You can toggle the "Intercept is on
-            / off" button in order to browse normally without any interception, if you require. For more help, see <a href="../tools/proxy/getting-started.html">Getting started with Burp Proxy</a>.
-        </p>
-        <p>
-            As you browse an application via Burp, the Proxy history keeps a record of all requests and responses. In
-            the Proxy, go to the History tab and review the series of requests you have made. Select an item in the
-            table and view the full messages in the Request and Response tabs.
-        </p>
-        <p>
-            Also, as you browse, Burp by default builds up a site map of the target application. Go to the Target tab, and the Site
-            Map sub-tab, to view this. The site map contains all of the URLs you have visited in your browser, and also
-            all of the content that Burp has inferred from responses to your requests (e.g. by parsing links from HTML
-            responses). Items that have been requested are shown in black, and other items are shown in gray. You can
-            expand branches in the tree, select individual items, and view the full requests and responses (where
-            available). For more help, see <a href="../tools/target/using.html"> Using the Target tool</a>. You can control which content gets added to the site map as you browse, by configuring a suitable <a href="../scanning/live-scans.html">live scanning task</a>.
-        </p>
-        <p>
-            At the
-            core of Burp's penetration testing workflow is the ability to pass HTTP requests between the Burp tools, to carry
-            out particular tasks. You can send messages from the Proxy intercept tab, the Proxy history, the site map,
-            and indeed anywhere else in Burp that you see HTTP messages. To do this, select one or more messages, and
-            use the context menu to send the request to another tool.
-        </p>
-        <div class="rounded-corner-box">
-            <p>
-                The Burp tools you will use for particular tasks are as follows:
-            </p>
-            <ul>
-                
-                <li>
-                    <strong><a href="../../scanner/index.html">Scanner</a></strong> - This is used to automatically
-                    scan websites for content and security vulnerabilities.
-                </li>
-                <li>
-                    <strong><a href="../tools/intruder/getting-started.html">Intruder</a></strong> - This allows you to perform
-                    customized automated attacks, to carry out all kinds of testing tasks.
-                </li>
-                <li>
-                    <strong><a href="../tools/repeater/using.html">Repeater</a></strong> - This is used to manually modify and
-                    reissue individual HTTP requests over and over.
-                </li>
-                <li>
-                    <strong><a href="../tools/collaborator-client.html">Collaborator client</a></strong> - This is used to generate Burp Collaborator payloads and monitor for resulting out-of-band interactions.
-                </li>
-                <li>
-                    <strong><a href="../tools/clickbandit.html">Clickbandit</a></strong> - This is used to generate clickjacking exploits against vulnerable applications.
-                </li>
-                <li>
-                    <strong><a href="../tools/sequencer/getting-started.html">Sequencer</a></strong> - This is used to analyze the
-                    quality of randomness in an application's session tokens.
-                </li>
-                <li>
-                    <strong><a href="../tools/decoder.html">Decoder</a></strong> - This lets you transform bits of application
-                    data using common encoding and decoding schemes.
-                </li>
-                <li>
-                    <strong><a href="../tools/comparer.html">Comparer</a></strong> - This is used to perform a visual comparison
-                    of bits of application data to find interesting differences.
-                </li>
-            </ul>
-        </div>
-        <p>
-            You can combine Burp's different tools in numerous ways, to perform testing tasks ranging from very simple
-            to highly advanced and specialized.
-        </p>
-        <h2 id="testing-workflow">Testing Workflow</h2>
-        <p>
-            Burp lets you combine manual
-            and automated techniques effectively, gives you complete control over all of the actions that Burp performs,
-            and provides detailed information and analysis about the applications you are testing.
-        </p>
-        <p>
-            Some users may not wish to use Burp in this way, and only want to perform a quick and easy vulnerability
-            scan of their application. If this is what you need, please refer to <a href="../scanning/index.html">Scanning web sites</a>.
-        </p>
-        <p>
-            The diagram below is a high-level overview of the key parts of Burp's penetration testing workflow:
-        </p>
-        <img src="../../burp-workflow.png">
-        <h2 id="recon-and-analysis">Recon and Analysis</h2>
-        <p>
-            The <a href="../tools/proxy/using.html">Proxy tool</a> lies at the heart of Burp's workflow. It lets you use your
-            browser to navigate the application, while Burp captures all relevant information and lets you easily
-            initiate further actions. In a typical test, the recon and analysis phase involves the tasks described below.
-        </p>
-        <h3>Manually map the application</h3>
-        <p>
-            Using your browser working through Burp Proxy, <a href="../tools/target/using.html#manual-application-mapping">manually map the application</a> by following links,
-            submitting forms, and stepping through multi-step processes. This process will populate the Proxy <a href="../tools/proxy/using.html#using-the-proxy-history">history</a> and Target <a href="../tools/target/site-map/index.html">site map</a> with all of the content requested, and (via <a href="../scanning/live-scans.html">live scanning</a>)
-            will add to the site map any further content that can be inferred from application responses (via links,
-            forms, etc.). You should then <a href="../tools/target/using.html#reviewing-unrequested-items"> review any unrequested
-                items</a> (shown in gray in the site map), and request these using your browser.
-        </p>
-        <h3>Perform automated mapping where necessary</h3>
-        <p>
-            You can optionally use Burp to automate the
-            mapping process in various ways. You can:
-        </p>
-        <ul>
-            <li>
-                Carry out <a href="../scanning/index.html">automated scanning</a> to crawl the application's content.
-            </li>
-            <li>
-                        Use the <a href="../functions/content-discovery.html"> content discovery</a> function to find
-                        further content that is not linked from visible content that you can browse to or spider.
-                    </li>
-                    <li>
-                        Perform <a href="../tools/intruder/using.html#enumerating-identifiers"> custom discovery</a> using Burp
-                        Intruder, to cycle through lists of common files and directories, and identify hits.
-                    </li>
-        </ul>
-        <p>
-            Note that before performing any automated actions, it may be necessary to update various aspects of
-            Burp's <a href="#tool-configuration">configuration</a>, such as <a href="../tools/target/using.html#defining-target-scope">target scope</a> and <a href="../options/sessions/index.html">session handling</a>.
-        </p>
-        <h3>Analyze the application's attack surface</h3>
-        <p>
-            The process of mapping the application
-            populates the Proxy <a href="../tools/proxy/using.html#using-the-proxy-history">history</a> and Target <a href="../tools/target/site-map/index.html">site map</a> with all the information that Burp has captured about the
-            application. Both of these repositories contain features to <a href="../tools/proxy/using.html#using-the-proxy-history">help
-                you</a> <a href="../tools/target/using.html#analyzing-the-attack-surface">analyze</a> the information they contain, and assess
-            the attack surface that the application exposes. Further, you can use Burp's <a href="../functions/target-analyzer.html">Target Analyzer</a> to report the extent of the attack
-            surface and the different types of URLs the application uses.
-        </p>
-        <h2 id="tool-configuration">Tool Configuration</h2>
-        <p>
-            Burp contains a wealth of <a href="../options/index.html">configuration options</a>, which it is often necessary to
-            use at different stages of your testing, to ensure that Burp works with your target application in the way
-            you require. For example:
-        </p>
-        <ul>
-            <li>
-                <strong>Display</strong> - You can configure the <a href="../options/display.html#http-message-display">font</a> and <a href="../options/display.html#character-sets">character set</a> used to display HTTP messages, and also
-                the <a href="../options/display.html#user-interface"> font</a> in Burp's own UI.
-            </li>
-            <li>
-                <strong>Target scope</strong> - The <a href="../tools/target/scope.html"> target scope</a> configuration tells
-                Burp the items that you are currently interested in and willing to attack. You should configure this
-                early in your testing, as it can control which items are displayed in the Proxy <a href="../tools/proxy/history.html#proxy-history-display-filter">history</a> and Target <a href="../tools/target/site-map/index.html#site-map-display-filter">site
-                    map</a>, which messages are <a href="../tools/proxy/options/index.html#intercepting-http-requests-and-responses">intercepted</a> in the Proxy, and
-                which items may be <a href="../scanning/index.html">scanned</a>.
-            </li>
-            <li>
-                <strong>Platform authentication</strong> - If the application server employs any platform level (HTTP)
-                authentication, you configure Burp to handle the <a href="../options/connections.html#platform-authentication">authentication</a> automatically.
-            </li>
-            <li>
-                <strong>Session handling</strong> - Many applications contain features that can hinder automated or
-                manual testing, such as reactive session termination, use of per-request tokens, and stateful
-                multi-stage processes. You can <a href="../options/sessions/index.html">configure Burp</a> to handle most of
-                these situations seamlessly, using a combination of <a href="../options/sessions/index.html#session-handling-rules">session
-                handling rules</a> and <a href="../options/sessions/index.html#macros">macros</a>.
-            </li>
-            
-            <li>
-                <strong>Task scheduling</strong> - You can configure Burp to <a href="../functions/task-scheduler.html">schedule tasks</a> at given times or intervals, to allow
-                you to work within specified testing windows.
-            </li>
-        </ul>
-        <h2 id="vulnerability-detection-and-exploitation">Vulnerability Detection and Exploitation</h2>
-        <p>
-            After completing your <a href="#recon-and-analysis">recon and analysis</a> of the target application, and any necessary <a href="#tool-configuration">configuration</a> of Burp, you can begin probing the application for common
-            vulnerabilities. At the stage, it is often most effective to use several Burp tools at once, passing
-            individual requests between different tools to perform different tasks, and also going back to your browser
-            for some tests. Throughout Burp, you can use the <a href="../functions/message-editor/index.html#context-menu-commands">context
-            menu</a> to pass items between tools and carry out other actions.
-        </p>
-        <p>
-            In Burp's default configuration, it automatically performs <a href="../scanning/live-scans.html">live passive scanning</a> of all requests and responses
-            that pass through the Proxy. So before you begin actively probing the application, you might find that Burp
-            Scanner has already recorded some <a href="../tools/target/site-map/index.html#issues-view"> issues</a> that warrant closer
-            investigation.
-        </p>
-        <p>
-            Burp's tools can be used in numerous different ways to support the process of actively testing for
-            vulnerabilities. Some examples are described below for different types of issues.
-        </p>
-        <h3>Input-based bugs</h3>
-        <p>
-            For issues like SQL injection, cross-site scripting, and file path
-            traversal, you can use Burp in various ways:
-        </p>
-        <ul>
-            <li>
-                You can perform <a href="../scanning/index.html">scans</a> using Burp Scanner.
-                You can select items anywhere in Burp, and <a href="../scanning/index.html#启动扫描">initiate
-                    scans</a> using the context menu. Or you can configure Burp to do <a href="../scanning/live-scans.html">live scanning</a> of all in-scope
-                requests passing through the Proxy.
-            </li>
-            <li>
-                        You can use Burp Intruder to perform <a href="../tools/intruder/using.html#fuzzing-for-vulnerabilities">fuzzing</a>,
-                        using your own test strings and payload positions.
-                    </li>
-                    <li>
-                        You can send individual requests to <a href="../tools/repeater/using.html">Burp Repeater</a>, to manually
-                        modify and reissue the request over and over.
-                    </li>
-                    <li>
-                        Having identified some types of bugs, you can actively exploit these using <a href="../tools/intruder/using.html">Burp Intruder</a>. For example, you can often use the <a href="../tools/intruder/payloads/types.html#recursive-grep">recursive grep</a> payload type to exploit
-                        SQL injection vulnerabilities.
-                    </li>
-        </ul>
-        <h3>Logic and design flaws</h3>
-        <p>
-            For issues like unsafe use of client-side controls, failure to
-            enforce account lockout, and the ability to skip key steps in multi-stage processes, you generally need
-            to work manually:
-        </p>
-        <ul>
-                    <li>
-                        Typically, a close review of the <a href="../tools/proxy/using.html#using-the-proxy-history">Proxy history</a> will
-                        identify the relevant requests that need to be investigated.
-            </li>
-                    <li>
-                        You can then probe the application's handling of unexpected requests by issuing these
-                        individually using <a href="../tools/repeater/using.html">Burp Repeater</a>, or by turning on <a href="../tools/proxy/using.html#intercepting-requests-and-responses">Proxy interception</a> and manually changing requests on
-                        the fly while using your browser.
-                    </li>
-                    <li>
-                        You can actively exploit many logic and design flaws using <a href="../tools/intruder/using.html"> Burp
-                        Intruder</a>. For example, Intruder can be used to enumerate valid usernames, guess passwords,
-                        cycle through predictable session tokens or password recovery tokens, or even simply to reissue
-                        the same request a large number of times (using the <a href="../tools/intruder/payloads/types.html#null-payloads">null payloads</a> type).
-                    </li>
-                    <li>
-                        Having confirmed a logic or design flaw, many of these can be actively exploited by using Burp
-                        Proxy's <a href="../tools/proxy/options/index.html#match-and-replace">match/replace function</a>, or <a href="../options/sessions/index.html#session-handling-rules"> session handling rules</a>, to change requests in
-                        systematic ways.
-                    </li>
-        </ul>
-            <h3>Access control issues</h3>
-        <p>
-            Burp contains several features that can help when testing for
-            access control vulnerabilities:
-        </p>
-        <ul>
-                    <li>
-                        You can use the <a href="../tools/target/site-map/comparing.html"> Compare site maps</a> function for
-                        various tasks, including: identifying functionality that is visible to one user and not another;
-                        testing whether a low privileged user can access functions that should be restricted to higher
-                        privileged users; and discovering where user-specific identifiers are being used to segregate
-                        access to data by two users of the same type.
-            </li>
-                    <li>
-                        You can use different browsers to access the application in different user contexts, and use a
-                        separate <a href="../tools/proxy/options/index.html#proxy-listeners">Burp Proxy listener</a> for each browser (using
-                        different ports). You can then open additional <a href="../tools/proxy/history.html">Proxy history</a> windows (via the context menu) and set the <a href="../tools/proxy/history.html#proxy-history-display-filter"> display
-                        filter</a> on each window to show only items received on a specific listener port. As you use
-                        the application in each browser, each history window will show only the items for the associated
-                        user context. You can then use the "Request in browser in current browser session" function (via
-                        the context menu) to switch requests between browsers, to determine how they are handled in that
-                        browser's user context.
-                    </li>
-                    <li>
-                        Many privilege escalation vulnerabilities arise when the application passes a user identifier in
-                        a request parameter, and uses that to identify the current user context. You can actively
-                        exploit this type of vulnerability by using <a href="../tools/intruder/using.html"> Burp Intruder</a> to
-                        cycle through identifiers in the appropriate format (e.g. using the <a href="../tools/intruder/payloads/types.html#numbers">numbers</a> or <a href="../tools/intruder/payloads/types.html#custom-iterator"> custom iterator</a> payload types) and
-                        configuring <a href="../tools/intruder/options.html#grep-extract">extract grep</a> items to retrieve
-                        interesting user-specific data from the application's responses.
-                    </li>
-                </ul>
-                    <h3>Other vulnerabilities</h3>
-                <p>
-                    Burp contains functions that can be used to deliver, and often
-                    automate, virtually any task that arises when probing for other types of vulnerabilities. For example:
-                </p>
-                <ul>
-                    <li>
-                        You can review the contents of the Target <a href="../tools/target/site-map/index.html">site map</a> for
-                        information leakage issues, using the <a href="../functions/search.html#text-search"> Search</a> and <a href="../functions/search.html#find-comments-and-scripts"> Find comments</a> functions to assist you.
-                    </li>
-                    <li>
-                        Having identified a possible CSRF vulnerability, you can use the <a href="../functions/generate-csrf-poc.html">CSRF generator</a> to quickly create a proof-of-concept
-                        attack in HTML, then use the "Test in browser" function to load the attack into your browser,
-                        and then review the browser results and <a href="../tools/proxy/using.html#using-the-proxy-history"> Proxy history</a> to
-                        verify whether the attack was successful.
-                    </li>
-                    <li>
-                        You can use <a href="../tools/sequencer/index.html">Burp Sequencer</a> to analyze a sample of session tokens
-                        from the application, and estimate the quality of their randomness.
-                    </li>
-                    <li>
-                        For some types of encrypted session tokens or other parameters, you can use the <a href="../tools/intruder/payloads/types.html#bit-flipper"> bit flipper</a> and <a href="../tools/intruder/payloads/types.html#ecb-block-shuffler"> ECB block shuffler</a> payload types in
-                        Burp Intruder to blindly modify the encrypted data in an attempt to meaningfully change the
-                        decrypted data that the application processes.
-                    </li>
-                    <li>
-                        You can write your own custom <a href="../tools/extender.html"> Burp extensions</a> to carry out more
-                        specialized or customized tasks.
-                    </li>
-        </ul>
-        <h2 id="read-more">Read More</h2>
-        <p>
-            There is extensive documentation for all of Burp's tools and features, and the typical workflow you need to
-            use when testing with Burp.
-        </p>
-        <div class="rounded-corner-box">
-            <p>
-                Use the links below for help about using each of the main Burp tools:
-            </p>
-            <ul class="link-list">
-                <li>
-                    <a href="../tools/target/using.html">Using the Target tool</a>
-                </li>
-                <li>
-                    <a href="../tools/proxy/using.html">Using Burp Proxy</a>
-                </li>
-                <li>
-                    <a href="../tools/intruder/using.html">Using Burp Intruder</a>
-                </li>
-                <li>
-                    <a href="../tools/repeater/using.html">Using Burp Repeater</a>
-                </li>
-                <li>
-                    <a href="../scanning/index.html">Scanning web sites</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-</body>
-</html>
+[帮助中心](https://support.portswigger.net/) >> [文档首页](../../index.md) >> [桌面版本](../index.md) >> [渗透测试](index.md)
+
+本页适用于`专业版`及`社区版`
+
+# 渗透测试
+
+--------------
+
+以下部分介绍了如何在Web应用程序测试中使用Burp Suite的基本知识。有关Web应用程序测试的一般技术和方法的更多信息，请参阅[Web应用程序黑客手册](http://mdsec.net/wahh/)，该文档由Burp Suite的创建者共同撰写。
+
+你也可以在[Burp Suite 支持中心](https://support.portswigger.net/)查看
+
+* [使用 Burp Suite](https://support.portswigger.net/customer/portal/topics/720229-using-burp-suite/articles)
+
+## 使用Burp的基础知识
+
+--------------
+
+如果需要关于安装、启动、开始一个工程、配置显示选项等信息，请参阅 [开始入门](../getting-started/index.md#开始入门).
+
+如果需要使用Burp来进行渗透测试，你需要先[配置你的浏览器](configuring-your-browser.md)，然后[安装Burp的根证书](../tools/proxy/options/installing-ca-certificate.md)。
+
+如果您已经配置好浏览器并运行了Burp，您可以请转到`代理(Proxy)`选项卡中的`侦听器( Intercept)`选项卡，确保已打开侦听器拦截，如果按钮显示：`侦听器已关闭(Intercept is off)`，则单击它以切换拦截状态。然后转到您的浏览器并访问任何URL。
+
+浏览器发出的每个HTTP请求都显示在`拦截(Intercept)`选项卡中。您可以查看每条消息，并根据需要进行编辑。然后单击`转发(Forward)`按钮将请求发送到目标Web服务器。如果浏览器卡在某个页面等待加载，则表示有截获的报文待处理，您需要转发所有这些报文，以便浏览器完成加载正在等待的页面。如果需要，您可以切换`拦截打开/关闭(Intercept is on / off)`按钮，以便正常浏览而不进行任何拦截。有关更多帮助，请参阅[Burp Proxy入门](../tools/proxy/getting-started.md)。
+
+当您通过Burp浏览Web应用程序时，代理历史记录会记录所有请求和响应。在代理服务器中，转到`历史记录(HTTP history)`选项卡，查看您所做的一系列请求。选择表中的项目并在`请求(Request)`和`响应(Response)`选项卡中查看完整报文。
+
+此外，在浏览页面时，Burp会自动构建目标应用程序的站点地图。转到`目标(Target)`选项卡和`站点地图(Site map)`子选项卡以查看此选项。站点地图包含您在浏览器中访问过的所有URL，以及Burp从您的请求响应中推断出的所有内容（例如，通过解析HTML响应中的链接）。已请求的项目以黑色显示，其他项目以灰色显示。您可以在树中展开分支，选择单个项目，并查看完整的请求和响应。有关更多帮助，请参阅[使用`目标(Target)`工具](../tools/target/using.md)。通过配置合适的[实时扫描任务](../scanning/live-scans.md)，您可以在浏览时设置将哪些内容添加到站点地图。
+
+Burp渗透测试工作流程的核心是能够在Burp工具之间传递HTTP请求，以执行特定任务。您可以从`代理(Proxy)`选项卡中的`侦听器( Intercept)`，`历史记录(HTTP history)`，`目标(Target)`选项卡的`站点地图(Site map)`以及您看到HTTP消息的Burp中的任何其他位置发送消息。为此，请选择一条或多条消息，然后使用上下文菜单将请求发送到另一个工具。
+
+您将用于特定任务的Burp工具如下：
+
+* **[Scanner](../../scanner/index.md)** - 该工具用于自动扫描网站的内容和安全漏洞。
+* **[Intruder](../tools/intruder/getting-started.md)** - 该工具用于您执行自定义的自动化攻击或各种测试。
+* **[Repeater](../tools/repeater/using.md)** - 该工具用于手动修改发送单个的HTTP请求。
+* **[Collaborator client](../tools/collaborator-client.md)** - 该工具用于生成Burp Collaborator有效载荷并监视所产生的其他交互。
+* **[Clickbandit](../tools/clickbandit.md)** - 该工具用于生成针对目标站点的点击劫持攻击。
+* **[Sequencer](../tools/sequencer/getting-started.md)** - 该工具用于分析Web应用程序会话令牌是否足够随机化。
+* **[Decoder](../tools/decoder.md)** - 该工具用于进行常见的编码解码转换。
+* **[Comparer](../tools/comparer.md)** - 该工具用于不同的HTTP报文之间的比较，对比寻找其中的差异，从而进一步发现问题。
+
+您可以通过多种方式组合Burp的不同工具，执行从简单到高级再到专业的测试任务。
+
+## 测试工作流
+
+--------------
+
+Burp允许您有效地结合手动和自动技术，使您可以完全控制Burp执行的所有操作，并提供有关您正在测试的应用程序的详细信息和分析。
+
+有些用户可能不希望以这种方式使用Burp，只想对其应用程序执行快速简便的漏洞扫描。如果您有这样的需求，请参阅[扫描网站](../scanning/index.md)。
+
+下图是Burp渗透测试工作流程关键部分的高级概述：
+
+![burp-workflow](../../burp-workflow.png)
+
+## 侦查和分析
+
+--------------
+
+[代理工具](../tools/proxy/using.md)是Burp工作流程的核心。它允许您使用浏览器浏览目标站点，而Burp会自动捕获所有相关信息并让您进一步进行操作。在大部分测试中，侦察和分析阶段涉及下述任务。
+
+### 手动映射应用程序
+
+通过Burp Proxy 使用浏览器[手动映射应用程序](../tools/target/using.md#manual-application-mapping)，之后在浏览器中点击链接，提交表单和单步执行多步骤过程。该过程将填充代理[`历史(HTTP history)`](../tools/proxy/using.md#using-the-proxy-history)和目标[`站点地图(Site map)`](../tools/target/site-map/index.md) 所有要求的内容，并(通过[`实时扫描(Live scans)`](../scanning/live-scans.md))将向网站地图添加任何可以从应用程序响应中推断出的更多内容（例如链接、表单等等。）。接下来您应该[查看任何未请求的项目](../tools/target/using.md#reviewing-unrequested-items)（在站点地图中以灰色显示），并使用您的浏览器请求这些项目。
+
+### 必要时执行自动映射
+
+您可以进行如下操作选择来以各种方式执行自动化映射过程：
+
+* 执行[自动扫描](../scanning/index.md)以抓取应用程序的内容。
+* 使用[内容发现](../functions/content-discovery.md)功能来查找更多内容。
+* 使用`Burp Intruder`执行[自定义发现](../tools/intruder/using.md#enumerating-identifiers)，循环浏览并识别常用文件和目录列表。
+
+请注意，在执行任何自动操作之前，可能需要更新Burp [配置](#工具配置)的各个方面，例如[目标范围](../tools/target/using.md#defining-target-scope)和[会话处理](../options/sessions/index.md)。
+
+### 分析目标应用的攻击面
+
+映射应用程序的过程会填充`代理(Proxy)`-[`历史(History)`](../tools/proxy/using.md#using-the-proxy-history)和`目标(Target)`-[`站点地图(Sitemap)`](../tools/target/site-map/index.md)，填充内容包含Burp捕获的目标应用程序的所有信息。这两个中都包含能够[帮助你](../tools/proxy/using.md#using-the-proxy-history)去[分析](../tools/target/using.md#analyzing-the-attack-surface)的它们包含的信息，并评估目标网站攻击面功能。此外您还可以使用Burp的[目标分析器](../functions/target-analyzer.md)来报告攻击面的范围以及目标网站使用的不同类型的URL。
+
+## 工具配置
+
+--------------
+
+Burp包含大量[配置选项](../options/index.md)，它们通常需要在测试的不同阶段使用，以确保Burp以您需要的方式与目标应用程序一起使用。 例如：
+
+* **显示** - 您可以配置[`HTTP消息字体(HTTP Message Font)`](../options/display.md#http-message-display)和[`字符集(Charset)`](../options/display.md#character-sets)用于显示HTTP消息，以及Burp自己[`UI中的字体(User Interface Font)`](../options/display.md#user-interface)。
+* **目标范围** - [目标范围](../tools/target/scope.md)中会显示您当前设置的在本次项目中的范围。您应该在测试的早期配置它，因为它可以控制在`代理(Proxy)`-[`历史记录(history)`](../tools/proxy/history.md#proxy-history-display-filter)和`目标(Target)`-[`站点地图(site map)`](../tools/target/site-map/index.md#site-map-display-filter)中显示哪些项目，哪些消息是需要[拦截](../tools/proxy/options/index.md#intercepting-http-requests-and-responses)的，哪些项目可以[扫描](../scanning/index.md)的。
+* **平台身份验证** - 如果目标网站采用了任何平台级别(HTTP)身份验证，则您可以配置Burp以自动处理有关[身份验证](../options/connections.md#platform-authentication)的问题。
+* **会话处理** - 许多目标包含可能阻碍您自动或手动测试的一些操作，例如终止响应会话，每次请求需要使用令牌以及有状态的多个阶段过程。您可以[配置Burp](../options/sessions/index.md)使用[`会话处理规则(Session handling rules)`](../options/sessions/index.md#session-handling-rules)和[`宏(macros)`](../options/sessions/index.md#macros)无缝地处理大多数情况。
+* **任务调度** - 您可以将Burp配置为[计划任务](../functions/task-scheduler.md)，使其可以在给定时间指定的测试窗口内工作。
+
+## 漏洞检测和利用
+
+--------------
+
+在完成目标应用程序的[侦测和分析](#侦查和分析)以及Burp的任何必要的[工具配置](#工具配置)之后，您可以开始探测应用程序是否存在常见漏洞。在这个阶段，通常最有效的方法是同时使用多个Burp工具，在不同工具之间传递单个请求以执行不同的任务，并返回浏览器进行某些测试。在整个Burp中，您可以使用[上下文菜单](../functions/message-editor/index.md#context-menu-commands)在工具之间传递项目并执行其他操作。
+
+在Burp的默认配置中，它会将通过代理的所有请求响应进行全自动的[实时被动扫描](../scanning/live-scans.md)。因此，在您开始主动探测应用程序之前，您可能会发现BurpScanner已经记录了一些需要进一步调查的[问题](../tools/target/site-map/index.md#issues-view)。
+
+Burp的工具可以以多种不同的方式使用，以支持主动测试漏洞的过程。下面针对不同类型的问题描述了一些示例。
+
+### 基于输入的问题
+
+对于SQL注入，XSS和文件路径遍历等问题，您可以通过各种方式使用 Burp 来发现他们：
+
+* 您可以使用Burp Scanner执行[扫描](../scanning/index.md)。在Burp中的任何位置选择项目，并使用上下文菜单来[启动扫描](../scanning/index.md#启动扫描)。或者，您可以将Burp配置为对通过代理的所有范围内请求执行[实时扫描](../scanning/live-scans.md)。
+* 您可以使用Burp Intruder使用您自己的测试字符串和有效负载位置执行[`模糊测试(fuzzing)`](../tools/intruder/using.md#fuzzing-for-vulnerabilities)。
+* 您可以将个别请求发送到[Burp Repeater](../tools/repeater/using.md)，一次又一次地手动修改和重新发出请求。
+* 确定了某些类型的错误后，您可以使用[Burp Intruder](../tools/intruder/using.md)主动利用这些错误。例如，您可以针对SQL注入漏洞使用[`递归查找(Recursive grep)`](../tools/intruder/payloads/types.md#recursive-grep)来确定有效`攻击载荷类型(Payload Type)`。
+
+### 逻辑和设计缺陷
+
+对于一些逻辑方面或是设计上的问题，例如重置密码跳过关键步骤等问题，您通常需要手动进行操作：
+
+* 大部分情况下你可以仔细查看[代理历史](../tools/proxy/using.md#using-the-proxy-history)来确定需要的相关请求。
+* 您可以通过使用[Burp Repeater](../tools/repeater/using.md)或打开代理[`拦截(Intercept)`](../tools/proxy/using.md#intercepting-requests-and-responses)来单独发出这些请求以探测应用程序对意外请求的处理并在使用浏览器浏览目标站点时动态的更改请求。
+* 您可以使用[Burp Intruder](../tools/intruder/using.md)来利用一些逻辑和设计上的缺陷。例如，Intruder可用于爆破账号密码，爆破可预测或是有一定规律的会话领跑或是密码恢复令牌，某些情况下甚至只需要使用[`空的攻击载荷(nullpayloads)`](../tools/intruder/payloads/types.md#null-payloads)重放请求即可完成漏洞检测。
+* 确认了逻辑或设计缺陷后，可以通过使用Burp Proxy的[`匹配/替换功能(Match and Replace)`](../tools/proxy/options/index.md#match-and-replace)或[`会话处理规则(Session handling rules)`](../options/sessions/index.md#session-handling-rules)自动更改请求以利用其中的漏洞。
+
+### 访问控制问题
+
+Burp 包含一些在测试访问控制漏洞时可以提供帮助的功能：
+
+* 您可以使用[比较站点地图](../tools/target/site-map/comparison.md)功能执行各种任务，例如
+  * 查看两个用户之间的功能区别
+  * 测试低权限用户是否可以访问高权限用户的功能
+  * 发现用户特定标识符被用于隔离同一类型的两个用户对数据的访问的位置。
+* 您可以使用不同的浏览器在不同的用户上下文中访问应用程序，并为每个浏览器使用单独的[`Burp 代理监听端口(Burp Proxy listener)`](../tools/proxy/options/index.md#proxy-listeners)。然后，您可以通过上下文菜单打开`代理(Proxy)`-[`历史记录(History)`](../tools/proxy/history.md)窗口并设置[`过滤器(Filter)`](../tools/proxy/history.md#proxy-history-display-filter)以显示在特定端口上接收的项目。当您在每个浏览器中使用该应用程序时，每个历史记录窗口将仅显示相关用户上下文的项目。然后，您可以通过上下文菜单使用`在当前浏览器会话中的浏览器中请求`功能在浏览器之间切换请求，以确定在浏览器中的用户如何处理它们。
+* 当应用程序在请求参数中传递用户标识符时，会出现许多权限提升漏洞，并使用该标识符来标识当前用户上下文。您可以通过使用[Burp Intruder](../tools/intruder/using.md)以适当的格式循环迭代标识符来利用此类漏洞，例如使用[`数字类型(Number)`](../tools/intruder/payloads/types.md#numbers)或[`自定义类型(customiterator)`](../tools/intruder/payloads/types.md#custom-iterator)来生产有效载荷类型，然后配置[`提取匹配内容(Extract grep)`](../tools/intruder/options.md#grep-extract)从应用程序的响应中检索用户的特定数据。
+
+### 其他漏洞
+
+Burp包含的功能可以用于传递，并且通常可以自动执行在探测其他类型的漏洞时出现的任何任务。 例如：
+
+* 您可以在`目标(Target)`-[`站点地图(Sitemap)`](../functions/search.md#text-search)中查看一些信息泄漏问题，使用[`搜索(Search)`](../functions/search.md#text)或[`查找注释(Find comments)`](../functions/search.md#find-comments-and-scripts)功能来寻找某些值得深入的点。
+* 确定了可能的CSRF漏洞后，您可以使用[CSRF生成器](../functions/generate-csrf-poc.md)在HTML中快速创建POC，然后使用`在浏览器中测试(Test in browser)`功能将攻击载荷加载到浏览器中，然后查看浏览器结果和`代理(Proxy)`-[`历史记录(History)`](../tools/proxy/using.md#using-the-proxy-history)以验证攻击是否成功。
+* 您可以使用[Burp Sequencer](../tools/sequencer/index.md)分析来自应用程序的会话令牌样本，并估计其随机性的质量。
+* 对于某些类型的加密会话令牌或其他参数，您可以在Burp Intruder中使用[`位反转(bit flipper)`](../tools/intruder/payloads/types.md#bit-flipper)和[`ECB块重排(ECB block shuffler)`](../tools/inpinder/payloads/types.md#ecb-block-shuffler)载荷类型来进行模糊测试。
+* 您可以编写自己的自定义Burp[`插件(Extensions)`](../tools/extender.md)来执行更专业或自定义的任务。
+
+## 了解更多
+
+--------------
+
+有关Burp所有工具和功能的大量文档，以及在使用Burp进行测试时需要使用的典型工作流程。
+
+使用以下链接获取有关使用每个主要Burp工具的帮助：
+
+* [使用 Burp Target](../tools/target/using.md)
+* [使用 Burp Proxy](../tools/proxy/using.md)
+* [使用 Burp Intruder](../tools/intruder/using.md)
+* [使用 Burp Repeater](../tools/repeater/using.md)
+* [扫描目标网站](../scanning/index.md)
